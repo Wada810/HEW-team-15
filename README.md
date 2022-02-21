@@ -1,9 +1,10 @@
 # HEW-team-15
 
-######  筒井さんおめでとう!!
+## css の構造
+1. css/style.scssで全てのscssファイルを読み込んでいるので、htmlから読み込むのはstyle.cssだけでよいです
+2. foundation/ は全体の基礎の部分をスタイルする。フォントや文字のサイズなど
+3. layout/　はレイアウトのみを定義する
+4. component/　は汎用パーツのスタイル
+5. project/ ページ固有のスタイル
 
 
-## SUPER BIG Ω HIPER VIP ULTRA SSR UR SUGOI CHANGES
-
-# できました
-## oppai
