@@ -11,7 +11,7 @@
 <body>
 <!-- ログインされていたら表示（ログインされてなかったらこっち表示） -->
 <p><img src="" alt="アイコン画像(固定のアイコン画像)"></p>
-<p><?php echo $name ; ?>さん</p>
+<p><?php echo $name; ?>さん</p>
 
     <button type ="submit" name="" value="">ゲームで遊ぶ</button>
     <button type ="submit" name="" value="">みんなの指示書を見る</button>
