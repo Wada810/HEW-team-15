@@ -5,12 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <title>指示書確認</title>
+    <title>Document</title>
 </head>
 <body>
-    <form method="POST" action="./view_direction.php">
-        <button class="" type="submit" name="status" value="back">やりなおす</button>
-        <button class="" type="submit" name="status" value="complete">完成</button>
-    </form>
+    <h1><?php echo $instraction_list['theme']; ?></h1>
+    
 </body>
 </html>
