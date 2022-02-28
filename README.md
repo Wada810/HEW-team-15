@@ -11,4 +11,3 @@ DBが作られてlaravelの機能と紐づきます
 ### リンク
 http://localhost/hal/sophomore/HEW-team-15/hew/public/dashboard
 からログインもしくは登録できるはず
-
