@@ -1,9 +1,14 @@
-# HEW-team-15
+# ログイン機能
+http://localhost/hal/sophomore/HEW-team-15/hew/public/dashboard
 
-## css の構造
-1. css/style.scssで全てのscssファイルを読み込んでいるので、htmlから読み込むのはstyle.cssだけでよいです
-2. foundation/ は全体の基礎の部分をスタイルする。フォントや文字のサイズなど
-3. layout/　はレイアウトのみを定義する
-4. component/　は汎用パーツのスタイル
-5. project/ ページ固有のスタイル
+## 動かし方
+### マイグレーション
+`php artisan migrate`
+を実行
+DBが作られてlaravelの機能と紐づきます
+たぶん名前はかぶってないはずだけどエラー出たら該当するテーブル削除（drop）してからもう一度実行
+
+### リンク
+http://localhost/hal/sophomore/HEW-team-15/hew/public/dashboard
+からログインもしくは登録できるはず
 
