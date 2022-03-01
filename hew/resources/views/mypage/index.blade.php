@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-
+    <a href="home">home</a>
+<div>username:{{$user["name"]}}</div>
+<div>level:{{$user["level"]}}</div>
+<div>exp:{{$user["total_exp"]}}</div>
+<div>icon:{{$user["icon_image"]}}</div>
 </body>
 </html>
