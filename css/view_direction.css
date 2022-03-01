@@ -1,0 +1,152 @@
+body{
+    background-color: rgb(20, 150, 236);
+    width: 100%;
+    height: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+  }
+.view{
+/*     overflow-y: scroll; */
+}
+
+.view_list {
+    width: 200px;
+    height: 80%;
+    margin: 7% auto 0 auto;
+  }
+  .order{
+      position: relative;
+    display: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+  }
+  .rep {
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+  }
+  .rep:active,
+  .rep.is-active {
+/*     background-color: white;
+    color: black; */
+  }
+  .rep_box {
+    text-align: center;
+    line-height: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition-duration: 0.4s;
+  }
+   
+  .rep_box.is-open {
+    border: 1px solid black;
+    padding: 10px;
+    line-height: normal;
+    height: auto;
+    opacity: 1;
+  }
+  .judge{
+    display: none;
+  }
+
+.corrected::before{
+    content: "○";
+    color: aquamarine;
+    position: absolute;
+    left: -18%;
+}
+.incorrected::before{
+    content: "×";
+    color: red;
+    position: absolute;
+    left: -18%;
+}
+.unopen{
+    transform: rotate(90deg);
+    display: block;
+    color: white;
+    font-size: 40px;
+    letter-spacing: -15px;
+    margin: 60px 0 0 0;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
+    background-color: rgb(14, 113, 179);
+}
+
+main{
+    position: relative;
+    width: 100%;
+    height: 86%;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
+    background-color: rgb(14, 113, 179);
+}
+
+footer .back_button{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(14, 113, 179);
+    color: white;
+    border: none;
+    font-size: 18px;
+}
+
+.theme{
+    color: white;
+    text-align: center;
+}
+
+.complete_button{
+    background-color: white;
+    color: cornflowerblue;
+    border: 3px solid rgb(25, 75, 167);
+    border-radius: 5px 5px;
+    width: 80%;
+    height: 50px;
+    margin: 50px auto 0 auto;
+}
+
+.com_button_cover{
+/*     position: absolute; */
+    bottom: 0;
+    width: 100%;
+    display: flex;
+}
+.back_button_cover{
+
+    width: 100%;
+    height: 100%;
+}
+
