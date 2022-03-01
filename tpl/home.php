@@ -11,8 +11,11 @@
     <title>HOME</title>
 </head>
 <body>
-    <div class="home">ホーム</div><!-- ヘッダーとなるところ -->
+
+<div class="home">ホーム</div><!-- ヘッダーとなるところ -->
+
 <form method="post" action="home.php">
+
     <div class="content_box">
 
         <div class="user_profile">
@@ -32,6 +35,7 @@
         </div>
 
     </div>
+
 </form>
 </body>
 </html>

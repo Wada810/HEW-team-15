@@ -1,5 +1,4 @@
 <?php 
-
 /* ログインされていたら */
 if(isset($_COOKIE['login_id'])){
     $login_id = $_COOKIE['login_id'];//クッキーで送られてきたログインID受け取る
