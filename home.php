@@ -1,4 +1,4 @@
-<?php 
+<?php
 /* ログインされていたら */
 if(isset($_COOKIE['login_id'])){
     $login_id = $_COOKIE['login_id'];//クッキーで送られてきたログインID受け取る
@@ -29,10 +29,6 @@ else{ //ログインされてなかったら
 //ゲームで遊ぶを押されたら
 //みんなの指示書を見るを遊ぶを押されたら
 //プロフィールを押されたら
-
-
-
-
 
 
 require_once 'tpl/home.php';
