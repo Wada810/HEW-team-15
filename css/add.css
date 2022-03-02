@@ -1,0 +1,161 @@
+#algorithm {
+  font-family: 'M PLUS 2', sans-serif;
+  font-weight: 500;
+  position: relative;
+  height: 78vh;
+  background-color: #49B5EC;
+  width: 100%;
+}
+
+#algorithm #algorithm_flame {
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+}
+
+#algorithm #algorithm_flame h2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 70px;
+  line-height: 25px;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+#algorithm #algorithm_flame .algorithm_head {
+  font-size: 14px;
+  line-height: 34px;
+}
+
+#algorithm #algorithm_flame ol li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-bottom: dashed 1px rgba(255, 255, 255, 0.75);
+}
+
+#algorithm #algorithm_flame ol li:nth-last-of-type(1) {
+  border-bottom: dashed 1px transparent;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_number {
+  width: 25px;
+  font-size: 16px;
+  line-height: 22px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_contents {
+  width: 100%;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_contents.is-active {
+  background-color: white;
+  color: #2C91C5;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_contents .algorithm_name {
+  width: 100%;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  font-weight: 600;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_contents .material_items {
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 2.5px dotted #2C91C5;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_contents .material_items button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 35%;
+  height: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 15px;
+  background-color: #FFFFFF;
+  color: #D8305E;
+  border-radius: 0px 0px 0px 5px;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_contents .material_items button:nth-last-of-type(1) {
+  width: 65%;
+  height: 60px;
+  color: #2C91C5;
+  background-color: #ffffff;
+  border-left: 2.5px dotted #2C91C5;
+  border-radius: 0px 0px 5px 0px;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_contents .material_items button .material-icons-round {
+  width: 27px;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_contents .material_items button .delete {
+  font-size: 24px;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_contents .material_items button .border {
+  font-size: 22px;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_contents .material_items button p {
+  line-height: 15px;
+  font-size: 15px;
+  height: 15px;
+}
+
+#algorithm .section_button {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  height: 60px;
+}
+
+#algorithm .section_button button {
+  display: block;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #E3F2F0;
+  color: #2C91C5;
+  border: 3px solid #2C91C5;
+  border-radius: 60px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.header {
+  height: 12vh;
+  background-color: #2C91C5;
+}
+
+.footer {
+  height: 10vh;
+  background-color: #2C91C5;
+}
+/*# sourceMappingURL=add.css.map */
