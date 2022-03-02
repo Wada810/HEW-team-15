@@ -46,7 +46,6 @@
     </div>
 </main>
 
-
 <script src="../text_count.js"></script>
 </body>
 </html>
