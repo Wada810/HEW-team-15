@@ -1,0 +1,125 @@
+$main_color: rgb(220, 240, 248);
+$sub_color: #3a9fa8;
+$background_color: #e2efef;
+$text_color_1: #3a9fa8;
+
+* {
+  font-family: "M PLUS 2", sans-serif;
+  font-weight: 600;
+}
+h1 {
+  font-weight: 800;
+}
+button {
+  font-weight: 800;
+}
+
+body {
+  height: 100vh;
+  min-height: 100vh;
+  background-color: $sub_color;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  background-color: $sub_color;
+  color: white;
+  display: flex;
+  align-items: center;
+  .header_button {
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    margin-left: 3%;
+  }
+
+  .back_button {
+    text-align: center;
+    color: $sub_color;
+    background-color: white;
+    border-radius: 50%;
+    height: 38px;
+    width: 38px;
+  }
+  .header_title {
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .material-icons-round {
+    display: inline-flex;
+    vertical-align: middle;
+  }
+}
+
+main {
+  height: 100%;
+  .theme_block {
+    height: 100%;
+    background-color: $background_color;
+  }
+  .theme_wrapper {
+    background-color: $background_color;
+    width: 100%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  h1,
+  p {
+    color: $text_color_1;
+  }
+  .title_area {
+    margin: 0 auto;
+    text-align: center;
+    h1 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+    p {
+      font-size: 12px;
+      font-weight: 700;
+    }
+    margin-bottom: 10%;
+  }
+
+  form {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    .textarea {
+      line-height: 140%;
+      letter-spacing: 0.5px;
+      height: 70px;
+      display: block;
+      margin: 0 auto;
+      resize: none;
+      width: 100%;
+      background-color: #d5ecf5;
+      color: $sub_color;
+      border-radius: 30px;
+      padding: 10px 25px;
+    }
+    div {
+      margin-left: auto;
+      width: 50px;
+      text-align: center;
+      font-size: 12px;
+    }
+    button {
+      width: 100%;
+      text-align: center;
+      border-radius: 30px;
+      border: solid 4px $sub_color;
+      background-color: white;
+      color: $sub_color;
+      padding: 15px 0 15px 0;
+      margin-top: 8%;
+    }
+  }
+}
