@@ -28,6 +28,14 @@
     color: $white;
     font-weight: 800;
 }
+.btn-secondary{
+    @extend .btn;
+    background-color: $white;
+    border-color: $button_border;
+    color: $white;
+    font-weight: 800;
+}
+
 .input{
     display: block;
     width: 100%;

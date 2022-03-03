@@ -13,41 +13,26 @@
 </header>
 <div class="l_pray_header__spacer"></div>
 
-<div class="p_theme_title">theme</div>
-<div class="p_theme_title__spacer"></div>
+<div class="theme_title">theme</div>
+<div class="theme_title__spacer"></div>
+
 
 <section class="l_algorithm">
-    <!-- <p class="p_algorithm_head">アルゴリズム</p> -->
-    <ol class="p_algorithm_list">
-        <li class="p_algorithm_list__item">
-            <div class="p_algorithm_number">1.</div>
-            <div class="p_algorithm_contents"><p class="algorithm_name">パンを2まいとる</p><div class=""></div></div>
-        </li>
-        <li class="p_algorithm_list__item">
-            <div class="p_algorithm_number">4.</div>
-            <div class="p_algorithm_contents is-active">
-                <p class="algorithm_name">ピーナッツバターをぬるピーナッツバターをぬる</p>
-                <div class="material_items">
-                    <button><span class="material-icons-round delete">delete</span>削除</button>
-                    <button><span class="material-icons-round border">border_color</span>編集</button>
-                </div>
-            </div>
-        </li>
-    </ol>
-    <form action="{{ route('order') }}" method="get">
+
+    <ol class="algorithm_list"  id="order_list"></ol>
+
+    <form action="{{ route('order') }}" id="order_form" method="get">
         @csrf
-        <button class="btn-primary">完成!!</button>
     </form>
 </section>
 
 
-<section class="p_algorithm_form">
-    <div class="p_algorithm_add_textbox"><input type="text" class="input" placeholder="やることを入力"></div>
-    <div class="p_algorithm_add_button"><span class="material-icons-round">outbound</span></div>
+<section class="algorithm_form">
+    <div class="algorithm_add_textbox"><input type="text" class="input" placeholder="やることを入力" id="order_input"></div>
+    <div class="algorithm_add_button"><span class="material-icons-round">outbound</span></div>
 </section>
 
-<script src="{{ asset('js/jquery.min.js') }}"></script>
 <script src="{{ asset('js/Sortable-master/Sortable.min.js') }}"></script>
-<script src="{{ asset('js/function.js') }}" ></script>
-<script src="{{ asset('js/test.js') }}"></script>
+<script src="{{ asset('js/order_function.js') }}" ></script>
+<script src="{{ asset('js/order.js') }}"></script>
 @endsection

@@ -490,7 +490,7 @@ body {
   border-radius: 4px;
 }
 
-.btn, .btn-primary {
+.btn, .btn-primary, .btn-secondary {
   width: 100%;
   text-align: center;
   border-radius: 30px;
@@ -500,6 +500,13 @@ body {
 
 .btn-primary {
   background-color: #3A9FA8;
+  border-color: #62BBC3;
+  color: #fbfeff;
+  font-weight: 800;
+}
+
+.btn-secondary {
+  background-color: #fbfeff;
   border-color: #62BBC3;
   color: #fbfeff;
   font-weight: 800;
@@ -698,7 +705,7 @@ footer .version {
 }
 
 /* やることリスト入力画面 */
-.p_theme_title {
+.theme_title {
   width: 100vw;
   height: 30px;
   color: #fbfeff;
@@ -708,16 +715,16 @@ footer .version {
   text-align: center;
 }
 
-.p_theme_title__spacer {
+.theme_title__spacer {
   height: 30px;
   width: 100%;
 }
 
-.p_algorithm_head {
+.algorithm_head {
   font-size: 0.9rem;
 }
 
-.p_algorithm_form {
+.algorithm_form {
   width: 100vw;
   height: 60px;
   position: fixed;
@@ -730,11 +737,11 @@ footer .version {
   gap: 10px;
 }
 
-.p_algorithm_add_textbox {
+.algorithm_add_textbox {
   width: fit-content;
 }
 
-.p_algorithm_add_button {
+.algorithm_add_button {
   background-color: #fbfeff;
   color: #eb9718;
   border-radius: 100px;
@@ -745,20 +752,20 @@ footer .version {
   justify-content: center;
 }
 
-.p_algorithm_add_button span {
+.algorithm_add_button span {
   font-size: 42px !important;
 }
 
-.p_algorithm_list__item {
+.algorithm_list__item {
   display: flex;
   border-bottom: dashed 1px #3a9fa8a4;
 }
 
-.p_algorithm_list__item:nth-last-of-type(1) {
+.algorithm_list__item:nth-last-of-type(1) {
   border-bottom: dashed 1px transparent;
 }
 
-.p_algorithm_number {
+.algorithm_number {
   width: 25px;
   font-size: 16px;
   line-height: 22px;
@@ -766,13 +773,13 @@ footer .version {
   padding-bottom: 15px;
 }
 
-.p_algorithm_contents {
+.algorithm_contents {
   width: 100%;
   font-size: 16px;
   line-height: 22px;
 }
 
-.p_algorithm_contents.is-active {
+.algorithm_contents.is-active {
   background-color: white;
   color: #3A9FA8;
   font-weight: 600;
@@ -781,7 +788,7 @@ footer .version {
   margin-bottom: 10px;
 }
 
-.p_algorithm_contents .algorithm_name {
+.algorithm_contents .algorithm_name {
   width: 100%;
   padding-left: 15px;
   padding-top: 15px;
@@ -790,7 +797,7 @@ footer .version {
   font-weight: 600;
 }
 
-.p_algorithm_contents .material_items {
+.algorithm_contents .material_items {
   margin-top: 10px;
   width: 100%;
   height: auto;
@@ -799,7 +806,7 @@ footer .version {
   border-top: 2px dotted #3A9FA8;
 }
 
-.p_algorithm_contents .material_items button {
+.algorithm_contents .material_items button {
   display: flex;
   justify-content: center;
   width: 35%;
@@ -810,26 +817,26 @@ footer .version {
   color: #D8305E;
 }
 
-.p_algorithm_contents .material_items button:nth-last-of-type(1) {
+.algorithm_contents .material_items button:nth-last-of-type(1) {
   width: 65%;
   height: 60px;
   color: #3A9FA8;
   border-left: 2px dotted #3A9FA8;
 }
 
-.p_algorithm_contents .material_items button .material-icons-round {
+.algorithm_contents .material_items button .material-icons-round {
   width: 27px;
 }
 
-.p_algorithm_contents .material_items button .delete {
+.algorithm_contents .material_items button .delete {
   font-size: 24px;
 }
 
-.p_algorithm_contents .material_items button .border {
+.algorithm_contents .material_items button .border {
   font-size: 22px;
 }
 
-.p_algorithm_contents .material_items button p {
+.algorithm_contents .material_items button p {
   line-height: 15px;
   font-size: 15px;
   height: 15px;

@@ -106,7 +106,7 @@ footer{
 }
 
 /* やることリスト入力画面 */
-.p_theme_title{
+.theme_title{
     width: 100vw;
     height: 30px;
     color: $white;
@@ -115,14 +115,14 @@ footer{
     background-color: $sub_bg_color;
     text-align: center;
 }
-.p_theme_title__spacer{
+.theme_title__spacer{
     height: 30px;
     width: 100%;
 }
-.p_algorithm_head{
+.algorithm_head{
     font-size: 0.9rem;
 }
-.p_algorithm_form{
+.algorithm_form{
     width: 100vw;
     height: 60px;
     position: fixed;
@@ -134,10 +134,10 @@ footer{
     padding: 20px;
     gap: 10px;
 }
-.p_algorithm_add_textbox{
+.algorithm_add_textbox{
     width: fit-content;
 }
-.p_algorithm_add_button{
+.algorithm_add_button{
     background-color: $white;
     color: $second_color;
     border-radius: 100px;
@@ -150,17 +150,14 @@ footer{
         font-size: 42px !important;
     }
 }
-.p_algorithm_list{
-
-}
-.p_algorithm_list__item{
+.algorithm_list__item{
     display: flex;
     border-bottom: dashed 1px #3a9fa8a4;
     &:nth-last-of-type(1){
         border-bottom:  dashed 1px transparent;
     }
 }
-.p_algorithm_number{
+.algorithm_number{
     width: 25px;
     font-size: 16px;
     line-height: 22px;
@@ -168,7 +165,7 @@ footer{
     padding-bottom: 15px;
 
 }
-.p_algorithm_contents{
+.algorithm_contents{
     width: 100%;
     font-size: 16px;
     line-height: 22px;

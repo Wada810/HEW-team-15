@@ -1,8 +1,6 @@
-const insert = document.getElementById("order");
-const form = document.getElementById('send_order');
+const insert = document.getElementById("order_input");
+const form = document.getElementById('order_form');
 const ol =  document.getElementById('order_list');
-
-
 
 let order_cnt = 0;
 let rock = 0;
@@ -10,20 +8,37 @@ let fix_flag = 0;
 let disable = 0;
 
 insert.addEventListener('change', ()=>{
-// insert.addEventListener("focusout", ()=>{
-
+    /* 要素が一つ以上の時に完成ボタンを追加 */
+    if(document.getElementsByClassName("form_order").length == 0){
+        let complete_button = document.createElement("button");
+        complete_button.setAttribute("id","complete_button");
+        complete_button.setAttribute("class","btn-primary");
+        complete_button.textContent = "完成!!";
+        form.appendChild(complete_button);
+    }
 
     if(insert.value.trim() !== ""){
 
         // order_list(ulタグ)に指令を追加
         let li = document.createElement('li');
-        li.name = "";
-        
-        li.className = "ol_order";
+        li.className = "ol_order algorithm_list__item";
         li.classList.add(order_cnt);
-        li.textContent = insert.value ;
         ol.appendChild(li);
-    
+
+        let div_num = document.createElement('div');
+        div_num.className = "algorithm_number";
+        div_num.textContent = (order_cnt + 1) +".";
+        li.appendChild(div_num);
+
+        let div_contents = document.createElement('div');
+        div_contents.className = "algorithm_contents";
+        li.appendChild(div_contents);
+
+        let p = document.createElement('p');
+        p.className = "algorithm_name";
+        p.textContent = insert.value;
+        div_contents.appendChild(p);
+
         // send_order(formタグ)に指令をhiddenで追加
         let input = document.createElement('input');
         input.type = 'hidden';
@@ -31,60 +46,54 @@ insert.addEventListener('change', ()=>{
         input.className = "form_order";
         input.classList.add(order_cnt);
         input.value = insert.value ;
-    
+
         form.appendChild(input);
-        
-        disable = order_cnt;
-    
+
         order_cnt++
         // inputをリセット
         insert.value = "";
-    
+
         // クリックしたらfocus にする処理
-        
-        li.addEventListener('dblclick',function li_func(){
-            
+        li.addEventListener('click',function li_func(){
+
             // 初期
             if(rock == 0){
-                
                 rock = 1;
-                disable =  li.classList[1]
-    
-                let  focus = document.getElementsByClassName(li.classList[1]);
-                const  focus_point = focus[0];
-                focus_point.classList.add("focus");
-                
-                let p = document.createElement('p');
+
+                disable =  li.classList[1];
+
+                div_contents.classList.add('is-active');
                 p.id = "text";
-                p.textContent = focus_point.textContent;
-                focus_point.textContent = "";
-                focus_point.appendChild(p);
-                
+
+                div_material_items = document.createElement('div');
+                div_material_items.className = "material_items";
+                div_contents.appendChild(div_material_items);
+
                 // 削除
                 let del_button =  document.createElement('button');
                 del_button.id = "delete";
                 del_button.value = li.classList[1];
-                del_button.textContent = "削除";
-                focus_point.appendChild(del_button);
-    
+                div_material_items.appendChild(del_button);
+                del_button.innerHTML = '<span class="material-icons-round delete">delete</span>削除';
+
+
+
                 // 編集
                 let fix_button =  document.createElement('button');
                 fix_button.id = "fix";
                 fix_button.value = li.classList[1];
                 fix_button.textContent = "編集";
-                focus_point.appendChild(fix_button);
-    
+                div_material_items.appendChild(fix_button);
+                fix_button.innerHTML = '<span class="material-icons-round border">border_color</span>編集';
             }
-    
             else if(disable == li.classList[1]){
-                
                 // 元に戻す
                 let fix_button =  document.getElementById('fix');
                 let del_button =  document.getElementById('delete');
                 let text = document.getElementById("text");
-                console.log(text.textContent)
+
                 if(text.textContent.trim() == ""){
-                    
+
                     const group  = document.getElementsByClassName(del_button.value);
                     disable = 0;
                     rock = 0;
@@ -94,47 +103,54 @@ insert.addEventListener('change', ()=>{
                     group[0].remove();
                     return;
                 }
-    
-                li.textContent = text.textContent;
-                li.classList.remove("focus");
-                fix_button.remove();
-                del_button.remove();
-                text.remove();
+
+                p.textContent = text.textContent;
+                div_contents.classList.remove("is-active");
+                div_material_items.remove()
+                p.removeAttribute("id");
                 rock = 0;
                 fix_flag = 0;
+
                 return;
             }
-            
-    
+
             // 初期
             if(fix_flag == 0){
-    
+
                 const del = document.getElementById("delete");
                 del.addEventListener('click',(e) =>{
-                    
+
                     const group  = document.getElementsByClassName(del.value);
+                    console.log(group);
                     disable = 0;
                     rock = 0;
                     fix_flag = 0;
                     // ol　+ form で計２回
                     group[0].remove();
                     group[0].remove();
-                    
+
+                    //完成ボタンを消す
+                    if(document.getElementsByClassName("form_order").length == 0){
+                        document.getElementById("complete_button").remove();
+                    }
+
                 });
-    
+
+
+
                 const fix = document.getElementById("fix");
-                
+
                 fix.addEventListener('click',(e) =>{
-                    e.stopPropagation();
+
                     fix.disabled = true;
                     const group = document.getElementsByClassName(fix.value);
-                    
+
                     let fix_point = document.getElementById("text");
                     // 編集可能にする
                     fix_point.innerHTML = '<input type="text" id="fix_order"  value="'+fix_point.textContent +'" ></input>'
-                    
+
                     const fix_text  = document.getElementById("fix_order");
-                    
+
                     // 編集後の処理
                     group[0].addEventListener("focusout", function fix_func(){
                         console.log(fix_text.value)
@@ -157,19 +173,15 @@ insert.addEventListener('change', ()=>{
                         fix.disabled = false;
                         this.removeEventListener('focusout', fix_func);
                     } ,false);
-                    
+
                 });
-                
+
                 fix_flag = 1;
             }
-            
-            
         })
     }else{
         insert.value = "";
     }
-    
-    
 } ,false);
 
 sort()

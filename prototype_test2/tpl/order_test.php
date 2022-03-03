@@ -11,7 +11,7 @@
 
         <ol id="order_list">
         
-            
+        
 
         </ol>
         
@@ -27,9 +27,8 @@
         <button type="submit" name="flg" value="on" >指令書確認</button>
     </form>
 
-    <script src="./Sortable-master/Sortable.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="./js/function.js" ></script>
+<script src="./Sortable-master/Sortable.min.js"></script>
+<script src="./js/function.js" ></script>
 <script src="./js/test.js" ></script>
 
 
