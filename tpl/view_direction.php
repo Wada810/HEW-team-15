@@ -44,6 +44,7 @@
             </div>
         </div>
         <div id="all_modal">
+            <div class="all_theme_cover"><p class="all_theme">ピーナッツバターサンドを作る！</p></div>
             <ul class="m_view_list">
                 <li class="list_order">パンをにまいとる</li>
                 <li class="list_order">パンをにまいとる</li>

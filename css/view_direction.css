@@ -187,7 +187,17 @@ main{
     text-align: left;
     margin: 0 auto;
 }
-
+.all_theme_cover{
+    padding-top: 6%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: center;
+}
+.all_theme{
+    color: #2C91C5;
+    font-size: 16px;
+    font-weight: 900;
+}
 
 #judge_modal{
     width: 100%;
