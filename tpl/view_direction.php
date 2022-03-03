@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="./css/view_direction.css">
     <link rel="stylesheet" href="./css/foundation">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <title>指示書確認</title>
 </head>
 <body>
     <header>
-        <button class="back_button" type="button">戻る</button>
+        <button class="back_button" type="button"><span class="material-icons-outlined">undo</span></button>
         <h1>指令を登録</h1>
     </header>
     <main>
@@ -43,6 +44,7 @@
             </div>
         </div>
         <div id="all_modal">
+            <div class="all_theme_cover"><p class="all_theme">ピーナッツバターサンドを作る！</p></div>
             <ul class="m_view_list">
                 <li class="list_order">パンをにまいとる</li>
                 <li class="list_order">パンをにまいとる</li>
