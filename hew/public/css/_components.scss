@@ -1,0 +1,15 @@
+@import "./variable";
+.s{
+    font-size: 0.8rem;
+}
+.l{
+    font-size: 2rem;
+}
+.btn{
+    background-color: $white;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    border-radius: 4px;
+}

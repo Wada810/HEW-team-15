@@ -1,33 +1,42 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-@if (Route::has('login'))
-    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-        @auth
-            <a href="{{ url('/mypage') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">マイページ</a>
-            <form action="{{ route('logout') }}" method="POST">
-                @csrf
-                <button>ログアウト</button>
-            </form>
-        @else
-            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">ログイン</a>
+@extends("layouts.layout")
 
-            @if (Route::has('register'))
-            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">新規登録</a>
+@section('css_link')
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+@endsection
+
+@section('title', 'ホーム')
+
+@section('body')
+    <div class="l_home">
+        <header class="l_home_header">
+            <a href="" class="btn s">お問い合わせ</a>
+            @if (Route::has('login'))
+                @auth
+                    <a href="mypage" class="p_home_user_icon">
+                        <img src="" alt="">
+                        <p>プロフィール</p>
+                    </a>
+                @endauth
             @endif
-        @endauth
+        </header>
+        <div class="l_home_culumn">
+            <h1 class="p_home_logo"><img src="img/3.svg" alt="algo"></h1>
+            @if (Route::has('login'))
+                @auth
+                    <a href="" class="p_home_link">あたらしく作る</a>
+                    <a href="" class="p_home_link">みんなの指示書をみる</a>
+                    <a href="" class="p_home_link">あそびかた</a>
+                @else
+                    <a href="{{ route('login') }}" class="p_home_link">ログイン</a>
+                    @if (Route::has('register'))
+                    <a href="{{ route('register') }}" class="p_home_link">新規登録</a>
+                    @endif
+                @endauth
+            @endif
+        </div>
+        <footer>
+            <address class="s alp_font">&copy; 2022 algo.</address>
+            <div class="version alp_font">v1.0</div>
+        </footer>
     </div>
-@endif
-
-<div>
-    <a href="pray">あそぶ</a><br>
-    <a href="seach">さがす</a>
-</div>
-</body>
-</html>
+@endsection

@@ -16,7 +16,7 @@ use App\Http\Controllers\MypageController;
 */
 
 Route::get('/', function () {
-    return view('title');
+    return view('home');
 });
 
 Route::get('home', function () {

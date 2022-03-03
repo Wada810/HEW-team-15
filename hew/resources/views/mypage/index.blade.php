@@ -7,7 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="home">home</a>
+<a href="home">home</a>
+<form action="logout" method="post">
+    @csrf
+    <button>ログアウト</button>
+</form>
 <div>username:{{$user["name"]}}</div>
 <div>level:{{$user["level"]}}</div>
 <div>exp:{{$user["total_exp"]}}</div>
