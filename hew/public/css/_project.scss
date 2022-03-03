@@ -104,3 +104,133 @@ footer{
     text-align: right;
     font-size: 0.8rem;
 }
+
+/* やることリスト入力画面 */
+.p_theme_title{
+    width: 100vw;
+    height: 30px;
+    color: $white;
+    position: fixed;
+    top: 59px;
+    background-color: $sub_bg_color;
+    text-align: center;
+}
+.p_theme_title__spacer{
+    height: 30px;
+    width: 100%;
+}
+.p_algorithm_head{
+    font-size: 0.9rem;
+}
+.p_algorithm_form{
+    width: 100vw;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $sub_bg_color;
+    padding: 20px;
+    gap: 10px;
+}
+.p_algorithm_add_textbox{
+    width: fit-content;
+}
+.p_algorithm_add_button{
+    background-color: $white;
+    color: $second_color;
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span{
+        font-size: 42px !important;
+    }
+}
+.p_algorithm_list{
+
+}
+.p_algorithm_list__item{
+    display: flex;
+    border-bottom: dashed 1px #3a9fa8a4;
+    &:nth-last-of-type(1){
+        border-bottom:  dashed 1px transparent;
+    }
+}
+.p_algorithm_number{
+    width: 25px;
+    font-size: 16px;
+    line-height: 22px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+.p_algorithm_contents{
+    width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+
+    &.is-active{
+        background-color: white;
+        color: #3A9FA8;
+        font-weight: 600;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    .algorithm_name{
+        width: 100%;
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-right: 15px;
+        font-weight: 600;
+    }
+
+    .material_items{
+        margin-top: 10px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        border-top: 2px dotted #3A9FA8;
+
+        button{
+            display: flex;
+            justify-content: center;
+            width: 35%;
+            height: 60px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 15px;
+            color: #D8305E;
+
+            &:nth-last-of-type(1){
+                width: 65%;
+                height: 60px;
+                color: #3A9FA8;
+                border-left: 2px dotted #3A9FA8;
+
+            }
+            .material-icons-round{
+                width: 27px
+            }
+            .delete{
+                font-size: 24px;
+            }
+            .border{
+                font-size: 22px;
+            }
+            p{
+                line-height: 15px;
+                font-size: 15px;
+                height: 15px;
+            }
+        }
+    }
+}

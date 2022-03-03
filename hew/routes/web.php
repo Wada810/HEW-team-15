@@ -30,4 +30,8 @@ Route::get('pray/theme', function () {
     return view('pray.theme');
 })->name('theme');
 
+Route::get('pray/order', function () {
+    return view('pray.order');
+})->name('order');
+
 require __DIR__.'/auth.php';
