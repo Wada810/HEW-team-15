@@ -231,3 +231,12 @@ footer{
         }
     }
 }
+
+.p_button_box{
+    background: $main_bg_color;
+    position: fixed;
+    left: 0;
+    bottom: 59px;
+    width: 100vw;
+    padding: 20px;
+}

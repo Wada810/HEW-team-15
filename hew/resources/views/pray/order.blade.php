@@ -21,9 +21,11 @@
 
     <ol class="algorithm_list"  id="order_list"></ol>
 
-    <form action="{{ route('order') }}" id="order_form" method="get">
-        @csrf
-    </form>
+    <div class="p_button_box">
+        <form action="{{ route('order') }}" id="order_form" method="get">
+            @csrf
+        </form>
+    </div>
 </section>
 
 

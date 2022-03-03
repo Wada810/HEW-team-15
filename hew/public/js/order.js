@@ -6,13 +6,15 @@ let order_cnt = 0;
 let rock = 0;
 let fix_flag = 0;
 let disable = 0;
+let alg_num = 0;
 
 insert.addEventListener('change', ()=>{
+    alg_num = document.getElementsByClassName("ol_order").length;
     /* 要素が一つ以上の時に完成ボタンを追加 */
     if(document.getElementsByClassName("form_order").length == 0){
         let complete_button = document.createElement("button");
         complete_button.setAttribute("id","complete_button");
-        complete_button.setAttribute("class","btn-primary");
+        complete_button.setAttribute("class","btn-secondary");
         complete_button.textContent = "完成!!";
         form.appendChild(complete_button);
     }
@@ -21,13 +23,15 @@ insert.addEventListener('change', ()=>{
 
         // order_list(ulタグ)に指令を追加
         let li = document.createElement('li');
-        li.className = "ol_order algorithm_list__item";
+        li.className = "ol_order";
         li.classList.add(order_cnt);
+        li.classList.add("algorithm_list__item");
+
         ol.appendChild(li);
 
         let div_num = document.createElement('div');
         div_num.className = "algorithm_number";
-        div_num.textContent = (order_cnt + 1) +".";
+        div_num.textContent = (alg_num + 1) +".";
         li.appendChild(div_num);
 
         let div_contents = document.createElement('div');
@@ -77,12 +81,10 @@ insert.addEventListener('change', ()=>{
                 del_button.innerHTML = '<span class="material-icons-round delete">delete</span>削除';
 
 
-
                 // 編集
                 let fix_button =  document.createElement('button');
                 fix_button.id = "fix";
                 fix_button.value = li.classList[1];
-                fix_button.textContent = "編集";
                 div_material_items.appendChild(fix_button);
                 fix_button.innerHTML = '<span class="material-icons-round border">border_color</span>編集';
             }
@@ -119,9 +121,9 @@ insert.addEventListener('change', ()=>{
 
                 const del = document.getElementById("delete");
                 del.addEventListener('click',(e) =>{
+                    e.stopPropagation();
 
                     const group  = document.getElementsByClassName(del.value);
-                    console.log(group);
                     disable = 0;
                     rock = 0;
                     fix_flag = 0;
@@ -134,25 +136,29 @@ insert.addEventListener('change', ()=>{
                         document.getElementById("complete_button").remove();
                     }
 
+                    update();
                 });
-
-
 
                 const fix = document.getElementById("fix");
 
                 fix.addEventListener('click',(e) =>{
-
+                    e.stopPropagation();
                     fix.disabled = true;
                     const group = document.getElementsByClassName(fix.value);
 
                     let fix_point = document.getElementById("text");
                     // 編集可能にする
-                    fix_point.innerHTML = '<input type="text" id="fix_order"  value="'+fix_point.textContent +'" ></input>'
+                    fix_point.innerHTML = '<input type="text" id="fix_order" sutofocus value="'+fix_point.textContent +'" ></input>'
+                    fix_point.focus();
+                    document.getElementById("fix_order").addEventListener("click", (e)=>{
+                        e.stopPropagation();
+                    })
 
                     const fix_text  = document.getElementById("fix_order");
 
                     // 編集後の処理
                     group[0].addEventListener("focusout", function fix_func(){
+                        console.log(rock);
                         console.log(fix_text.value)
                         if(fix_text.value.trim() == ""){
                             fix_button =  document.getElementById('fix');

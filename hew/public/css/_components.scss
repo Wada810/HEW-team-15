@@ -31,8 +31,8 @@
 .btn-secondary{
     @extend .btn;
     background-color: $white;
-    border-color: $button_border;
-    color: $white;
+    border-color: $sub_bg_color;
+    color: $text_color;
     font-weight: 800;
 }
 

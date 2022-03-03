@@ -507,8 +507,8 @@ body {
 
 .btn-secondary {
   background-color: #fbfeff;
-  border-color: #62BBC3;
-  color: #fbfeff;
+  border-color: #3A9FA8;
+  color: #3A9FA8;
   font-weight: 800;
 }
 
@@ -582,6 +582,8 @@ body {
 
 .l_algorithm {
   padding: 10px 30px;
+  height: calc(100vh - 250px);
+  overflow-y: auto;
 }
 
 footer {
@@ -840,4 +842,13 @@ footer .version {
   line-height: 15px;
   font-size: 15px;
   height: 15px;
+}
+
+.p_button_box {
+  background: #E2EFEF;
+  position: fixed;
+  left: 0;
+  bottom: 59px;
+  width: 100vw;
+  padding: 20px;
 }
