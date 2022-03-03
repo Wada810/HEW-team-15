@@ -18,12 +18,12 @@
     
     <br>
     <input type="text" name="order" value="" id="order"  >
-    <p id="log"></p>
+
     <form action="order_check.php" method="post" id="send_order">
         
-
+        
+        
         <br>
-
         <button type="submit" name="flg" value="on" >指令書確認</button>
     </form>
 
