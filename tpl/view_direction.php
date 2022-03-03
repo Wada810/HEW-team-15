@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="./css/view_direction.css">
     <link rel="stylesheet" href="./css/foundation">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <title>指示書確認</title>
 </head>
 <body>
     <header>
-        <button class="back_button" type="button">戻る</button>
+        <button class="back_button" type="button"><span class="material-icons-outlined">undo</span></button>
         <h1>指令を登録</h1>
     </header>
     <main>
