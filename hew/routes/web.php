@@ -26,4 +26,8 @@ Route::get('home', function () {
 Route::get('mypage', [MypageController::class, 'index'])->middleware("auth")->name('mypage');
 
 
+Route::get('pray/theme', function () {
+    return view('pray.theme');
+})->name('theme');
+
 require __DIR__.'/auth.php';

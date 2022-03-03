@@ -458,6 +458,7 @@ template {
 body {
   font-family: 'M PLUS 2', sans-serif;
   font-size: 16px;
+  font-weight: 600;
   color: #3A9FA8;
   background-color: #E2EFEF;
   line-height: 1.5;
@@ -480,13 +481,43 @@ body {
   font-size: 2rem;
 }
 
-.btn {
-  background-color: #f7fbfd;
+.inquery_btn {
+  background-color: #fbfeff;
   height: 44px;
   display: flex;
   align-items: center;
   padding: 0 14px;
   border-radius: 4px;
+}
+
+.btn, .btn-primary {
+  width: 100%;
+  text-align: center;
+  border-radius: 30px;
+  border: solid 4px #3A9FA8;
+  padding: 12px;
+}
+
+.btn-primary {
+  background-color: #3A9FA8;
+  border-color: #62BBC3;
+  color: #fbfeff;
+}
+
+.input-text {
+  display: block;
+  width: 100%;
+  background-color: #fbfeff;
+  color: #3A9FA8;
+  border-radius: 30px;
+  padding: 12px 24px;
+  color: #3A9FA8;
+  border: 2px solid rgba(0, 0, 0, 0);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.input-text:focus {
+  border-color: #eb9618ab;
 }
 
 .l_home_header {
@@ -505,6 +536,35 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.l_pray_header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.l_pray_header__spacer {
+  width: 100vw;
+  height: 60px;
+}
+
+.l_theme_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - 60px);
+  padding: 40px;
+}
+
+.l_theme_main__title {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -571,4 +631,59 @@ footer .version {
   10% {
     transform: translateY(0px);
   }
+}
+
+/* プレイ画面 */
+/* テーマ入力 */
+.p_pray_header {
+  background-color: #3A9FA8;
+  color: #fbfeff;
+}
+
+.p_pray_header__back {
+  color: #3A9FA8;
+  background-color: #fbfeff;
+  border-radius: 100px;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.p_pray_header__back span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.p_pray_header__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.p_theme_main {
+  margin: 60px 0;
+}
+
+.p_theme_main h1 {
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+
+.p_theme_main p {
+  font-size: 0.9;
+}
+
+.p_theme_input {
+  margin-bottom: 60px;
+}
+
+.p_theme_input__letter_counter {
+  width: 100%;
+  text-align: right;
+  font-size: 0.8rem;
 }
