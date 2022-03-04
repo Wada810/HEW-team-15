@@ -13,9 +13,10 @@ class ThemeController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function index()
+    public function post(Request $request)
     {
-        $theme = $_REQUEST["theme"] ?? "";
-        return view('play/theme',compact("theme"));
+        $request->flash();
+
+        return redirect()->route("play/order");
     }
 }

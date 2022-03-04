@@ -32,19 +32,18 @@ Route::get('mypage', [MypageController::class, 'index'])->middleware("auth")->na
 Route::get('play/theme', function () {
     return view('play.theme');
 })->name('theme');
-Route::post('play/theme', [ThemeController::class, 'index']);
+Route::post('play/theme', [ThemeController::class, 'post']);
 
 
 Route::get('play/order', function () {
     return view('play.order');
 })->name('order');
-Route::post('play/order', [OrderController::class, 'index'])->name('order');
+Route::post('play/order', [OrderController::class, 'post']);
 
 
 Route::get('play/instraction', function () {
     return view('play.instraction');
 })->name('instraction');
-
-Route::post('play/instraction', [InstractionController::class, 'index']);
+Route::post('play/instraction', [InstractionController::class, 'post']);
 
 require __DIR__.'/auth.php';

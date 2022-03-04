@@ -22,7 +22,7 @@
     <ol class="algorithm_list"  id="order_list"></ol>
 
     <div class="p_button_box">
-        <form action="{{ route('instraction') }}" id="order_form" method="post">
+        <form id="order_form" method="post">
             @csrf
         </form>
     </div>

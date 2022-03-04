@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
+use Symfony\Component\VarDumper\VarDumper;
+
 class OrderController extends Controller
 {
     /**
@@ -16,11 +18,6 @@ class OrderController extends Controller
     public function index(Request $request)
     {
         $request->flash();
-
-        $data = [
-            'theme' => $request->post('theme'),
-        ];
-        $theme = $_REQUEST["theme"] ?? "";
-        return view('play/order',compact("data"));
+        return view('play/order',compact("request"));
     }
 }

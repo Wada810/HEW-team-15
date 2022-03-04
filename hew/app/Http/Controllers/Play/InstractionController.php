@@ -13,8 +13,9 @@ class InstractionController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('play/instraction');
+        $request->flash();
+        return view('play/order',compact("instraction"));
     }
 }

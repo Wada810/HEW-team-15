@@ -13,7 +13,7 @@
 </header>
 <div class="l_play_header__spacer"></div>
 
-<form action="{{ route('order') }}" method="post">
+<form method="post">
     @csrf
     <main class="l_theme_main">
         <div class="l_theme_main__title p_theme_main">
