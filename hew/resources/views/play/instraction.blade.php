@@ -31,9 +31,9 @@
                 <div class="first_order sub_order"><p class="first_number"></p><p class="first_order_val sub_val"></p></div>
                 <div class="second_order sub_order"><p class="second_number"></p><p class="second_order_val sub_val"></p></div>
             </div>
-            <p class="up button"><span class="material-icons-round">expand_less</span></p>
+            <p class="up button"><span class="material-icons-round up-arrow">expand_less</span></p>
             <div class="active_order"><div class="active_cover"><p class="active_number number"></p><p class="active_order_val"></p></div></div>
-            <p class="down button"><span class="material-icons-round">keyboard_arrow_down</span></p>
+            <p class="down button"><span class="material-icons-round down-arrow">keyboard_arrow_down</span></p>
             <ul class="view_list">
                 <li class="order">パンを2まいとる</li>
                 <li class="order">バターナイフをとる</li>
@@ -44,7 +44,7 @@
                 <li class="order">バターナイフをとる4</li>
             </ul>
             <div class="sub_action">
-                <p class="unopen">・・・</p>
+                <p class="unopen"><span class="material-icons-round">more_vert</span></p>
                 <p class="all_list">一覧を見る</p>
             </div>
             <button class="com_button" type="button">結果へ</button>
