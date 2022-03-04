@@ -26,10 +26,10 @@
                     <a href="" class="p_home_link">みんなの指示書をみる</a>
                     <a href="" class="p_home_link">あそびかた</a>
                 @else
-                    <a href="{{ route('login') }}" class="p_home_link">ログイン</a>
                     @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="p_home_link">新規登録</a>
+                    <a href="{{ route('register') }}" class="btn-primary mb-s">新規登録</a>
                     @endif
+                    <a href="{{ route('login') }}" class="btn-secondary">ログイン</a>
                 @endauth
             @endif
         </div>

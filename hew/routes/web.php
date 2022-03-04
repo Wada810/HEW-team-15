@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\MypageController;
+use App\Http\Controllers\Play\ThemeController;
+use App\Http\Controllers\Play\OrderController;
+use App\Http\Controllers\Play\InstractionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,13 +28,23 @@ Route::get('home', function () {
 
 Route::get('mypage', [MypageController::class, 'index'])->middleware("auth")->name('mypage');
 
-
-Route::get('pray/theme', function () {
-    return view('pray.theme');
+/* プレイ画面 */
+Route::get('play/theme', function () {
+    return view('play.theme');
 })->name('theme');
+Route::post('play/theme', [ThemeController::class, 'index']);
 
-Route::get('pray/order', function () {
-    return view('pray.order');
+
+Route::get('play/order', function () {
+    return view('play.order');
 })->name('order');
+Route::post('play/order', [OrderController::class, 'index'])->name('order');
+
+
+Route::get('play/instraction', function () {
+    return view('play.instraction');
+})->name('instraction');
+
+Route::post('play/instraction', [InstractionController::class, 'index']);
 
 require __DIR__.'/auth.php';

@@ -5,6 +5,15 @@
 .l{
     font-size: 2rem;
 }
+.mb-s{
+    margin-bottom: 10px;
+}
+.mb-m{
+    margin-bottom: 20px;
+}
+.mb-l{
+    margin-bottom: 30px;
+}
 .inquery_btn{
     background-color: $white;
     height: 44px;
@@ -18,7 +27,7 @@
     text-align: center;
     border-radius: 30px;
     border: solid 4px $sub_bg_color;
-    padding: 12px;
+    padding: 8px;
 }
 
 .btn-primary{

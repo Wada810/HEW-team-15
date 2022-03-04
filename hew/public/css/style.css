@@ -481,6 +481,18 @@ body {
   font-size: 2rem;
 }
 
+.mb-s {
+  margin-bottom: 10px;
+}
+
+.mb-m {
+  margin-bottom: 20px;
+}
+
+.mb-l {
+  margin-bottom: 30px;
+}
+
 .inquery_btn {
   background-color: #fbfeff;
   height: 44px;
@@ -495,7 +507,7 @@ body {
   text-align: center;
   border-radius: 30px;
   border: solid 4px #3A9FA8;
-  padding: 12px;
+  padding: 8px;
 }
 
 .btn-primary {
@@ -525,7 +537,7 @@ body {
 }
 
 .input:focus, .input-thick:focus {
-  border-color: #eb9618ab;
+  border-color: #eb9718ab;
 }
 
 .input-thick {
@@ -538,7 +550,7 @@ body {
 }
 
 .l_home {
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   overflow: hidden;
   padding: 30px;
@@ -551,7 +563,7 @@ body {
   align-items: center;
 }
 
-.l_pray_header {
+.l_play_header {
   position: fixed;
   top: 0;
   width: 100vw;
@@ -561,7 +573,7 @@ body {
   justify-content: center;
 }
 
-.l_pray_header__spacer {
+.l_play_header__spacer {
   width: 100vw;
   height: 60px;
 }
@@ -630,7 +642,7 @@ footer .version {
 }
 
 .p_home_link {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.4rem;
   margin-bottom: 30px;
 }
@@ -653,12 +665,12 @@ footer .version {
 
 /* プレイ画面 */
 /* テーマ入力 */
-.p_pray_header {
+.p_play_header {
   background-color: #3A9FA8;
   color: #fbfeff;
 }
 
-.p_pray_header__back {
+.p_play_header__back {
   color: #3A9FA8;
   background-color: #fbfeff;
   border-radius: 100px;
@@ -670,14 +682,14 @@ footer .version {
   transform: translateY(-50%);
 }
 
-.p_pray_header__back span {
+.p_play_header__back span {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
 
-.p_pray_header__title {
+.p_play_header__title {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -760,7 +772,7 @@ footer .version {
 
 .algorithm_list__item {
   display: flex;
-  border-bottom: dashed 1px #3a9fa8a4;
+  border-bottom: dashed 1px #3A9FA8;
 }
 
 .algorithm_list__item:nth-last-of-type(1) {
@@ -782,7 +794,7 @@ footer .version {
 }
 
 .algorithm_contents.is-active {
-  background-color: white;
+  background-color: #fbfeff;
   color: #3A9FA8;
   font-weight: 600;
   border-radius: 5px;
@@ -816,7 +828,7 @@ footer .version {
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 15px;
-  color: #D8305E;
+  color: #EE3F7A;
 }
 
 .algorithm_contents .material_items button:nth-last-of-type(1) {
@@ -844,11 +856,15 @@ footer .version {
   height: 15px;
 }
 
-.p_button_box {
+.p_button_box, .p_button_box-only {
   background: #E2EFEF;
   position: fixed;
   left: 0;
   bottom: 59px;
   width: 100vw;
   padding: 20px;
+}
+
+.p_button_box-only {
+  bottom: 0;
 }

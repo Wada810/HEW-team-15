@@ -4,16 +4,16 @@
 
 @section('body')
 
-<header class="l_pray_header p_pray_header">
-    <a href="{{ route('theme') }}" class="p_pray_header__back"><span class="material-icons-round">undo</span></a>
-    <div class="p_pray_header__title">
+<header class="l_play_header p_play_header">
+    <a href="{{ route('theme') }}" class="p_play_header__back"><span class="material-icons-round">undo</span></a>
+    <div class="p_play_header__title">
         <span class="material-icons-round">library_books</span>
         <span>やることリストを登録</span>
     </div>
 </header>
-<div class="l_pray_header__spacer"></div>
+<div class="l_play_header__spacer"></div>
 
-<div class="theme_title">theme</div>
+<div class="theme_title">{{old('theme')}}</div>
 <div class="theme_title__spacer"></div>
 
 
@@ -22,7 +22,7 @@
     <ol class="algorithm_list"  id="order_list"></ol>
 
     <div class="p_button_box">
-        <form action="{{ route('order') }}" id="order_form" method="get">
+        <form action="{{ route('instraction') }}" id="order_form" method="post">
             @csrf
         </form>
     </div>

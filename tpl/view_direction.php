@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.scss">
     <link rel="stylesheet" href="./css/view_direction.css">
-    <link rel="stylesheet" href="./css/foundation">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <title>指示書確認</title>
@@ -17,6 +15,7 @@
         <h1>指令を登録</h1>
     </header>
     <main>
+
         <div id="view_home">
             <div class="theme_cover"><p class="theme">ピーナッツバターサンドを作る！</p></div>
             <div class="view">
@@ -43,6 +42,7 @@
                 <button class="com_button" type="button">結果へ</button>
             </div>
         </div>
+
         <div id="all_modal">
             <div class="all_theme_cover"><p class="all_theme">ピーナッツバターサンドを作る！</p></div>
             <ul class="m_view_list">
