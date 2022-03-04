@@ -46,12 +46,11 @@ h1{
 }
 
 main{
+    position: relative;
     width: 100%;
-    height: 87%;
     text-align: center;
     margin: 0 auto;
     color: #1794D5;
-    position: relative;
 }
 
 .theme_cover{
@@ -79,10 +78,10 @@ main{
 }
 .sub_order{
     width: 100%;
+    height: 60px;
     display: flex;
+    align-items: center;
     border-bottom: 2px dotted #2C91C5;
-    padding-top: 3%;
-    padding-bottom: 3%;
 }
 .number{
     text-align: left;
@@ -109,7 +108,7 @@ main{
 }
 .active_cover{
     width: 90%;
-    height: 80%;
+    height: 150px;
     padding-top: 8%;
     padding-bottom: 8%;
     display: flex;
@@ -133,17 +132,17 @@ main{
     margin: 0 0 20% 0;
 }
 .unopen{
-    font-size: 60px;
-    letter-spacing: -35px;
+    margin: 40px 0 0 0;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
-    background: #005aa7; /* fallback for old browsers */
-    background: -webkit-linear-gradient(right, #005aa7, #fffde4);
+    background: #005aa7;
+    /* fallback for old browsers */
     background: linear-gradient(to right, #005aa7, #fffde4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transform: rotate(90deg);
     border: none;
+    z-index: -100;
 }
 .all_list{
     position: absolute;
@@ -159,6 +158,7 @@ main{
     display: inline-flex;
     vertical-align: middle;
     font-size: 250% !important;
+    z-index: -100 !important;
 }
 
 .com_button{
@@ -203,11 +203,12 @@ main{
 
 #judge_modal{
     width: 100%;
-    height: 150%;
+    height: 1500px;
     display: none;
     background-color: #49b6ecc0;
-    position: absolute;
-    top: -8%;
+    position: fixed;
+    top: 89px;
+    overflow-y: hidden;
 }
 
 .theme_view{
