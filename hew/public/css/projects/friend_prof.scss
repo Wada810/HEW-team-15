@@ -53,6 +53,7 @@ html {
     width: 100%;
     height: 100%;
     padding-top: 60px;
+    font-size: 0.8rem;
   }
   
   #prof {
@@ -91,13 +92,14 @@ html {
     width: 100%;
     height: 100%;
     text-align: center;
+    padding-top: 5vh;
   }
   .prof_cover {
     position: relative;
     width: 100px;
     height: 100px;
     border-radius: 50px;
-    margin: 11% auto 0 auto;
+    margin: 0 auto 0 auto;
   }
   .prof_img {
     border-radius: 50px;
@@ -128,7 +130,7 @@ html {
   }
   
   .name {
-    margin: 3% 0 3% 0;
+    margin: 2vh 0 1vh 0;
     letter-spacing: 2px;
     font-weight: bold;
     color: $sub_bg_color;
@@ -291,7 +293,7 @@ html {
   
   .sort_cover {
     width: 90%;
-    font-size: 13px;
+    font-size: 0.6rem;
     padding-bottom: 2%;
     display: flex;
     justify-content: flex-end;
@@ -311,8 +313,8 @@ html {
   }
   .todo_list_cover {
     width: 100%;
-    height: 100%;
-    overflow-y: scroll;
+    height: 40vh;
+    overflow-y: auto;
   }
   .todo_list {
     width: 80%;
@@ -324,6 +326,7 @@ html {
     border-left: 15px solid $sub_bg_color;
     border-radius: 5px;
     background-color: #fff;
+    font-size: 0.8rem;
   }
   .top {
     width: 100%;
@@ -333,8 +336,7 @@ html {
     padding-top: 3%;
     padding-bottom: 3%;
     border-bottom: 2px dotted $sub_bg_color;
-    font-size: 800;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
   .todo_theme {
   }
@@ -348,9 +350,10 @@ html {
     padding-bottom: 3%;
     display: flex;
     justify-content: space-between;
+    font-size: 0.6rem;
   }
   .cross {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
   .lines_cover {
     display: flex;
@@ -359,7 +362,7 @@ html {
   .lines_icon {
   }
   .lines {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
   .fav_cover {
     display: flex;
@@ -370,13 +373,13 @@ html {
   .fav_icon {
   }
   .fav {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
   .data {
     display: flex;
     align-items: flex-end;
     padding-right: 6%;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     font-weight: 600;
   }
   .year {
@@ -505,7 +508,7 @@ html {
   
   /* 友達のマイページ */
   .star_cover{
-    margin: 5vh auto 0 auto;
+    margin: 1vh auto 0 auto;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -519,14 +522,15 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 0.6rem;
   }
   
   .lines_num_cover{
     display: flex;
     align-items: center;
+    font-size: 0.6rem;
   }
   
   .line_num{
     padding-left: 20%;
-    font-size: 0.8rem;
   }
