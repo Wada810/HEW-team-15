@@ -9,8 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Rounded -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"rel="stylesheet">
+<<<<<<< HEAD
     <link rel="stylesheet" href="./css/style.scss">
     <link rel="stylesheet" href="./css/add.css">
+=======
+    <link rel="stylesheet" href="../css/style.scss">
+    <link rel="stylesheet" href="../css/add.css">
+>>>>>>> db7e59579c55df7a7bec0af782cf146191d91669
     <title>Document</title>
 </head>
 <body>
@@ -34,7 +39,11 @@
                         <div class="algorithm_number">1.</div>
                         <div class="algorithm_contents"><p class="algorithm_name">パンを2まいとる</p></div>
                     </li> -->
+<<<<<<< HEAD
                     
+=======
+
+>>>>>>> db7e59579c55df7a7bec0af782cf146191d91669
                     <!-- <li class="ol_order 0">
                         <div class="algorithm_number">1.</div>
                         <div class="algorithm_contents is-active">
@@ -55,7 +64,11 @@
 
                 <div class="section_button"><button type="">完成!!!</button></div>
             </form>
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> db7e59579c55df7a7bec0af782cf146191d91669
         </section>
         <div class="footer"></div>
         <footer>
@@ -66,8 +79,14 @@
         </footer>
     </article>
 
+<<<<<<< HEAD
 <script src="./Sortable-master/Sortable.min.js"></script>
 <script src="./js/function.js" ></script>
 <script src="./js/order.js" ></script>
+=======
+<script src="../Sortable-master/Sortable.min.js"></script>
+<script src="../js/function.js" ></script>
+<script src="../js/order.js" ></script>
+>>>>>>> db7e59579c55df7a7bec0af782cf146191d91669
 </body>
 </html>

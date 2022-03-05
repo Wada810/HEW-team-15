@@ -1,0 +1,57 @@
+@import "./variable";
+.s{
+    font-size: 0.8rem;
+}
+.l{
+    font-size: 2rem;
+}
+.inquery_btn{
+    background-color: $white;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    border-radius: 4px;
+}
+.btn{
+    width: 100%;
+    text-align: center;
+    border-radius: 30px;
+    border: solid 4px $sub_bg_color;
+    padding: 12px;
+}
+
+.btn-primary{
+    @extend .btn;
+    background-color: $sub_bg_color;
+    border-color: $button_border;
+    color: $white;
+    font-weight: 800;
+}
+.btn-secondary{
+    @extend .btn;
+    background-color: $white;
+    border-color: $button_border;
+    color: $white;
+    font-weight: 800;
+}
+
+.input{
+    display: block;
+    width: 100%;
+    background-color: $white;
+    color: $sub_bg_color;
+    border-radius: 30px;
+    color: $text_color;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition: background-color 0.3s, border-color 0.3s;
+    padding: 6px 12px;
+    &:focus{
+        //background-color: #e2edf2;
+        border-color: $input_border;
+    }
+}
+.input-thick{
+    @extend .input;
+    padding: 12px 24px;
+}

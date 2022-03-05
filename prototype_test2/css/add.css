@@ -41,8 +41,11 @@
 }
 
 #algorithm #algorithm_flame ol li {
+<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
+=======
+>>>>>>> db7e59579c55df7a7bec0af782cf146191d91669
   display: flex;
   width: 80%;
   margin: 0 auto;
@@ -89,22 +92,32 @@
   margin-top: 10px;
   width: 100%;
   height: auto;
+<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+=======
+  display: flex;
+  align-items: center;
+>>>>>>> db7e59579c55df7a7bec0af782cf146191d91669
   border-top: 2.5px dotted #3A9FA8;
 }
 
 #algorithm #algorithm_flame ol li .algorithm_contents .material_items button {
+<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+=======
+  display: flex;
+  justify-content: center;
+>>>>>>> db7e59579c55df7a7bec0af782cf146191d91669
   width: 35%;
   height: 60px;
   padding-top: 20px;
@@ -172,12 +185,17 @@ footer {
 
 footer section {
   padding-top: 15px;
+<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+=======
+  display: flex;
+  justify-content: space-between;
+>>>>>>> db7e59579c55df7a7bec0af782cf146191d91669
   width: 90%;
   height: 100%;
   margin: 0 auto;
@@ -186,8 +204,12 @@ footer section {
 footer section .algorithm_add_textbox {
   width: 90%;
   height: 45px;
+<<<<<<< HEAD
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+=======
+  box-sizing: border-box;
+>>>>>>> db7e59579c55df7a7bec0af782cf146191d91669
 }
 
 footer section .algorithm_add_textbox input {
@@ -201,6 +223,7 @@ footer section .algorithm_add_textbox input {
   font-size: 15px;
   font-weight: 600;
   border-radius: 45px;
+<<<<<<< HEAD
   -webkit-box-sizing: none;
           box-sizing: none;
 }
@@ -215,6 +238,9 @@ footer section .algorithm_add_textbox input:-ms-input-placeholder {
 
 footer section .algorithm_add_textbox input::-ms-input-placeholder {
   color: #cacaca;
+=======
+  box-sizing: none;
+>>>>>>> db7e59579c55df7a7bec0af782cf146191d91669
 }
 
 footer section .algorithm_add_textbox input::placeholder {
@@ -235,4 +261,7 @@ footer section .algorithm_add_button button {
 footer section .algorithm_add_button button .material-icons-round {
   font-size: 45px;
 }
+<<<<<<< HEAD
 /*# sourceMappingURL=add.css.map */
+=======
+>>>>>>> db7e59579c55df7a7bec0af782cf146191d91669
