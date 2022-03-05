@@ -5,14 +5,14 @@
     <link rel="stylesheet" href="{{ asset('css/projects/login.css') }}">
 @endsection
 
-@section('title', 'やることリスト')
+@section('title', '新規登録')
 
 @section('body')
 
 <!-- ヘッダー -->
 <header class="l_play_header p_play_header">
     <!-- 前のページへ戻るリンク -->
-    <a href="{{ route('order') }}" class="p_play_header__back"><span class="material-icons-round">undo</span></a>
+    <a href="{{ route('home') }}" class="p_play_header__back"><span class="material-icons-round">undo</span></a>
     <div class="p_play_header__title">
         <span>新規登録</span>
     </div>
@@ -22,7 +22,7 @@
     <div id="login_dev">
         <div name="logo">
             <a href="./">
-                <h1 class="log_p_home_logo"><img src="img/3.svg" alt="algo"></h1>
+                <h1 class="login_home_img_cover"><img class="login_home_img" src="img/3.svg" alt="algo"></h1>
             </a>
             <!-- title call -->
             <h1 class="title_call">アルゴに登録しよう！</h1>
