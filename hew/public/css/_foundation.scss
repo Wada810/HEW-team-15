@@ -1,0 +1,16 @@
+@import "./variable";
+body{
+    font-family: 'M PLUS 2', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: $text_color;
+    background-color: $main_bg_color;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+.number_font{
+    font-family: 'Montserrat', sans-serif;
+}
+.alp_font{
+    font-family: 'Montserrat', sans-serif;
+}

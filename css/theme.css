@@ -5,12 +5,10 @@
 
 h1 {
   font-weight: 800;
-  letter-spacing: 1px;
 }
 
 button {
   font-weight: 800;
-  letter-spacing: 1px;
 }
 
 body {
@@ -134,4 +132,3 @@ main form button {
   padding: 15px 0 15px 0;
   margin-top: 8%;
 }
-/*# sourceMappingURL=theme.css.map */

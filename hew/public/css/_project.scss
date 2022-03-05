@@ -1,0 +1,247 @@
+@import "./variable";
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .version{
+        font-weight: 600;
+    }
+}
+/* タイトル画面 */
+.p_home_logo{
+    font-weight: 700;
+    font-size: 3rem;
+    img{
+        width: 80vw;
+    }
+    margin: 10vh 0 15vh 0;
+}
+.p_home_user_icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        background-color: $text_color;
+        border: 3px solid rgba(255, 255, 255, 0.5);
+        box-sizing: content-box;
+        position: relative;
+    }
+    p{
+        font-size: 0.7rem;
+        white-space: nowrap;
+    }
+}
+.p_home_link{
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    //animation: home_link 3s linear infinite;
+    &:last-of-type{
+        margin-bottom: 60px;
+    }
+}
+@keyframes home_link {
+    0%{
+        transform: translateY(0px);
+    }
+    5%{
+        transform: translateY(-5px);
+    }
+    10%{
+        transform: translateY(0px);
+    }
+}
+
+/* プレイ画面 */
+/* テーマ入力 */
+.p_play_header{
+    background-color: $sub_bg_color;
+    color: $white;
+}
+.p_play_header__back{
+    color: $text_color;
+    background-color: $white;
+    border-radius: 100px;
+    width: 35px;
+    height: 35px;
+
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    span{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+.p_play_header__title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.p_theme_main{
+    margin: 60px 0;
+    h1{
+        font-weight: 800;
+        font-size: 1.4rem;
+    }
+    p{
+        font-size: 0.9;
+    }
+}
+.p_theme_input{
+    margin-bottom: 60px;
+}
+.p_theme_input__letter_counter{
+    width: 100%;
+    text-align: right;
+    font-size: 0.8rem;
+}
+
+/* やることリスト入力画面 */
+.theme_title{
+    width: 100vw;
+    height: 30px;
+    color: $white;
+    position: fixed;
+    top: 59px;
+    background-color: $sub_bg_color;
+    text-align: center;
+}
+.theme_title__spacer{
+    height: 30px;
+    width: 100%;
+}
+.algorithm_head{
+    font-size: 0.9rem;
+}
+.algorithm_form{
+    width: 100vw;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $sub_bg_color;
+    padding: 20px;
+    gap: 10px;
+}
+.algorithm_add_textbox{
+    width: fit-content;
+}
+.algorithm_add_button{
+    background-color: $white;
+    color: $second_color;
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span{
+        font-size: 42px !important;
+    }
+}
+.algorithm_list__item{
+    display: flex;
+    border-bottom: dashed 1px $sub_bg_color;
+    &:nth-last-of-type(1){
+        border-bottom:  dashed 1px transparent;
+    }
+}
+.algorithm_number{
+    width: 25px;
+    font-size: 16px;
+    line-height: 22px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+.algorithm_contents{
+    width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+
+    &.is-active{
+        background-color: $white;
+        color: $sub_bg_color;
+        font-weight: 600;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    .algorithm_name{
+        width: 100%;
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-right: 15px;
+        font-weight: 600;
+    }
+
+    .material_items{
+        margin-top: 10px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        border-top: 2px dotted $sub_bg_color;
+
+        button{
+            display: flex;
+            justify-content: center;
+            width: 35%;
+            height: 60px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 15px;
+            color: $disabled;
+
+            &:nth-last-of-type(1){
+                width: 65%;
+                height: 60px;
+                color: $sub_bg_color;
+                border-left: 2px dotted $sub_bg_color;
+
+            }
+            .material-icons-round{
+                width: 27px
+            }
+            .delete{
+                font-size: 24px;
+            }
+            .border{
+                font-size: 22px;
+            }
+            p{
+                line-height: 15px;
+                font-size: 15px;
+                height: 15px;
+            }
+        }
+    }
+}
+
+.p_button_box{
+    background: $main_bg_color;
+    position: fixed;
+    left: 0;
+    bottom: 59px;
+    width: 100vw;
+    padding: 20px;
+
+}
+.p_button_box-only{
+    @extend .p_button_box;
+    bottom: 0;
+}
