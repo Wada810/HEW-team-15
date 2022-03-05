@@ -12,6 +12,9 @@ class InstractionController extends Controller
     {
         // セッションからデータを取得
         $data = session()->all();
+        if(!isset($data["order"])){
+            $data["order"] = [];
+        }
 
         return view('play.instraction', compact('data'));
     }

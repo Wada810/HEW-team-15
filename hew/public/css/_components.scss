@@ -17,6 +17,10 @@
 .hidden{
     display: none !important;
 }
+.invisible{
+    opacity: 0;
+    pointer-events: none;
+}
 .c_bg-white{
     background-color: $white !important;
 }
