@@ -20,7 +20,7 @@ up_arrow.addEventListener('click',function (event) {
             if(active_order_val.innerHTML != order[0].innerHTML){
                 active_order_val.innerHTML = '';
                 active_number.innerHTML = '';
-                active_number.innerHTML = i;
+                active_number.innerHTML = i + '.';
                 active_order_val.innerHTML = order[i - 1].innerHTML;
                 second_order_val.innerHTML = '';
                 second_number.innerHTML = '';
@@ -28,13 +28,13 @@ up_arrow.addEventListener('click',function (event) {
                     let insert_second_order_val = order[i - 2].innerHTML;
                     second_order_val.innerHTML = insert_second_order_val;
                     first_order_val.innerHTML = '';
-                    second_number.innerHTML = i;
+                    second_number.innerHTML = i + '.';
                     first_number.innerHTML = '';
-                    second_number.innerHTML = i - 1;
+                    second_number.innerHTML = i - 1 + '.';
                     if(i != 2){
                         let insert_first_order_val = order[i - 3].innerHTML;
                         first_order_val.innerHTML = insert_first_order_val;
-                        first_number.innerHTML = i - 2;
+                        first_number.innerHTML = i - 2 + '.';
                     }
                 }
             }
@@ -54,16 +54,16 @@ down_arrow.addEventListener('click',function (event) {
                 second_order_val.innerHTML = '';
                 second_order_val.innerHTML = order[i].innerHTML;
                 second_number.innerHTML = '';
-                second_number.innerHTML = i + 1;
+                second_number.innerHTML = i + 1 + '.';
                 active_order_val.innerHTML = '';
                 active_order_val.innerHTML = order[i + 1].innerHTML;
                 active_number.innerHTML = '';
-                active_number.innerHTML = i + 2;
+                active_number.innerHTML = i + 2 + '.';
                 if(i != 0){
                     first_order_val.innerHTML = '';
                     first_order_val.innerHTML = order[i - 1].innerHTML;
                     first_number.innerHTML = '';
-                    first_number.innerHTML = i;
+                    first_number.innerHTML = i + '.';
                 }
             }
             break;
