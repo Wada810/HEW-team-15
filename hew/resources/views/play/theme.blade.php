@@ -21,7 +21,7 @@
             <p>30文字以内</p>
         </div>
         <div class="p_theme_input">
-            <textarea type="text" cols="100" rows="1" name="theme" id="input_theme" class="input-thick" maxlength="30" placeholder="お題をいれてね" required>{{old('theme')}}</textarea>
+            <textarea type="text" cols="100" rows="1" name="theme" id="input_theme" class="input-thick" maxlength="30" placeholder="お題をいれてね" required>{{$data["theme"] ?? ""}}</textarea>
             <div class="p_theme_input__letter_counter"><span id="strLen">0</span>/30</div>
         </div>
         <button class="btn-primary">次へ</button>

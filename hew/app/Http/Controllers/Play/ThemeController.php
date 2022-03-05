@@ -8,15 +8,21 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 class ThemeController extends Controller
 {
-    /**
-     * Display the mypage view.
-     *
-     * @return \Illuminate\View\View
-     */
+    public function index(Request $request)
+    {
+        // セッションからデータを取得
+        $data = session()->all();
+
+        return view('play.theme', compact('data'));
+    }
+
     public function post(Request $request)
     {
-        $request->flash();
+        $theme = $request->input('theme');
+        // セッションにデータを保存
+        session(['theme' => $theme]);
+        session(['play' => time()]);
 
-        return redirect()->route("play/order");
+        return redirect()->route("order");
     }
 }

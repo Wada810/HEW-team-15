@@ -10,14 +10,25 @@ use Symfony\Component\VarDumper\VarDumper;
 
 class OrderController extends Controller
 {
-    /**
-     * Display the mypage view.
-     *
-     * @return \Illuminate\View\View
-     */
     public function index(Request $request)
     {
-        $request->flash();
-        return view('play/order',compact("request"));
+        // セッションからデータを取得
+        $data = session()->all();
+        if(!isset($data["order"])){
+            $data["order"] = [];
+        }
+
+        return view('play.order', compact('data'));
+    }
+
+    public function post(Request $request)
+    {
+        $instractions = $request->all();
+        // セッションにデータを保存
+        foreach($instractions as $key => $val){
+            session([$key => $val]);
+        }
+
+        return redirect()->route("instraction");
     }
 }

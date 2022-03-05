@@ -1,7 +1,7 @@
 @extends("layouts.layout")
 
 @section('css_link')
-    <link rel="stylesheet" href="{{ asset('css/projects/instraction.css') }}">
+    <!-- <link rel="stylesheet" href="{{ asset('css/projects/instraction.css') }}"> -->
 @endsection
 
 @section('title', 'やることリスト')
@@ -12,20 +12,39 @@
 <header class="l_play_header p_play_header">
     <!-- 前のページへ戻るリンク -->
     <a href="{{ route('order') }}" class="p_play_header__back"><span class="material-icons-round">undo</span></a>
-    <!-- 一覧戻るボタン -->
-    <button class="back_button" type="button"><span class="material-icons-outlined">undo</span></button>
+    <!-- 一覧戻るボタン --><!--
+    <button class="back_button" type="button"><span class="material-icons-outlined">undo</span></button> -->
     <div class="p_play_header__title">
         <span class="material-icons-round">library_books</span>
         <span>やることリスト</span>
     </div>
 </header>
 <div class="l_play_header__spacer"></div>
-<div class="theme_title">theme</div>
+<div class="theme_title">{{$data["theme"] ?? ""}}</div>
 <div class="theme_title__spacer"></div>
 <!-- コンテンツ -->
-<main>
+<main class="l_instraction">
+    <div class="p_instraction__move"><span class="material-icons-round up-arrow">expand_less</span></div>
+    <div class="p_instraction_content_active">
+        <span>1.</span>
+        <p>そいｈｓｐｆぎｈｓｄｐｆぼｂ</p>
+    </div>
+    <div class="p_instraction__move"><span class="material-icons-round down-arrow">keyboard_arrow_down</span></div>
+    <div class="p_instraction__tools">
+        <div class="p_instraction__dots">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="p_instraction_all">
+            一覧を見る
+        </div>
+    </div>
+</main>
+<script>const order_json = <?php print json_encode($data["order"]);?></script>
+<!-- <main>
     <div id="view_home">
-        <!-- <div class="theme_cover"><p class="theme">ピーナッツバターサンドを作る！</p></div> -->
+        <div class="theme_cover"><p class="theme">ピーナッツバターサンドを作る！</p></div>
         <div class="view">
             <div class="sub_order_cover">
                 <div class="first_order sub_order"><p class="first_number"></p><p class="first_order_val sub_val"></p></div>
@@ -35,13 +54,9 @@
             <div class="active_order"><div class="active_cover"><p class="active_number number"></p><p class="active_order_val"></p></div></div>
             <p class="down button"><span class="material-icons-round down-arrow">keyboard_arrow_down</span></p>
             <ul class="view_list">
-                <li class="order">パンを2まいとる</li>
-                <li class="order">バターナイフをとる</li>
-                <li class="order">ピーナッツバターをぬりぬりぬりぬりぬりぬりぬりぬりぬりぬりぬりぬり</li>
-                <li class="order">バターナイフをとる1</li>
-                <li class="order">バターナイフをとる2</li>
-                <li class="order">バターナイフをとる3</li>
-                <li class="order">バターナイフをとる4</li>
+                @foreach ($data["order"] as $val)
+                    <li class="order">{{$val}}</li>
+                @endforeach
             </ul>
             <div class="sub_action">
                 <p class="unopen"><span class="material-icons-round">more_vert</span></p>
@@ -99,15 +114,15 @@
             </div>
         </div>
     </div>
-</main>
+</main> -->
 
 <!-- 送信ボタン -->
-<!-- <div class="p_button_box-only">
+<div class="p_button_box-only c_bg-white">
     <form action="{{ route('order') }}" id="order_form" method="get">
         @csrf
-        <button class="btn-primary">次へ</button>
+        <button class="btn-secondary">次へ</button>
     </form>
-</div> -->
+</div>
 
 <script src="{{ asset('js/instraction.js') }}"></script>
 @endsection
