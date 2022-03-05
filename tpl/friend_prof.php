@@ -1,24 +1,26 @@
-@extends("layouts.layout")
-
-@section('css_link')
-<!-- 個別のｃｓｓがあったらここに -->
-<!-- <link rel="stylesheet" href="{{ asset('css/フォルダ名') }}"> -->
-<link rel="stylesheet" href="{{ asset('css/projects/friend_prof.css') }}">
-@endsection
-
-@section('title', 'ともだちのマイページ')
-
-@section('body')
-<!-- ここにhtml -->
-    <!-- ヘッダー -->
-    <header class="l_play_header p_play_header">
-        <!-- 前のページへ戻るリンク -->
-        <a href="{{ route('order') }}" class="p_play_header__back"><span class="material-icons-round">undo</span></a>
-        <div class="p_play_header__title">
-            <span>新規登録</span>
-        </div>
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../hew/public/css/style.css">
+    <link rel="stylesheet" href="../css/style.scss">
+    
+    <link rel="stylesheet" href="../css/friend_prof.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <button class="back_button" type="button"><span class="material-icons-outlined">undo</span></button>
+        <h1>ともだちのマイページ</h1>
     </header>
-
     <main>
         <div id="prof">
             <div class="prof_area">
@@ -85,4 +87,6 @@
             <div class="black-background" id="js-black-bg"></div>
         </div>
     </main>
-@endsection
+    <script src="../pattern_change.js"></script>
+</body>
+</html>

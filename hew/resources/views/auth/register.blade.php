@@ -2,6 +2,7 @@
 
 @section('css_link')
     <link rel="stylesheet" href="{{ asset('css/projects/instraction.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/projects/login.css') }}">
 @endsection
 
 @section('title', 'やることリスト')

@@ -977,3 +977,10 @@ footer .version {
   transform: translateY(-50%);
   font-size: 0.9rem;
 }
+:root{
+  --main_color: #3A9FA8;
+  --sub_color: #cdeaec;
+  --border_color: #50a7af;
+  --err_bgcolor: #8a8a8a;/* jsでエラー時に変更 */
+}
+
