@@ -1,4 +1,6 @@
-// リスト切り替え
+
+
+/* // リスト切り替え
 
 const up_arrow = document.getElementsByClassName('up')[0];
 const down_arrow = document.getElementsByClassName('down')[0];
@@ -54,7 +56,8 @@ down_arrow.addEventListener('click',function (event) {
                 second_order_val.innerHTML = '';
                 second_order_val.innerHTML = order[i].innerHTML;
                 second_number.innerHTML = '';
-                second_number.innerHTML = i + 1 + '.';
+
+                second_number.innerHTML = (i + 1) + ".";
                 active_order_val.innerHTML = '';
                 active_order_val.innerHTML = order[i + 1].innerHTML;
                 active_number.innerHTML = '';
@@ -63,7 +66,7 @@ down_arrow.addEventListener('click',function (event) {
                     first_order_val.innerHTML = '';
                     first_order_val.innerHTML = order[i - 1].innerHTML;
                     first_number.innerHTML = '';
-                    first_number.innerHTML = i + '.';
+                    first_number.innerHTML = i + ".";
                 }
             }
             break;
@@ -135,4 +138,6 @@ ok_judge_button.addEventListener('click',function () {
     button_modal.style.display = 'block';
     flg = 3;
 })
+ */
+
 

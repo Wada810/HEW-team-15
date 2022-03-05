@@ -114,6 +114,7 @@ footer{
     top: 59px;
     background-color: $sub_bg_color;
     text-align: center;
+    z-index: 10;
 }
 .theme_title__spacer{
     height: 30px;
@@ -244,4 +245,48 @@ footer{
 .p_button_box-only{
     @extend .p_button_box;
     bottom: 0;
+}
+/* instraction */
+.p_instraction__move{
+    background-color: $main_bg_color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: $r;
+    span{
+        font-size: 2.4rem !important;
+    }
+}
+.p_instraction_content{
+    border-bottom: 1px dashed $sub_bg_color;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+}
+.p_instraction_content_active{
+    border-radius: $r;
+    border: 1px solid $main_bg_color;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+.p_instraction__tools{
+    display: flex;
+    justify-content: center;
+    .p_instraction__dots{
+        div{
+            background-color: $sub_bg_color;
+            width: 20px;
+            height: 20px;
+        }
+        div:nth-of-type(2){
+            opacity: 0.8;
+        }
+        div:nth-of-type(3){
+            opacity: 0.6;
+        }
+    }
 }

@@ -19,31 +19,34 @@ use App\Http\Controllers\Play\InstractionController;
 */
 
 Route::get('/', function () {
+    session()->forget('theme');
+    session()->forget('order');
     return view('home');
 });
 
 Route::get('home', function () {
+    session()->forget('theme');
+    session()->forget('order');
     return view('home');
 })->name('home');
 
 Route::get('mypage', [MypageController::class, 'index'])->middleware("auth")->name('mypage');
 
 /* プレイ画面 */
-Route::get('play/theme', function () {
-    return view('play.theme');
-})->name('theme');
+Route::get('play/theme', [ThemeController::class, 'index'])->name('theme');
 Route::post('play/theme', [ThemeController::class, 'post']);
 
 
-Route::get('play/order', function () {
-    return view('play.order');
-})->name('order');
+Route::get('play/order', [OrderController::class, 'index'])->name('order');
 Route::post('play/order', [OrderController::class, 'post']);
 
 
-Route::get('play/instraction', function () {
-    return view('play.instraction');
-})->name('instraction');
+Route::get('play/instraction', [InstractionController::class, 'index'])->name('instraction');
 Route::post('play/instraction', [InstractionController::class, 'post']);
+
+/* 友達のプロフィール */
+Route::get('friend_prof', function (){
+    return view('friend_prof');
+})->name('friend_prof');
 
 require __DIR__.'/auth.php';

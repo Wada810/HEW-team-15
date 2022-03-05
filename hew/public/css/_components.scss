@@ -14,6 +14,12 @@
 .mb-l{
     margin-bottom: 30px;
 }
+.hidden{
+    display: none !important;
+}
+.c_bg-white{
+    background-color: $white !important;
+}
 .inquery_btn{
     background-color: $white;
     height: 44px;
@@ -39,7 +45,7 @@
 }
 .btn-secondary{
     @extend .btn;
-    background-color: $white;
+    background-color: $main_bg_color;
     border-color: $sub_bg_color;
     color: $text_color;
     font-weight: 800;
