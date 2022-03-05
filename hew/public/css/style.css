@@ -639,6 +639,16 @@ footer .version {
   width: 80vw;
 }
 
+.log_p_home_logo {
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 50px 0 0 0;
+}
+
+.log_p_home_logo img {
+  width: 50%;
+}
+
 .p_home_user_icon {
   display: flex;
   flex-direction: column;
@@ -686,12 +696,12 @@ footer .version {
 /* プレイ画面 */
 /* テーマ入力 */
 .p_play_header {
-  background-color: #3A9FA8;
+  background-color: var(--main_color);
   color: #fbfeff;
 }
 
 .p_play_header__back {
-  color: #3A9FA8;
+  color: var(--main_color);
   background-color: #fbfeff;
   border-radius: 100px;
   width: 35px;
@@ -745,7 +755,7 @@ footer .version {
   color: #fbfeff;
   position: fixed;
   top: 59px;
-  background-color: #3A9FA8;
+  background-color: var(--main_color);
   text-align: center;
   z-index: 10;
 }
@@ -767,7 +777,7 @@ footer .version {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #3A9FA8;
+  background-color: var(--main_color);
   padding: 20px;
   gap: 10px;
 }
@@ -793,7 +803,7 @@ footer .version {
 
 .algorithm_list__item {
   display: flex;
-  border-bottom: dashed 1px #3A9FA8;
+  border-bottom: dashed 1px var(--main_color);
 }
 
 .algorithm_list__item:nth-last-of-type(1) {
@@ -816,7 +826,7 @@ footer .version {
 
 .algorithm_contents.is-active {
   background-color: #fbfeff;
-  color: #3A9FA8;
+  color: var(--main_color);
   font-weight: 600;
   border-radius: 5px;
   margin-top: 10px;
@@ -838,7 +848,7 @@ footer .version {
   height: auto;
   display: flex;
   align-items: center;
-  border-top: 2px dotted #3A9FA8;
+  border-top: 2px dotted var(--main_color);
 }
 
 .algorithm_contents .material_items button {
@@ -856,7 +866,7 @@ footer .version {
   width: 65%;
   height: 60px;
   color: #3A9FA8;
-  border-left: 2px dotted #3A9FA8;
+  border-left: 2px dotted var(--main_color);
 }
 
 .algorithm_contents .material_items button .material-icons-round {
@@ -939,3 +949,123 @@ footer .version {
 .p_instraction__tools .p_instraction__dots div:nth-of-type(3) {
   opacity: 0.6;
 }
+:root{
+  --main_color: #3A9FA8;
+  --sub_color: #cdeaec;
+  --border_color: #50a7af;
+  --err_bgcolor: #8a8a8a;/* jsでエラー時に変更 */
+}
+
+
+/* 新規登録 */
+main{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--sub_color);
+  padding-top: 50px;
+}
+
+.title_call{
+  margin: 2vh auto 0 auto;
+  width: 90%;
+}
+
+.error_zone{
+  display: flex;
+  justify-self: center !important;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  border-radius: 10px;
+  background-color: var(--sub_color);
+  font-size: 0.6rem;
+  color: white;
+}
+
+.err_icon_cover{
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.err_icon{
+}
+
+.error_msg{
+  margin: 0 auto;
+  padding-top: 1vh;
+  width: 90%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: var(--err_bgcolor) !important;
+}
+.input_cover{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.log_input, .input-thick {
+  display: block;
+  width: 100%;
+  height: 5vh;
+  text-align: left;
+  background-color: #fbfeff;
+  color: #3A9FA8;
+  border-radius: 30px;
+  color: #3A9FA8;
+  border: 2px solid rgba(0, 0, 0, 0);
+  transition: background-color 0.3s, border-color 0.3s;
+  padding: 6px 12px;
+}
+
+.lavel{
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 0 1vh 0;
+}
+
+.name_cover{
+  margin: 2vh auto 0 auto;
+}
+.pass_cover{
+
+}
+
+.form_input{
+
+}
+
+.word_count{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn_cover{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 3vh 0 0 0;
+}
+.button{
+  width: 90%;
+  height: 6vh;
+  border-radius: 30px !important;
+  border: 5px solid var(--border_color);
+}
+.reg_btn{
+  background-color: var(--main_color) !important;
+  color: white;
+}
+.log_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main_color);
+  background-color: var(--sub_color) !important;
+}
+
+
+
+
+
+/* ログイン */
