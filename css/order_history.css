@@ -1,7 +1,8 @@
 :root {
   --main_color: #3a9fa8;
-  --sub_color: #81dcec;
-  --fav_color: #ffcd70;
+  --sub_color: #e2efef;
+  --frame_color: #379ea760; /* ボタンの枠の色 */
+  --fav_color: #ebcb4d;
   --rank_point_font_size: 0.5rem;
 }
 
@@ -11,7 +12,7 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color: var(--sub_color);
   width: 100%;
   height: 100%;
 }
@@ -20,6 +21,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "M PLUS 2", sans-serif;
+  font-weight: 600;
 }
 
 header {
@@ -33,6 +35,7 @@ header {
   color: white;
   position: relative;
   z-index: 100;
+  font-weight: 600;
 }
 h1 {
   font-size: 16px;
@@ -65,18 +68,20 @@ main {
 .pattern_cover {
   position: absolute;
   right: 4%;
-  top: -20%;
+  top: -15%;
+  color: var(--main_color);
 }
 .palette_cover {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   background-color: var(--main_color);
-  border: 5px solid var(--sub_color);
   border-radius: 50px;
   display: flex;
   margin: 0 auto;
   justify-self: center;
   align-items: center;
+  /* ボタンの枠 */
+  box-shadow: var(--frame_color) 0px 0px 0px 4px;
 }
 .palette {
   margin: 0 auto;
@@ -97,7 +102,7 @@ main {
   width: 100px;
   height: 100px;
   border-radius: 50px;
-  margin: 20% auto 0 auto;
+  margin: 11% auto 0 auto;
 }
 .prof_img {
   border-radius: 50px;
@@ -128,35 +133,46 @@ main {
 }
 
 .name {
-  margin: 5% 0 0 0;
+  margin: 3% 0 3% 0;
   letter-spacing: 2px;
   font-weight: bold;
+  color: var(--main_color);
 }
 
 .rank_cover {
-  width: 50%;
-  margin: 2% auto 1% auto;
-  display: flex;
-  justify-content: flex-start;
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
   font-weight: 600;
-}
-.rank {
-  font-size: 0.7rem;
-}
-.rank_no {
-  font-size: 0.7rem;
+  color: var(--main_color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -12px;
+  left: -12px;
 }
 
-.rank_bar_cover {
+.rank {
+  font-size: 10px;
+  transform: scale(0.8);
+}
+.rank_no {
+  font-size: 14px;
+}
+
+/* .rank_bar_cover {
   position: relative;
   width: 100%;
-  height: 25px;
+  height: 18px;
+  color: var(--main_color);
 }
 .rank_bar_tank {
   width: 50%;
   height: 100%;
   margin: 0 auto;
-  background: #575757;
+  background: #dcdcdc;
   border-radius: 20px;
 }
 .rank_bar {
@@ -164,13 +180,52 @@ main {
   width: 34%;
   height: 100%;
   margin: 0 auto;
-  background: #f4ff61;
+  background: var(--fav_color);
+  border-radius: 20px;
+} */
+/* レベルメーター */
+.level_box {
+  position: relative;
+  width: 70%;
+  height: 18px;
+  color: var(--main_color);
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background: #dcdcdc;
+}
+.animation-box {
+  width: 100%;
+  height: 100%;
+  color: #333;
+  box-sizing: border-box;
   border-radius: 20px;
 }
+.animation {
+  background-color: var(--fav_color);
+  animation-name: animation-sample;
+  /*--アニメーション名--*/
+  animation-duration: 3s;
+  /*--時間--*/
+  animation-iteration-count: 1;
+  /*--実行回数--*/
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+@keyframes animation-sample {
+  0% {
+    width: 5%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 .rank_point {
   display: flex;
   justify-content: center;
   font-weight: 600;
+  color: var(--main_color);
 }
 .left_rank_point {
   padding-right: 1%;
@@ -182,6 +237,25 @@ main {
 .right_rank_point {
   padding-left: 1%;
   font-size: var(--rank_point_font_size);
+}
+
+.get_star_cover {
+  margin: 10px auto 0 auto;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--fav_color);
+  border-radius: 30px;
+  width: 100px;
+  border: white solid 2px;
+  color: white;
+  padding: 3px 0;
+  font-weight: 600;
+}
+.get_star_num {
+  font-size: 0.75rem;
+  padding-left: 0.5rem;
 }
 
 #todo {
@@ -196,11 +270,30 @@ main {
 }
 .todo_title {
   text-align: center;
-  font-size: 20px;
+  font-size: 14px;
   padding-top: 5%;
   padding-bottom: 5%;
   font-weight: bold;
 }
+/* 左右ボーダー */
+.text-divider {
+  display: flex;
+  align-items: center;
+}
+.text-divider::before,
+.text-divider::after {
+  content: "";
+  flex-grow: 1;
+  border-top: 4px dotted var(--main_color);
+  display: block;
+}
+.text-divider::before {
+  margin-right: 10px;
+}
+.text-divider::after {
+  margin-left: 10px;
+}
+
 .sort_cover {
   width: 90%;
   font-size: 13px;
@@ -216,6 +309,10 @@ main {
   font-size: 0.9rem !important;
 }
 
+.todo_scroll {
+  width: 100%;
+  height: 310px;
+}
 .todo_list_cover {
   width: 100%;
   height: 100%;
@@ -223,7 +320,7 @@ main {
 }
 .todo_list {
   width: 80%;
-  height: 10%;
+  height: 80px;
   margin: 0 auto 5% auto;
   display: flex;
   justify-content: center;
@@ -352,7 +449,7 @@ main {
 
 .popup-inner button {
   position: relative;
-  background-color: #ebcb4d;
+  background-color: var(--fav_color);
   border-radius: 40px;
   border: #e7d9a2 solid 6px;
   color: white;
@@ -398,13 +495,62 @@ main {
   flex-wrap: wrap;
   align-items: center;
   width: 90%;
+  height: 65vh;
   margin: 0 auto;
   text-align: center;
+  overflow-y: scroll;
 }
 .modal_items > div {
   padding: 1rem;
+  width: 50%;
 }
 .modal_items > div img {
-  width: 100px;
+  width: 90px;
   height: auto;
+}
+
+/* アイコン */
+.modal_items_icon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 90%;
+  height: 65vh;
+  margin: 0 auto;
+  text-align: center;
+  overflow-y: scroll;
+}
+.modal_items_icon > div {
+  padding: 1rem;
+  position: relative;
+  width: 50%;
+  text-align: center;
+}
+.modal_items_icon > p {
+  text-align: center;
+}
+.icon_cover {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 40px;
+  margin: 0 auto;
+}
+.icon_cover img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  border: 5px solid var(--main_color);
+  object-fit: cover;
+  z-index: -10000;
+}
+
+/* 選択中のアイコン */
+.active_icon {
+  background-color: var(--main_color);
+  border-radius: 20px;
+  z-index: -100;
+  color: white;
 }

@@ -11,6 +11,7 @@ body {
   background-color: #E2EFEF;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 * {
@@ -58,6 +59,8 @@ main {
   width: 100%;
   height: 100%;
   padding-top: 60px;
+  font-size: 0.8rem;
+  position: relative;
 }
 
 #prof {
@@ -101,6 +104,7 @@ main {
   width: 100%;
   height: 100%;
   text-align: center;
+  padding-top: 5vh;
 }
 
 .prof_cover {
@@ -108,7 +112,7 @@ main {
   width: 100px;
   height: 100px;
   border-radius: 50px;
-  margin: 11% auto 0 auto;
+  margin: 0 auto 0 auto;
 }
 
 .prof_img {
@@ -142,7 +146,7 @@ main {
 }
 
 .name {
-  margin: 3% 0 3% 0;
+  margin: 2vh 0 1vh 0;
   letter-spacing: 2px;
   font-weight: bold;
   color: #3A9FA8;
@@ -319,7 +323,7 @@ main {
 
 .sort_cover {
   width: 90%;
-  font-size: 13px;
+  font-size: 0.6rem;
   padding-bottom: 2%;
   display: flex;
   justify-content: flex-end;
@@ -337,13 +341,13 @@ main {
 
 .todo_list_cover {
   width: 100%;
-  height: 100%;
-  overflow-y: scroll;
+  height: 40vh;
+  overflow-y: auto;
 }
 
 .todo_list {
   width: 80%;
-  height: 80px;
+  height: auto;
   margin: 0 auto 5% auto;
   display: flex;
   justify-content: center;
@@ -351,18 +355,25 @@ main {
   border-left: 15px solid #3A9FA8;
   border-radius: 5px;
   background-color: #fff;
+  font-size: 0.8rem;
 }
 
 .top {
   width: 100%;
-  height: 40%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-right: 3%;
   padding-left: 3%;
   padding-top: 3%;
   padding-bottom: 3%;
   border-bottom: 2px dotted #3A9FA8;
-  font-size: 800;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
+}
+
+.todo_theme {
+  width: 70%;
 }
 
 .under {
@@ -374,10 +385,11 @@ main {
   padding-bottom: 3%;
   display: flex;
   justify-content: space-between;
+  font-size: 0.6rem;
 }
 
 .cross {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
 
 .lines_cover {
@@ -386,7 +398,7 @@ main {
 }
 
 .lines {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
 
 .fav_cover {
@@ -397,14 +409,14 @@ main {
 }
 
 .fav {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
 
 .data {
   display: flex;
   align-items: flex-end;
   padding-right: 6%;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   font-weight: 600;
 }
 
@@ -527,7 +539,7 @@ main {
 
 /* 友達のマイページ */
 .star_cover {
-  margin: 5vh auto 0 auto;
+  margin: 1vh auto 0 auto;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -541,14 +553,245 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 0.6rem;
 }
 
 .lines_num_cover {
   display: flex;
   align-items: center;
+  font-size: 0.6rem;
 }
 
 .line_num {
   padding-left: 20%;
-  font-size: 0.8rem;
+}
+
+.release_area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3A9FA8;
+  width: 15vw;
+  color: white;
+  border: 2px solid #3A9FA8;
+  border-radius: 5px;
+  padding: 0.4vh 0 0.4vh 0;
+}
+
+.release_p {
+  font-size: 0.4rem;
+  font-weight: 400;
+  padding-right: 1vw;
+}
+
+.release_icon {
+  font-size: 0.4rem;
+}
+
+/* modal */
+#release_modal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: #e2efefbe;
+  padding: 20vh 0 0 0;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+#release_modal .release_modal {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
+#release_modal .release_modal .release_cover {
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  position: relative;
+}
+
+#release_modal .release_modal .release_cover .modal_prof_img_area {
+  position: relative;
+  width: 100px;
+  border-radius: 50px;
+  margin: 0 auto 0 auto;
+}
+
+#release_modal .release_modal .release_cover .modal_prof_img_area .modal_prof_img {
+  width: 100px;
+  height: 100px;
+  border: 5px solid #3A9FA8;
+  border-radius: 50px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+#release_modal .release_modal .release_cover .modal_prof_img_area .modal_rank_area {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  font-weight: 600;
+  color: #3A9FA8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -70px;
+  left: -12px;
+  z-index: 100;
+}
+
+#release_modal .release_modal .release_cover .modal_prof_img_area .modal_rank_area .modal_rank_cover {
+  text-align: center;
+}
+
+#release_modal .release_modal .release_cover .modal_prof_img_area .modal_rank_area .modal_rank_cover .modal_rank {
+  font-size: 0.1rem;
+}
+
+#release_modal .release_modal .release_cover .modal_prof_img_area .modal_rank_area .modal_rank_cover .modal_rank_sum {
+  font-size: 1rem;
+}
+
+#release_modal .release_modal .release_cover .modal_top {
+  width: 100%;
+  height: 50%;
+  border-bottom: 3px dotted black;
+}
+
+#release_modal .release_modal .release_cover .modal_top .modal_close {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+}
+
+#release_modal .release_modal .release_cover .modal_top .modal_close .modal_close_icon {
+  font-size: 2.5rem;
+}
+
+#release_modal .release_modal .release_cover .modal_top .modal_user_name {
+  width: 100%;
+  height: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #E2EFEF;
+  border-radius: 10px 10px 0 0;
+}
+
+#release_modal .release_modal .release_cover .modal_top .modal_user_name .modal_name {
+  font-size: 1.2rem;
+}
+
+#release_modal .release_modal .release_cover .modal_top .modal_half {
+  width: 100%;
+  height: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #E2EFEF 0%, #E2EFEF 50%, #ffffff 50%, #ffffff 100%);
+}
+
+#release_modal .release_modal .release_cover .modal_top .modal_half .modal_fav_cover {
+  width: 25vw;
+  padding: 0.5vh 0 0.5vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background: #eb9718;
+  border: 4px solid white;
+  border-radius: 50px;
+}
+
+#release_modal .release_modal .release_cover .modal_top .modal_half .modal_fav_cover .moda_fav_icon {
+  color: white;
+  padding: 0 1vw 0 0;
+}
+
+#release_modal .release_modal .release_cover .modal_top .modal_half .modal_fav_cover .modal_sums {
+  color: white;
+  padding: 0 0 1vw 0;
+}
+
+#release_modal .release_modal .release_cover .modal_top .modal_theme_cover {
+  width: 100%;
+  height: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#release_modal .release_modal .release_cover .modal_top .modal_theme_cover .modal_theme {
+  width: 80%;
+}
+
+#release_modal .release_modal .release_cover .modal_under {
+  width: 100%;
+  height: 50%;
+}
+
+#release_modal .release_modal .release_cover .modal_under .modal_items {
+  font-size: 0.6rem;
+}
+
+#release_modal .release_modal .release_cover .modal_under .modal_items .modal_lines_cover {
+  display: flex;
+  align-items: flex-end;
+}
+
+#release_modal .release_modal .release_cover .modal_under .modal_items .modal_date_cover {
+  display: flex;
+  align-items: flex-end;
+}
+
+#release_modal .release_modal .release_cover .modal_under .modal_items .modal_date_cover .modal_date {
+  display: flex;
+  padding: 0 0 0 1vw;
+}
+
+#release_modal .release_modal .release_cover .modal_under .modal_items .modal_date_cover .modal_time {
+  display: flex;
+  padding: 0 0 0 1vw;
+}
+
+#release_modal .release_modal .release_cover .modal_under .modal_button_cover {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2vh 0 0 0;
+}
+
+#release_modal .release_modal .release_cover .modal_under .modal_button_cover .modal_lerease_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #3A9FA8;
+  margin: 0 0 0.5vh 0;
+}
+
+#release_modal .release_modal .release_cover .modal_under .modal_button_cover .modal_play_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3A9FA8;
+  color: white;
+  margin: 0.5vh 0 0 0;
+}
+
+#release_modal .release_modal .release_cover .modal_under .modal_button_cover .modal_button {
+  width: 80%;
+  padding: 1vh 0 1vh 0;
+  border-radius: 10px;
 }
