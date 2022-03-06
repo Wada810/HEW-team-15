@@ -21,6 +21,7 @@ main {
   margin: 1vh auto 0 auto;
   width: 90%;
   line-height: 16px;
+  text-align: center;
 }
 
 .login_home_img_cover {

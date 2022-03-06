@@ -1,7 +1,7 @@
 @extends("layouts.layout")
 
 @section('css_link')
-    <link rel="stylesheet" href="{{ asset('css/projects/instraction.css') }}">
+<!--     <link rel="stylesheet" href="{{ asset('css/projects/instraction.css') }}"> -->
     <link rel="stylesheet" href="{{ asset('css/projects/login.css') }}">
 @endsection
 
@@ -10,7 +10,6 @@
 @section('body')
 <!-- ヘッダー -->
 <header class="l_play_header p_play_header">
-    <!-- 前のページへ戻るリンク -->
     <a href="{{ route('home') }}" class="p_play_header__back"><span class="material-icons-round">undo</span></a>
     <div class="p_play_header__title">
         <span>新規登録</span>
