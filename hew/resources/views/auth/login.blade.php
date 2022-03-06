@@ -51,9 +51,12 @@
                 <x-label class="lavel" for="password" :value="__('パスワード')" />
 
                 <input id="pass" class="input"
-                    type="text"
+                    type="password"
                     name="password"
                     required autocomplete="new-password">
+
+                <span class="material-icons-round visibility_on_icon">visibility</span>
+                <span class="material-icons-round visibility_off_icon">visibility_off</span>
             </div>
 
             <!-- Remember Me -->
@@ -76,4 +79,5 @@
         </form>
     </div>
 </main>
+<script src="{{ asset('js/password_hide.js') }}"></script>
 @endsection
