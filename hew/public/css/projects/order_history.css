@@ -22,8 +22,8 @@
   --sub_bg_color: #0FAA6C;
   --text_color: #0FAA6C;
   --button_border: #59b18e;
-  --second_color: #84D8B5;
-  --input_border: #84D8B5;
+  --second_color: #dde45a;
+  --input_border: #b2b84e;
 }
 
 :root[theme="strawberry"] {
@@ -533,14 +533,61 @@ main {
   width: 100px;
   height: 100px;
   position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.color_item::after {
+  content: "";
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+}
+
+.color_item::before {
+  content: "";
+  width: 100%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: top right;
 }
 
 .emerald::after {
-  content: "";
-  width: 100%;
-  height: 100%;
   background-color: #3A9FA8;
-  position: absolute;
+}
+
+.emerald::before {
+  background-color: #e1efef;
+}
+
+.emerald_green::after {
+  background-color: #0FAA6C;
+}
+
+.emerald_green::before {
+  background-color: #E8FFF3;
+}
+
+.ocean_blue::after {
+  background-color: #407DCC;
+}
+
+.ocean_blue::before {
+  background-color: #E8EFFF;
+}
+
+.strawberry::after {
+  background-color: #DE4065;
+}
+
+.strawberry::before {
+  background-color: #FFE8ED;
 }
 
 .popup-inner img {
@@ -630,7 +677,7 @@ main {
 /* 選択中のアイコン */
 .active_icon {
   background-color: var(--sub_bg_color);
-  border-radius: 20px;
+  border-radius: 10px;
   z-index: -100;
   color: #fbfeff;
 }

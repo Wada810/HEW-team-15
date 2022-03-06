@@ -469,14 +469,58 @@ main {
   width: 100px;
   height: 100px;
   position: relative;
+  overflow: hidden;
+  border-radius: $r;
+  &::after{
+    content: "";
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+  }
+  &::before{
+    content: "";
+    width: 100%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top right;
+  }
 }
 .emerald{
   &::after{
-    content: "";
-    width: 100%;
-    height: 100%;
     background-color: $emerald_main;
-    position: absolute;
+  }
+  &::before{
+    background-color: $emerald_sub;
+  }
+}
+.emerald_green{
+  &::after{
+    background-color: $emerald_green_main;
+  }
+  &::before{
+    background-color: $emerald_green_sub;
+  }
+}
+.ocean_blue{
+  &::after{
+    background-color: $ocean_blue_main;
+  }
+  &::before{
+    background-color: $ocean_blue_sub;
+  }
+}
+.strawberry{
+  &::after{
+    background-color: $strawberry_main;
+  }
+  &::before{
+    background-color: $strawberry_sub;
   }
 }
 
@@ -560,7 +604,7 @@ main {
 /* 選択中のアイコン */
 .active_icon {
   background-color: $sub_bg_color;
-  border-radius: 20px;
+  border-radius: 10px;
   z-index: -100;
   color: $white;
 }

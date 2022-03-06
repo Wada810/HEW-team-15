@@ -56,3 +56,23 @@ for (let i = icon_btn.length - 1; i >= 0; i--) {
 let max_length_exp = document.querySelector(".level_box").clientWidth;
 let current_length_xp = (max_length_exp / user["next"]) * user["total_exp"];
 document.querySelector(".animation-box").setAttribute("style",`width: ${current_length_xp}px;`);
+
+let color_change_button = document.getElementsByClassName("color_change_button");
+for(let i = 0; i < color_change_button.length; i ++){
+  color_change_button[i].addEventListener("click",(e)=>{
+    const theme = e.currentTarget.id;
+    $.ajax({
+      type: 'GET',
+      url: url, //後述するweb.phpのURLと同じ形にする
+      data: {
+          'theme': theme, //ここはサーバーに贈りたい情報。今回は検索ファームのバリューを送りたい。
+      },
+      dataType: 'json', //json形式で受け取る
+    }).done((data)=>{
+      console.log(data);
+      document.documentElement.setAttribute("theme",theme)
+    }).fail(()=>{
+
+    })
+  })
+}

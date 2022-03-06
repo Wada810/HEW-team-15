@@ -60,19 +60,19 @@
         <div class="popup-inner">
             <div class="popup_header">カラーパターン</div>
                 <div class="modal_items">
-                    <div>
+                    <div class="color_change_button" id="emerald">
                         <div class="color_item emerald"></div>
                         <p>エメラルド</p>
                     </div>
-                    <div>
-                        <div class="color_item emrald_green"></div>
+                    <div class="color_change_button" id="emerald_green">
+                        <div class="color_item emerald_green"></div>
                         <p>エメラルドグリーン</p>
                     </div>
-                    <div>
-                        <div class="color_item oceanblue"></div>
+                    <div class="color_change_button" id="ocean_blue">
+                        <div class="color_item ocean_blue"></div>
                         <p>オーシャンブルー</p>
                     </div>
-                    <div>
+                    <div class="color_change_button" id="strawberry">
                         <div class="color_item strawberry"></div>
                         <p>ストロベリー</p>
                     </div>
@@ -136,9 +136,11 @@
     </div>
 </main>
 
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
     const user = <?php print json_encode($user)?> ;
+    const url = "{{route('color')}}";
 </script>
+<script src="{{asset('js/jquery.min.js')}}"></script>
 <script src="{{asset('js/pattern_change.js')}}"></script>
 @endsection
