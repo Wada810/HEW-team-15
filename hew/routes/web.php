@@ -49,4 +49,8 @@ Route::get('friend_prof', function (){
     return view('friend_prof');
 })->name('friend_prof');
 
+Route::get('order_history', function (){
+    return view('order_history');
+})->name('order_history');
+
 require __DIR__.'/auth.php';
