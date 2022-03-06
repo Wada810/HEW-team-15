@@ -455,6 +455,8 @@ template {
   display: none;
 }
 
+/* ボタンの枠の色 */
+/* ランクポイントのフォントサイズ */
 body {
   font-family: 'M PLUS 2', sans-serif;
   font-size: 16px;
@@ -463,6 +465,7 @@ body {
   background-color: #E2EFEF;
   line-height: 1.5;
   letter-spacing: 1px;
+  height: 100%;
 }
 
 .number_font {
@@ -473,6 +476,8 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* ボタンの枠の色 */
+/* ランクポイントのフォントサイズ */
 .s {
   font-size: 0.8rem;
 }
@@ -515,7 +520,7 @@ body {
   border-radius: 4px;
 }
 
-.btn, .btn-primary, .btn-secondary {
+.btn, .btn-primary, .btn-secondary, .btn-white {
   width: 100%;
   text-align: center;
   border-radius: 30px;
@@ -532,6 +537,13 @@ body {
 
 .btn-secondary {
   background-color: #E2EFEF;
+  border-color: #3A9FA8;
+  color: #3A9FA8;
+  font-weight: 800;
+}
+
+.btn-white {
+  background-color: #fbfeff;
   border-color: #3A9FA8;
   color: #3A9FA8;
   font-weight: 800;
@@ -557,6 +569,8 @@ body {
   padding: 12px 24px;
 }
 
+/* ボタンの枠の色 */
+/* ランクポイントのフォントサイズ */
 .l_home_header {
   display: flex;
   justify-content: space-between;
@@ -608,20 +622,21 @@ body {
 
 .l_algorithm {
   padding: 10px 30px;
-  height: calc(100vh - 250px);
-  overflow-y: auto;
+  margin-bottom: 150px;
 }
 
 .l_instraction {
   width: 100%;
   background-color: #fbfeff;
-  height: calc(100vh - 90px);
+  min-height: calc(100vh - 90px);
   padding: 10px 30px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+/* ボタンの枠の色 */
+/* ランクポイントのフォントサイズ */
 footer {
   display: flex;
   flex-direction: column;
@@ -816,6 +831,15 @@ footer .version {
   width: 100%;
   font-size: 16px;
   line-height: 22px;
+  position: relative;
+}
+
+.algorithm_contents .handle {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.3;
 }
 
 .algorithm_contents.is-active {
@@ -882,12 +906,19 @@ footer .version {
 }
 
 .p_button_box, .p_button_box-only {
+  height: 90px;
   background: #E2EFEF;
   position: fixed;
   left: 0;
   bottom: 59px;
   width: 100vw;
-  padding: 20px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.p_button_box form, .p_button_box-only form {
+  width: 100%;
 }
 
 .p_button_box-only {
@@ -977,10 +1008,179 @@ footer .version {
   transform: translateY(-50%);
   font-size: 0.9rem;
 }
-:root{
-  --main_color: #3A9FA8;
-  --sub_color: #cdeaec;
-  --border_color: #50a7af;
-  --err_bgcolor: #8a8a8a;/* jsでエラー時に変更 */
+
+.p_instraction_all_list_modal {
+  border-left: 10px solid #3A9FA8;
+  display: none;
 }
 
+.show {
+  display: block;
+  animation: show 0.5s forwards;
+}
+
+.close {
+  display: block;
+  animation: close 0.5s forwards;
+}
+
+@keyframes show {
+  0% {
+    position: absolute;
+    top: 90px;
+    transform: translateX(100%);
+  }
+  99% {
+    position: absolute;
+    top: 90px;
+    transform: translateX(1%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes close {
+  0% {
+    position: absolute;
+    top: 90px;
+    transform: translateX(0%);
+  }
+  99% {
+    position: absolute;
+    top: 90px;
+    transform: translateX(99%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.p_instraction_comp_modal {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #3A9FA8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  z-index: 11;
+}
+
+.p_instraction_comp_modal_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10vh;
+}
+
+.p_instraction_comp_modal_q {
+  text-align: center;
+  color: #fbfeff;
+  font-size: 1.4rem;
+}
+
+.p_instraction_comp_modal_window {
+  border-radius: 4px;
+  background-color: #fbfeff;
+}
+
+.p_instraction_comp_modal_title {
+  text-align: center;
+  margin: 10px auto;
+  border-radius: 50px;
+  width: 60%;
+  background-color: #3A9FA8;
+  color: #fbfeff;
+  padding: 4px;
+}
+
+.p_instraction_comp_modal_theme {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.p_instraction_comp_modal_judge_box {
+  border-top: 1px dashed #3A9FA8;
+  display: flex;
+}
+
+.p_instraction_comp_modal_judge_box button {
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.p_instraction_comp_modal_judge_box button span {
+  font-size: 4rem;
+}
+
+.p_instraction_comp_modal_judge_box .fail {
+  color: #EE3F7A;
+  border-right: 1px dashed #3A9FA8;
+}
+
+.p_instraction_comp_modal_judge_box .success {
+  color: #0fdd69;
+}
+
+#close_comp_modal {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(-50%) translateY(50%);
+  border: 0px solid #3A9FA8;
+  background-color: #fbfeff;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  font-size: 30px;
+}
+
+.c_show {
+  display: flex;
+  animation: c_show 0.5s forwards;
+}
+
+.c_close {
+  display: flex;
+  animation: c_close 0.5s 0.5s forwards;
+}
+
+.c_close_up {
+  animation: c_close_up .8s forwards;
+}
+
+@keyframes c_show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes c_close {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes c_close_up {
+  0% {
+    transform: translateY(0vh);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}

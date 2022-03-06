@@ -48,6 +48,7 @@ function sort(){
     new Sortable(order_list,{
         onEnd : update,
         filter: '.filtered',
+        handle: '.handle',
         animation: 150,
     })
 }

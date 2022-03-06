@@ -70,7 +70,75 @@ order_json.forEach(val => {
 
     i ++;
 });
+
+//戻るボタン
+let back_text = document.createElement("p");
+back_text.setAttribute("class","p_instraction_back_text");
+back_text.textContent = "閉じる";
+all_modal.appendChild(back_text);
+
+function all_close(){
+    main.classList.remove("hidden");
+    document.querySelector("#back_link").classList.remove("hidden");
+    document.querySelector("#back_text").classList.add("hidden");
+    all_modal.addEventListener("animationend",()=>{
+        all_modal.classList.remove("show");
+        all_modal.classList.remove("close");
+    }, { once: true})
+    all_modal.classList.add("close");
+}
+
+document.querySelector(".p_instraction_back_text").addEventListener("click",()=>{
+    all_close();
+});
+document.querySelector("#back_text").addEventListener("click",()=>{
+    all_close();
+});
+
+//モーダル開く
 document.querySelector(".p_instraction_all").addEventListener("click",()=>{
-    main.classList.add("hidden");
-    all_modal.classList.remove("hidden");
+    document.querySelector("#back_link").classList.add("hidden");
+    document.querySelector("#back_text").classList.remove("hidden");
+    all_modal.addEventListener("animationend",()=>{
+        main.classList.add("hidden");
+    }, { once: true})
+    all_modal.classList.add("show");
+});
+
+///////////完成モーダル
+//戻るボタン
+let comp_modal = document.querySelector(".p_instraction_comp_modal");
+let comp_window = document.querySelector(".p_instraction_comp_modal_wrapper");
+
+function comp_close(){
+    document.querySelector("#back_link").classList.remove("hidden");
+    document.querySelector("#back_comp").classList.add("hidden");
+
+    comp_window.addEventListener("animationend",()=>{
+        comp_modal.classList.remove("c_show");
+        comp_window.classList.remove("c_close_up");
+    }, { once: true})
+    comp_window.classList.add("c_close_up");
+
+    comp_modal.addEventListener("animationend",()=>{
+        comp_modal.classList.remove("c_close");
+    }, { once: true})
+    comp_modal.classList.add("c_close");
+}
+
+comp_modal.addEventListener("click",()=>{
+    comp_close();
+});
+document.querySelector(".p_instraction_comp_modal_window").addEventListener("click",(e)=>{
+    e.stopPropagation();
+});
+document.querySelector("#back_comp").addEventListener("click",()=>{
+    comp_close();
+});
+
+//モーダル開く
+document.querySelector("#comp_button").addEventListener("click",()=>{
+    document.querySelector("#back_link").classList.add("hidden");
+    document.querySelector("#back_comp").classList.remove("hidden");
+    comp_modal.classList.add("c_show");
 });

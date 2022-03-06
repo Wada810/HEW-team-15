@@ -11,9 +11,9 @@
 <!-- ヘッダー -->
 <header class="l_play_header p_play_header">
     <!-- 前のページへ戻るリンク -->
-    <a href="{{ route('order') }}" class="p_play_header__back"><span class="material-icons-round">undo</span></a>
-    <!-- 一覧戻るボタン --><!--
-    <button class="back_button" type="button"><span class="material-icons-outlined">undo</span></button> -->
+    <a href="{{ route('order') }}" class="p_play_header__back" id="back_link"><span class="material-icons-round">undo</span></a>
+    <div class="p_play_header__back hidden" id="back_text"><span class="material-icons-round">undo</span></div>
+    <div class="p_play_header__back hidden" id="back_comp"><span class="material-icons-round">undo</span></div>
     <div class="p_play_header__title">
         <span class="material-icons-round">library_books</span>
         <span>やることリスト</span>
@@ -43,17 +43,31 @@
     </div>
     <!-- 送信ボタン  -->
     <div class="p_button_box-only c_bg-white">
-        <form action="{{ route('order') }}" id="order_form" method="get">
-            @csrf
-            <button class="btn-secondary" id="comp_button">結果へ</button>
-        </form>
+
+    <button class="btn-secondary" id="comp_button">結果へ</button>
     </div>
 </main>
 
-<section class="l_instraction p_instraction_all_list_modal hidden">
+<section class="l_instraction p_instraction_all_list_modal"></section>
 
+
+<form action="{{ route('order') }}" id="order_form" method="get">
+    @csrf
+</form>
+<section class="p_instraction_comp_modal">
+    <div class="p_instraction_comp_modal_wrapper">
+        <span class="material-icons-round" id="close_comp_modal">close</span>
+        <p class="p_instraction_comp_modal_q">お題は達成できた？</p>
+        <div class="p_instraction_comp_modal_window">
+            <p class="p_instraction_comp_modal_title">お題</p>
+            <p class="p_instraction_comp_modal_theme">{{$data["theme"] ?? ""}}</p>
+            <div class="p_instraction_comp_modal_judge_box">
+                <a href="{{route('order')}}"><button class="fail"><span class="material-icons-round">clear</span><p>失敗</p></button></a>
+                <button class="success"><span class="material-icons-round">radio_button_unchecked</span><p>成功!</p></button>
+            </div>
+        </div>
+    </div>
 </section>
-
 
 <script>
     const order_json = <?php print json_encode($data["order"])?> ;
