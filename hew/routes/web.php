@@ -30,6 +30,7 @@ Route::get('home', function () {
     return view('home');
 })->name('home');
 
+/* マイページ */
 Route::get('mypage', [MypageController::class, 'index'])->middleware("auth")->name('mypage');
 
 /* プレイ画面 */

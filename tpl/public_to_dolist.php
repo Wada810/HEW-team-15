@@ -8,9 +8,9 @@
     <!-- cssリセットCDN -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <!-- デフォルトCSS -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <!-- public_to_dolistのCSS -->
-    <link rel="stylesheet" type="text/css" href="css/public_to_dolist.css">
+    <link rel="stylesheet" type="text/css" href="../css/public_to_dolist.css">
     <!-- public_to_dolistモーダルのCSS -->
     <link rel="stylesheet" href="css/public_to_do_list_modal.css">
 
@@ -73,7 +73,7 @@
             <input placeholder="キーワードを入力" name=""  type="text">
             <button><span class="material-icons-round search_icon">search</span></button>
         </div>
-    
+
         <!-- セレクトで動かすのか？それ以外の何かで動かすのか？ -->
         <div class="sort_area">
             <div class="sort_content">
@@ -86,7 +86,7 @@
     <div class="content_box">
         <!-- 検索件数 -->
         <p class="search_num">検索件数:129件</p>
-    
+
         <!-- 各ユーザーのやることリスト -->
         <div class="public_list">
             <!-- 友だちのマイページ画面へ飛ぶ -->
@@ -100,7 +100,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="todo_list open-btn">
                 <p class="theme">ピーナッツバターサンドを作る！ピーナッツバターサンドを作る！</p><!-- 長い文章でも検証すること -->
                 <div class="icons_flex">
@@ -109,7 +109,7 @@
                         <p><span class="material-icons-round stars_icon">stars</span>125</p>
                     </div>
                     <p class="data">2022/02/13</p>
-                </div> 
+                </div>
             </div>
         </div>
 
@@ -125,7 +125,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="todo_list open-btn">
                 <p class="theme">ピーナッツバターサンドを作る！</p><!-- 長い文章でも検証すること -->
                 <div class="icons_flex">
@@ -134,7 +134,7 @@
                         <p><span class="material-icons-round stars_icon">stars</span>125</p>
                     </div>
                     <p class="data">2022/02/13</p>
-                </div> 
+                </div>
             </div>
         </div>
 
@@ -150,7 +150,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="todo_list open-btn">
                 <p class="theme">ピーナッツバターサンドを作る！</p><!-- 長い文章でも検証すること -->
                 <div class="icons_flex">
@@ -159,7 +159,7 @@
                         <p><span class="material-icons-round stars_icon">stars</span>125</p>
                     </div>
                     <p class="data">2022/02/13</p>
-                </div> 
+                </div>
             </div>
         </div>
 
@@ -175,7 +175,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="todo_list open-btn">
                 <p class="theme">ピーナッツバターサンドを作る！</p><!-- 長い文章でも検証すること -->
                 <div class="icons_flex">
@@ -184,7 +184,7 @@
                         <p><span class="material-icons-round stars_icon">stars</span>125</p>
                     </div>
                     <p class="data">2022/02/13</p>
-                </div> 
+                </div>
             </div>
         </div>
 
@@ -200,7 +200,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="todo_list open-btn">
                 <p class="theme">ピーナッツバターサンドを作る！</p><!-- 長い文章でも検証すること -->
                 <div class="icons_flex">
@@ -209,7 +209,7 @@
                         <p><span class="material-icons-round stars_icon">stars</span>125</p>
                     </div>
                     <p class="data">2022/02/13</p>
-                </div> 
+                </div>
             </div>
         </div>
     </div>

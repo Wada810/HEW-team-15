@@ -15,8 +15,18 @@ class MypageController extends Controller
      */
     public function index()
     {
-        //$user = User::find(1);
+        // セッションからデータを取得
+        $data = session()->all();
+        if(!isset($data["order"])){
+            $data["order"] = [];
+        }
+        //ユーザ情報
         $user = Auth::user();
-        return view('mypage.index',compact("user"));
+        $user["next"] = 0;
+        for($i = 1; $i <= $user["level"]; $i++){
+            $user["next"] += $i;
+        }
+
+        return view('mypage',compact("user","data"));
     }
 }

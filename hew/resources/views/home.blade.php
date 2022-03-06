@@ -19,7 +19,7 @@
             @endif
         </header>
         <div class="l_home_culumn">
-            <h1 class="p_home_logo"><img src="img/3.svg" alt="algo"></h1>
+            <h1 class="p_home_logo">@include("logo")</h1>
             @if (Route::has('login'))
                 @auth
                     <a href="{{ route('theme') }}" class="p_home_link">あたらしく作る</a>

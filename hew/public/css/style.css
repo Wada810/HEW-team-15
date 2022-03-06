@@ -455,14 +455,57 @@ template {
   display: none;
 }
 
-/* ボタンの枠の色 */
-/* ランクポイントのフォントサイズ */
+:root {
+  --main_bg_color: #e1efef;
+  --sub_bg_color: #3A9FA8;
+  --text_color: #3A9FA8;
+  --button_border: #62BBC3;
+  --second_color: #eb9718;
+  --input_border: #eb9718ab;
+}
+
+:root[theme="emerald"] {
+  --main_bg_color: #e1efef;
+  --sub_bg_color: #3A9FA8;
+  --text_color: #3A9FA8;
+  --button_border: #62BBC3;
+  --second_color: #eb9718;
+  --input_border: #eb9718ab;
+}
+
+:root[theme="emerald_green"] {
+  --main_bg_color: #E8FFF3;
+  --sub_bg_color: #0FAA6C;
+  --text_color: #0FAA6C;
+  --button_border: #59b18e;
+  --second_color: #84D8B5;
+  --input_border: #84D8B5;
+}
+
+:root[theme="strawberry"] {
+  --main_bg_color: #FFE8ED;
+  --sub_bg_color: #DE4065;
+  --text_color: #DE4065;
+  --button_border: #df6c87;
+  --second_color: #84D8B5;
+  --input_border: #84D8B5;
+}
+
+:root[theme="ocean_blue"] {
+  --main_bg_color: #E8EFFF;
+  --sub_bg_color: #407DCC;
+  --text_color: #407DCC;
+  --button_border: #89b2e8;
+  --second_color: #417ECE;
+  --input_border: #417ECE;
+}
+
 body {
   font-family: 'M PLUS 2', sans-serif;
   font-size: 16px;
   font-weight: 600;
-  color: #3A9FA8;
-  background-color: #E2EFEF;
+  color: var(--text_color);
+  background-color: var(--main_bg_color);
   line-height: 1.5;
   letter-spacing: 1px;
   height: 100%;
@@ -476,8 +519,51 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* ボタンの枠の色 */
-/* ランクポイントのフォントサイズ */
+:root {
+  --main_bg_color: #e1efef;
+  --sub_bg_color: #3A9FA8;
+  --text_color: #3A9FA8;
+  --button_border: #62BBC3;
+  --second_color: #eb9718;
+  --input_border: #eb9718ab;
+}
+
+:root[theme="emerald"] {
+  --main_bg_color: #e1efef;
+  --sub_bg_color: #3A9FA8;
+  --text_color: #3A9FA8;
+  --button_border: #62BBC3;
+  --second_color: #eb9718;
+  --input_border: #eb9718ab;
+}
+
+:root[theme="emerald_green"] {
+  --main_bg_color: #E8FFF3;
+  --sub_bg_color: #0FAA6C;
+  --text_color: #0FAA6C;
+  --button_border: #59b18e;
+  --second_color: #84D8B5;
+  --input_border: #84D8B5;
+}
+
+:root[theme="strawberry"] {
+  --main_bg_color: #FFE8ED;
+  --sub_bg_color: #DE4065;
+  --text_color: #DE4065;
+  --button_border: #df6c87;
+  --second_color: #84D8B5;
+  --input_border: #84D8B5;
+}
+
+:root[theme="ocean_blue"] {
+  --main_bg_color: #E8EFFF;
+  --sub_bg_color: #407DCC;
+  --text_color: #407DCC;
+  --button_border: #89b2e8;
+  --second_color: #417ECE;
+  --input_border: #417ECE;
+}
+
 .s {
   font-size: 0.8rem;
 }
@@ -507,6 +593,10 @@ body {
   pointer-events: none;
 }
 
+.logo_color {
+  stroke: var(--sub_bg_color);
+}
+
 .c_bg-white {
   background-color: #fbfeff !important;
 }
@@ -524,28 +614,28 @@ body {
   width: 100%;
   text-align: center;
   border-radius: 30px;
-  border: solid 4px #3A9FA8;
+  border: solid 4px var(--sub_bg_color);
   padding: 8px;
 }
 
 .btn-primary {
-  background-color: #3A9FA8;
-  border-color: #62BBC3;
+  background-color: var(--sub_bg_color);
+  border-color: var(--button_border);
   color: #fbfeff;
   font-weight: 800;
 }
 
 .btn-secondary {
-  background-color: #E2EFEF;
-  border-color: #3A9FA8;
-  color: #3A9FA8;
+  background-color: var(--main_bg_color);
+  border-color: var(--sub_bg_color);
+  color: var(--text_color);
   font-weight: 800;
 }
 
 .btn-white {
   background-color: #fbfeff;
-  border-color: #3A9FA8;
-  color: #3A9FA8;
+  border-color: var(--sub_bg_color);
+  color: var(--text_color);
   font-weight: 800;
 }
 
@@ -553,24 +643,67 @@ body {
   display: block;
   width: 100%;
   background-color: #fbfeff;
-  color: #3A9FA8;
+  color: var(--sub_bg_color);
   border-radius: 30px;
-  color: #3A9FA8;
+  color: var(--text_color);
   border: 2px solid rgba(0, 0, 0, 0);
   transition: background-color 0.3s, border-color 0.3s;
   padding: 6px 12px;
 }
 
 .input:focus, .input-thick:focus {
-  border-color: #eb9718ab;
+  border-color: var(--input_border);
 }
 
 .input-thick {
   padding: 12px 24px;
 }
 
-/* ボタンの枠の色 */
-/* ランクポイントのフォントサイズ */
+:root {
+  --main_bg_color: #e1efef;
+  --sub_bg_color: #3A9FA8;
+  --text_color: #3A9FA8;
+  --button_border: #62BBC3;
+  --second_color: #eb9718;
+  --input_border: #eb9718ab;
+}
+
+:root[theme="emerald"] {
+  --main_bg_color: #e1efef;
+  --sub_bg_color: #3A9FA8;
+  --text_color: #3A9FA8;
+  --button_border: #62BBC3;
+  --second_color: #eb9718;
+  --input_border: #eb9718ab;
+}
+
+:root[theme="emerald_green"] {
+  --main_bg_color: #E8FFF3;
+  --sub_bg_color: #0FAA6C;
+  --text_color: #0FAA6C;
+  --button_border: #59b18e;
+  --second_color: #84D8B5;
+  --input_border: #84D8B5;
+}
+
+:root[theme="strawberry"] {
+  --main_bg_color: #FFE8ED;
+  --sub_bg_color: #DE4065;
+  --text_color: #DE4065;
+  --button_border: #df6c87;
+  --second_color: #84D8B5;
+  --input_border: #84D8B5;
+}
+
+:root[theme="ocean_blue"] {
+  --main_bg_color: #E8EFFF;
+  --sub_bg_color: #407DCC;
+  --text_color: #407DCC;
+  --button_border: #89b2e8;
+  --second_color: #417ECE;
+  --input_border: #417ECE;
+}
+
 .l_home_header {
   display: flex;
   justify-content: space-between;
@@ -635,8 +768,51 @@ body {
   gap: 10px;
 }
 
-/* ボタンの枠の色 */
-/* ランクポイントのフォントサイズ */
+:root {
+  --main_bg_color: #e1efef;
+  --sub_bg_color: #3A9FA8;
+  --text_color: #3A9FA8;
+  --button_border: #62BBC3;
+  --second_color: #eb9718;
+  --input_border: #eb9718ab;
+}
+
+:root[theme="emerald"] {
+  --main_bg_color: #e1efef;
+  --sub_bg_color: #3A9FA8;
+  --text_color: #3A9FA8;
+  --button_border: #62BBC3;
+  --second_color: #eb9718;
+  --input_border: #eb9718ab;
+}
+
+:root[theme="emerald_green"] {
+  --main_bg_color: #E8FFF3;
+  --sub_bg_color: #0FAA6C;
+  --text_color: #0FAA6C;
+  --button_border: #59b18e;
+  --second_color: #84D8B5;
+  --input_border: #84D8B5;
+}
+
+:root[theme="strawberry"] {
+  --main_bg_color: #FFE8ED;
+  --sub_bg_color: #DE4065;
+  --text_color: #DE4065;
+  --button_border: #df6c87;
+  --second_color: #84D8B5;
+  --input_border: #84D8B5;
+}
+
+:root[theme="ocean_blue"] {
+  --main_bg_color: #E8EFFF;
+  --sub_bg_color: #407DCC;
+  --text_color: #407DCC;
+  --button_border: #89b2e8;
+  --second_color: #417ECE;
+  --input_border: #417ECE;
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -669,7 +845,7 @@ footer .version {
   width: 50px;
   height: 50px;
   border-radius: 50px;
-  background-color: #3A9FA8;
+  background-color: var(--text_color);
   border: 3px solid rgba(255, 255, 255, 0.5);
   box-sizing: content-box;
   position: relative;
@@ -705,12 +881,12 @@ footer .version {
 /* プレイ画面 */
 /* テーマ入力 */
 .p_play_header {
-  background-color: #3A9FA8;
+  background-color: var(--sub_bg_color);
   color: #fbfeff;
 }
 
 .p_play_header__back {
-  color: #3A9FA8;
+  color: var(--text_color);
   background-color: #fbfeff;
   border-radius: 100px;
   width: 35px;
@@ -764,7 +940,7 @@ footer .version {
   color: #fbfeff;
   position: fixed;
   top: 59px;
-  background-color: #3A9FA8;
+  background-color: var(--sub_bg_color);
   text-align: center;
   z-index: 10;
 }
@@ -786,7 +962,7 @@ footer .version {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #3A9FA8;
+  background-color: var(--sub_bg_color);
   padding: 20px;
   gap: 10px;
 }
@@ -797,7 +973,7 @@ footer .version {
 
 .algorithm_add_button {
   background-color: #fbfeff;
-  color: #eb9718;
+  color: var(--second_color);
   border-radius: 100px;
   width: 40px;
   height: 40px;
@@ -812,7 +988,7 @@ footer .version {
 
 .algorithm_list__item {
   display: flex;
-  border-bottom: dashed 1px #3A9FA8;
+  border-bottom: dashed 1px var(--sub_bg_color);
 }
 
 .algorithm_list__item:nth-last-of-type(1) {
@@ -844,7 +1020,7 @@ footer .version {
 
 .algorithm_contents.is-active {
   background-color: #fbfeff;
-  color: #3A9FA8;
+  color: var(--sub_bg_color);
   font-weight: 600;
   border-radius: 5px;
   margin-top: 10px;
@@ -866,7 +1042,7 @@ footer .version {
   height: auto;
   display: flex;
   align-items: center;
-  border-top: 2px dotted #3A9FA8;
+  border-top: 2px dotted var(--sub_bg_color);
 }
 
 .algorithm_contents .material_items button {
@@ -883,8 +1059,8 @@ footer .version {
 .algorithm_contents .material_items button:nth-last-of-type(1) {
   width: 65%;
   height: 60px;
-  color: #3A9FA8;
-  border-left: 2px dotted #3A9FA8;
+  color: var(--sub_bg_color);
+  border-left: 2px dotted var(--sub_bg_color);
 }
 
 .algorithm_contents .material_items button .material-icons-round {
@@ -907,7 +1083,7 @@ footer .version {
 
 .p_button_box, .p_button_box-only {
   height: 90px;
-  background: #E2EFEF;
+  background: var(--main_bg_color);
   position: fixed;
   left: 0;
   bottom: 59px;
@@ -927,7 +1103,7 @@ footer .version {
 
 /* instraction */
 .p_instraction__move {
-  background-color: #E2EFEF;
+  background-color: var(--main_bg_color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -960,12 +1136,12 @@ footer .version {
 }
 
 .filled {
-  border-color: #3A9FA8;
+  border-color: var(--sub_bg_color);
 }
 
 .p_instraction_content_active {
   border-radius: 4px;
-  border: 1px solid #E2EFEF;
+  border: 1px solid var(--main_bg_color);
   padding: 20px;
   display: grid;
   grid-template-columns: auto 1fr;
@@ -987,7 +1163,7 @@ footer .version {
 }
 
 .p_instraction__tools .p_instraction__dots div {
-  background-color: #3A9FA8;
+  background-color: var(--sub_bg_color);
   width: 12px;
   height: 12px;
   border-radius: 40px;
@@ -1010,7 +1186,7 @@ footer .version {
 }
 
 .p_instraction_all_list_modal {
-  border-left: 10px solid #3A9FA8;
+  border-left: 10px solid var(--sub_bg_color);
   display: none;
 }
 
@@ -1061,7 +1237,7 @@ footer .version {
   top: 0;
   height: 100vh;
   width: 100vw;
-  background: #3A9FA8;
+  background: var(--sub_bg_color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1092,7 +1268,7 @@ footer .version {
   margin: 10px auto;
   border-radius: 50px;
   width: 60%;
-  background-color: #3A9FA8;
+  background-color: var(--sub_bg_color);
   color: #fbfeff;
   padding: 4px;
 }
@@ -1103,7 +1279,7 @@ footer .version {
 }
 
 .p_instraction_comp_modal_judge_box {
-  border-top: 1px dashed #3A9FA8;
+  border-top: 1px dashed var(--sub_bg_color);
   display: flex;
 }
 
@@ -1121,7 +1297,7 @@ footer .version {
 
 .p_instraction_comp_modal_judge_box .fail {
   color: #EE3F7A;
-  border-right: 1px dashed #3A9FA8;
+  border-right: 1px dashed var(--sub_bg_color);
 }
 
 .p_instraction_comp_modal_judge_box .success {
@@ -1133,7 +1309,7 @@ footer .version {
   right: 0;
   top: 0;
   transform: translateX(-50%) translateY(50%);
-  border: 0px solid #3A9FA8;
+  border: 0px solid var(--sub_bg_color);
   background-color: #fbfeff;
   width: 35px;
   height: 35px;

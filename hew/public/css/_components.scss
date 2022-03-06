@@ -21,6 +21,10 @@
     opacity: 0;
     pointer-events: none;
 }
+.logo_color{
+    stroke: $sub_bg_color;
+}
+
 .c_bg-white{
     background-color: $white !important;
 }

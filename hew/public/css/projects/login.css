@@ -1,6 +1,49 @@
 @charset "UTF-8";
-/* ボタンの枠の色 */
-/* ランクポイントのフォントサイズ */
+:root {
+  --main_bg_color: #e1efef;
+  --sub_bg_color: #3A9FA8;
+  --text_color: #3A9FA8;
+  --button_border: #62BBC3;
+  --second_color: #eb9718;
+  --input_border: #eb9718ab;
+}
+
+:root[theme="emerald"] {
+  --main_bg_color: #e1efef;
+  --sub_bg_color: #3A9FA8;
+  --text_color: #3A9FA8;
+  --button_border: #62BBC3;
+  --second_color: #eb9718;
+  --input_border: #eb9718ab;
+}
+
+:root[theme="emerald_green"] {
+  --main_bg_color: #E8FFF3;
+  --sub_bg_color: #0FAA6C;
+  --text_color: #0FAA6C;
+  --button_border: #59b18e;
+  --second_color: #84D8B5;
+  --input_border: #84D8B5;
+}
+
+:root[theme="strawberry"] {
+  --main_bg_color: #FFE8ED;
+  --sub_bg_color: #DE4065;
+  --text_color: #DE4065;
+  --button_border: #df6c87;
+  --second_color: #84D8B5;
+  --input_border: #84D8B5;
+}
+
+:root[theme="ocean_blue"] {
+  --main_bg_color: #E8EFFF;
+  --sub_bg_color: #407DCC;
+  --text_color: #407DCC;
+  --button_border: #89b2e8;
+  --second_color: #417ECE;
+  --input_border: #417ECE;
+}
+
 /* 新規登録 */
 main {
   width: 100%;
