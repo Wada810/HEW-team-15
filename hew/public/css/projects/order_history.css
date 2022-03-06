@@ -1,17 +1,24 @@
 @charset "UTF-8";
 /* ボタンの枠の色 */
 /* ランクポイントのフォントサイズ */
+:root {
+  --main_color: #3a9fa8;
+  --sub_color: #e2efef;
+  --frame_color: #379ea760;
+  /* ボタンの枠の色 */
+  --fav_color: #ebcb4d;
+  --rank_point_font_size: 0.5rem;
+}
+
 html {
   width: 100%;
   height: 100%;
-  overflow-y: hidden;
 }
 
 body {
-  background-color: #E2EFEF;
+  background-color: var(--sub_color);
   width: 100%;
   height: 100%;
-  position: relative;
 }
 
 * {
@@ -19,6 +26,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "M PLUS 2", sans-serif;
+  font-weight: 600;
 }
 
 header {
@@ -28,7 +36,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3A9FA8;
+  background-color: var(--main_color);
   color: white;
   position: relative;
   z-index: 100;
@@ -61,6 +69,7 @@ main {
   padding-top: 60px;
   font-size: 0.8rem;
   position: relative;
+  overflow-y: hidden;
 }
 
 #prof {
@@ -72,21 +81,21 @@ main {
 .pattern_cover {
   position: absolute;
   right: 4%;
-  top: -15%;
-  color: #3A9FA8;
+  top: -12%;
+  color: var(--main_color);
 }
 
 .palette_cover {
   width: 45px;
   height: 45px;
-  background-color: #3A9FA8;
+  background-color: var(--main_color);
   border-radius: 50px;
   display: flex;
   margin: 0 auto;
   justify-self: center;
   align-items: center;
   /* ボタンの枠 */
-  /*     box-shadow: $frame_color 0px 0px 0px 4px; */
+  box-shadow: var(--frame_color) 0px 0px 0px 4px;
 }
 
 .palette {
@@ -104,7 +113,6 @@ main {
   width: 100%;
   height: 100%;
   text-align: center;
-  padding-top: 5vh;
 }
 
 .prof_cover {
@@ -112,14 +120,14 @@ main {
   width: 100px;
   height: 100px;
   border-radius: 50px;
-  margin: 0 auto 0 auto;
+  margin: 11% auto 0 auto;
 }
 
 .prof_img {
   border-radius: 50px;
   width: 100%;
   height: 100%;
-  border: 5px solid #3A9FA8;
+  border: 5px solid var(--main_color);
   object-fit: cover;
   z-index: -10000;
 }
@@ -128,7 +136,7 @@ main {
   position: absolute;
   width: 30px;
   height: 30px;
-  background-color: #3A9FA8;
+  background-color: var(--main_color);
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -146,10 +154,10 @@ main {
 }
 
 .name {
-  margin: 2vh 0 1vh 0;
+  margin: 3% 0 3% 0;
   letter-spacing: 2px;
   font-weight: bold;
-  color: #3A9FA8;
+  color: var(--main_color);
 }
 
 .rank_cover {
@@ -159,7 +167,7 @@ main {
   width: 38px;
   height: 38px;
   font-weight: 600;
-  color: #3A9FA8;
+  color: var(--main_color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -180,7 +188,7 @@ main {
     position: relative;
     width: 100%;
     height: 18px;
-    color: $sub_bg_color;
+    color: var(--main_color);
   }
   .rank_bar_tank {
     width: 50%;
@@ -194,7 +202,7 @@ main {
     width: 34%;
     height: 100%;
     margin: 0 auto;
-    background: $second_color;
+    background: var(--fav_color);
     border-radius: 20px;
   } */
 /* レベルメーター */
@@ -202,7 +210,7 @@ main {
   position: relative;
   width: 70%;
   height: 18px;
-  color: #3A9FA8;
+  color: var(--main_color);
   margin: 0 auto;
   box-sizing: border-box;
   border-radius: 20px;
@@ -218,7 +226,7 @@ main {
 }
 
 .animation {
-  background-color: #eb9718;
+  background-color: var(--fav_color);
   animation-name: animation-sample;
   /*--アニメーション名--*/
   animation-duration: 3s;
@@ -242,21 +250,21 @@ main {
   display: flex;
   justify-content: center;
   font-weight: 600;
-  color: #3A9FA8;
+  color: var(--main_color);
 }
 
 .left_rank_point {
   padding-right: 1%;
-  /*     font-size: $rank_point_font_size; */
+  font-size: var(--rank_point_font_size);
 }
 
 .center_rank_point {
-  /*     font-size: $rank_point_font_size; */
+  font-size: var(--rank_point_font_size);
 }
 
 .right_rank_point {
   padding-left: 1%;
-  /*     font-size: $rank_point_font_size; */
+  font-size: var(--rank_point_font_size);
 }
 
 .get_star_cover {
@@ -265,7 +273,7 @@ main {
   text-align: center;
   align-items: center;
   justify-content: center;
-  background-color: #eb9718;
+  background-color: var(--fav_color);
   border-radius: 30px;
   width: 100px;
   border: white solid 2px;
@@ -282,8 +290,8 @@ main {
 #todo {
   width: 100%;
   height: 1fr;
-  background-color: #E2EFEF;
-  color: #3A9FA8;
+  background-color: var(--sub_color);
+  color: var(--main_color);
 }
 
 .todo_sort_cover {
@@ -299,6 +307,22 @@ main {
   font-weight: bold;
 }
 
+.item_list {
+  margin: 0 auto;
+  padding-bottom: 2vh;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.6rem;
+}
+
+.lines_num_cover {
+  display: flex;
+  align-items: center;
+  font-size: 0.6rem;
+}
+
 /* 左右ボーダー */
 .text-divider {
   display: flex;
@@ -309,7 +333,7 @@ main {
 .text-divider::after {
   content: "";
   flex-grow: 1;
-  border-top: 4px dotted #3A9FA8;
+  border-top: 4px dotted var(--main_color);
   display: block;
 }
 
@@ -439,7 +463,7 @@ main {
 
 .popup_header {
   position: relative;
-  background-color: #3A9FA8;
+  background-color: var(--main_color);
   color: white;
   width: 100%;
   height: 50px;
@@ -477,7 +501,7 @@ main {
 
 .popup-inner button {
   position: relative;
-  background-color: #eb9718;
+  background-color: var(--fav_color);
   border-radius: 40px;
   border: #e7d9a2 solid 6px;
   color: white;
@@ -524,68 +548,70 @@ main {
   flex-wrap: wrap;
   align-items: center;
   width: 90%;
+  height: 10vh;
   margin: 0 auto;
   text-align: center;
+  overflow-y: scroll;
 }
 
 .modal_items > div {
   padding: 1rem;
+  width: 50%;
 }
 
 .modal_items > div img {
-  width: 100px;
+  width: 90px;
   height: auto;
 }
 
-/* 友達のマイページ */
-.star_cover {
-  margin: 1vh auto 0 auto;
-  width: 100%;
+/* アイコン */
+.modal_items_icon {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
-}
-
-.item_list {
+  width: 90%;
+  height: 65vh;
   margin: 0 auto;
-  padding-bottom: 2vh;
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.6rem;
+  text-align: center;
+  overflow-y: scroll;
 }
 
-.lines_num_cover {
-  display: flex;
-  align-items: center;
-  font-size: 0.6rem;
+.modal_items_icon > div {
+  padding: 1rem;
+  position: relative;
+  width: 50%;
+  text-align: center;
 }
 
-.line_num {
-  padding-left: 20%;
+.modal_items_icon > p {
+  text-align: center;
 }
 
-.release_area {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #3A9FA8;
-  width: 15vw;
+.icon_cover {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 40px;
+  margin: 0 auto;
+}
+
+.icon_cover img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  border: 5px solid var(--main_color);
+  object-fit: cover;
+  z-index: -10000;
+}
+
+/* 選択中のアイコン */
+.active_icon {
+  background-color: var(--main_color);
+  border-radius: 20px;
+  z-index: -100;
   color: white;
-  border: 2px solid #3A9FA8;
-  border-radius: 5px;
-  padding: 0.4vh 0 0.4vh 0;
-}
-
-.release_p {
-  font-size: 0.4rem;
-  font-weight: 400;
-  padding-right: 1vw;
-}
-
-.release_icon {
-  font-size: 0.4rem;
 }
 
 /* modal */
@@ -754,6 +780,7 @@ main {
 #release_modal .release_modal .release_cover .modal_under .modal_items .modal_date_cover {
   display: flex;
   align-items: flex-end;
+  padding: 0 3vw 0 0;
 }
 
 #release_modal .release_modal .release_cover .modal_under .modal_items .modal_date_cover .modal_date {
@@ -877,4 +904,4 @@ main {
 #release_check_modal .release_check_modal_cover .release_comp .comp_p {
   color: #fbfeff;
 }
-/*# sourceMappingURL=friend_prof.css.map */
+/*# sourceMappingURL=order_history.css.map */

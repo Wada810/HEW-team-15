@@ -7,16 +7,25 @@ main {
   height: 100vh;
   background-color: var(--sub_color);
   padding-top: 80px;
-  font-size: 0.8rem;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0px;
+}
+
+#login_dev {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .title_call {
   margin: 1vh auto 0 auto;
   width: 90%;
+  line-height: 16px;
+  text-align: center;
 }
 
 .login_home_img_cover {
-  width: 30vh;
+  width: 25vh;
   margin: 0 auto;
 }
 
@@ -28,34 +37,40 @@ main {
   height: 10vh;
   border-radius: 10px;
   background-color: var(--sub_color);
-  font-size: 0.6rem;
   color: white;
+  margin: 1vh auto 1vh auto;
+  font-size: 12px;
 }
 
 .err_icon_cover {
   text-align: center;
-  padding-bottom: 10px;
+}
+
+.err_icon {
+  font-size: 1px;
 }
 
 .error_msg {
+  white-space: nowrap;
   margin: 0 auto;
   padding-top: 1vh;
   width: 90%;
   height: 100%;
   border-radius: 10px;
-  background-color: var(--err_bgcolor) !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
 .input_cover {
   width: 90%;
+  height: 79px;
   margin: 0 auto;
+  padding-bottom: 1vh;
 }
 
 .log_input, .input-thick {
   display: block;
   width: 100%;
   height: 5vh;
-  text-align: left;
   background-color: #fbfeff;
   color: #3A9FA8;
   border-radius: 30px;
@@ -63,6 +78,10 @@ main {
   border: 2px solid rgba(0, 0, 0, 0);
   transition: background-color 0.3s, border-color 0.3s;
   padding: 6px 12px;
+}
+
+.input {
+  text-align: left;
 }
 
 .lavel {
@@ -73,6 +92,16 @@ main {
 
 .name_cover {
   margin: 2vh auto 0 auto;
+}
+
+.rem_cover {
+  text-align: left !important;
+  padding: 0 0 0 5vw;
+}
+
+.p_pixel {
+  font-weight: 700;
+  font-size: 0.6rem;
 }
 
 .word_count {
@@ -92,21 +121,26 @@ main {
   width: 90%;
   height: 6vh;
   border-radius: 30px !important;
-  border: 5px solid var(--border_color);
+  border: 5px solid #379ea760;
+}
+
+.btn {
+  width: 90%;
+  margin: 2vh 0 0 0;
 }
 
 .reg_btn {
-  background-color: var(--main_color) !important;
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh auto;
 }
 
 .log_btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--main_color);
-  background-color: var(--sub_color) !important;
-  margin: 0;
+  margin: 1vh auto;
 }
 
 /* ログイン */
