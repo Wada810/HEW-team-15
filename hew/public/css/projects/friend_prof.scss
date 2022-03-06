@@ -79,7 +79,7 @@ html {
     justify-self: center;
     align-items: center;
     /* ボタンの枠 */
-    box-shadow: $frame_color 0px 0px 0px 4px;
+/*     box-shadow: $frame_color 0px 0px 0px 4px; */
   }
   .palette {
     margin: 0 auto;
@@ -228,14 +228,14 @@ html {
   }
   .left_rank_point {
     padding-right: 1%;
-    font-size: $rank_point_font_size;
+/*     font-size: $rank_point_font_size; */
   }
   .center_rank_point {
-    font-size: $rank_point_font_size;
+/*     font-size: $rank_point_font_size; */
   }
   .right_rank_point {
     padding-left: 1%;
-    font-size: $rank_point_font_size;
+/*     font-size: $rank_point_font_size; */
   }
   
   .get_star_cover {
@@ -785,4 +785,106 @@ html {
         }
       }
     }
+  }
+
+  //checkModal
+  #release_check_modal{
+    background-color: $modal_main_bg_color;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    .release_check_modal_cover{
+      position: relative;
+      width: 60%;
+      height: 30vh;
+      background-color: $white;
+      border: 3px solid $sub_bg_color;
+      border-radius: 10px;
+      .release_top{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 85%;
+        height: 35%;
+        .release_p{
+          text-align: center;
+          font-size: 0.8rem;
+        }
+      }
+      .release_under{
+        width: 95%;
+        margin: 0 auto;
+        position: relative;
+        border-top: 3px dotted $sub_bg_color;
+        .release_check_area{
+          width: 90%;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          .release_ok_area{
+            .release_ok_cover{
+              .release_ok_icon{
+
+              }
+              .release_ok_p{
+
+              }
+            }
+            .check_ok{
+
+            }
+          }
+          .release_no_area{
+            .release_no_cover{
+              .release_no_icon{
+
+              }
+              .release_no_p{
+
+              }
+            }
+            .check_no{
+
+            }
+          }
+          .release_check_cover{
+            margin: 0 auto;
+            display: flex;
+            padding: 2.5vh 4vw 0 4vw;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            .release_check_inner{
+              display: flex;
+            }
+          }
+        }
+      }
+      .release_comp{
+        position: absolute;
+        bottom: -35px;
+        left: 50%;
+        display: flex;
+        border-radius: 20px;
+        justify-content: center;
+        background-color: $sub_bg_color;
+        width: 20vw;
+        padding: 0.8vh 0 0.8vh 0;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        .comp_p{
+          color: $white;
+        }
+      }
+    }
+  } 
+  .check{
   }
