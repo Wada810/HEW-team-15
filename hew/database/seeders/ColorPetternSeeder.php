@@ -21,7 +21,7 @@ class ColorPetternSeeder extends Seeder
             "level" => 1
         ]);
         ColorPettern::create([
-            "name" => "emeraldgeen",
+            "name" => "emeraldgreen",
             "jp_name" => "エメラルドグリーン",
             "level" => 1
         ]);

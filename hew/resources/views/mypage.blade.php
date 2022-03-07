@@ -38,7 +38,7 @@
             </div>
             <div class="get_star_cover">
                 <span class="material-icons-round">stars</span>
-                <span class="get_star_num">999</span>
+                <span class="get_star_num">{{$favs}}</span>
             </div>
         </div>
     </div>
@@ -49,8 +49,33 @@
         </div>
         <div class="todo_scroll">
             <div class="todo_list_cover">
+<<<<<<< HEAD
                 @foreach($instraction as $key => $value)
                 <div class="todo_list"><div class="top"><p class="todo_theme">{{$value['theme']}}</p></div><div class="under"><div class="lines_cover"><span class="material-icons-round lines_icon">format_list_numbered</span><p class="cross">×</p><p class="lines">{{$value['lines']}}</p></div><div class="fav_cover"><span class="material-icons-round fav_icon">stars</span><p class="cross">×</p><p class="fav">{{$value['likes']}}</p></div><div class="data">{{$value['updated_at']}}</div></div></div>
+=======
+                @foreach($instractions as $val)
+                <div class="todo_list">
+                    <div class="top">
+                        <p class="todo_theme">{{$val["theme"]}}</p>
+                        <div class="todo_public_setting">@if($val['is_shared'] == 1)<span class="material-icons-round on">public</span>@else<span class="material-icons-round off">public_off</span>@endif</div>
+                    </div>
+                    <div class="under">
+                        <div class="lines_cover">
+                            <span class="material-icons-round lines_icon">format_list_numbered</span>
+                            <p class="cross">×</p>
+                            <p class="lines">{{$val["lines"]}}</p>
+                        </div>
+                        <div class="fav_cover">
+                            <span class="material-icons-round fav_icon">stars</span>
+                            <p class="cross">×</p>
+                            <p class="fav">{{$val["likes"]}}</p>
+                        </div>
+                        <div class="data">
+                            <p>{{substr($val["created_at"],0,10)}}</p>
+                        </div>
+                    </div>
+                </div>
+>>>>>>> dev_user_class
                 @endforeach
             </div>
         </div>
@@ -105,8 +130,8 @@
             <div class="release_modal">
                 <div class="release_cover">
                     <div class="modal_prof_img_area">
-                        <div class="modal_rank_area"><div class="modal_rank_cover"><p class="modal_rank">RANK</p><p class="modal_rank_sum">97</p></div></div>
-                        <img class="modal_prof_img" src="" alt="">
+                        <div class="modal_rank_area"><div class="modal_rank_cover"><p class="modal_rank">RANK</p><p class="modal_rank_sum">{{$user["level"]}}</p></div></div>
+                        <img class="modal_prof_img" src="{{asset('img/' . $user['icon_image'])}}" alt="">
                     </div>
                     <div class="modal_top">
                         <div class="modal_close"><span class="material-icons-round modal_close_icon">cancel</span></div>

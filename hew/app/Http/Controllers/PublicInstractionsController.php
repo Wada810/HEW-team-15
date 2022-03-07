@@ -56,5 +56,6 @@ class PublicInstractionsController extends Controller
         $user = Auth::user();
         $search = Instraction::where('user_id',$user['id'])->count('likes');
         return view('public_instractions',compact('user','instractions','search'));
+
     }
 }

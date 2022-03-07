@@ -24,7 +24,7 @@ class MypageController extends Controller
             $data["order"] = [];
         }
 
-        
+
         //ユーザ情報
         $user = Auth::user();
         $user["next"] = 0;
@@ -42,6 +42,8 @@ class MypageController extends Controller
         //ユーザそういいね数
         $favs = Instraction::where('user_id',$user['id'])->sum('likes');
 
+
         return view('mypage',compact("user","data","colors","icons","instraction","favs"));
+
     }
 }

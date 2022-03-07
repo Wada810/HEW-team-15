@@ -8,15 +8,15 @@ footer{
     }
 }
 /* タイトル画面 */
-.p_footer{
-}
+/* .p_footer{
+} */
 .p_home_logo{
     font-weight: 700;
     font-size: 3rem;
     img{
         width: 80vw;
     }
-    margin: 10vh 0 15vh 0;
+    margin: 40px 0 70px 0;
 }
 .p_home_user_icon{
     display: flex;
@@ -40,9 +40,9 @@ footer{
 }
 .p_home_link{
     font-weight: 700;
-    font-size: 1.4rem;
-    margin-bottom: 30px;
-    //animation: home_link 3s linear infinite;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    animation: home_link 3s linear infinite;
     &:last-of-type{
         margin-bottom: 60px;
     }

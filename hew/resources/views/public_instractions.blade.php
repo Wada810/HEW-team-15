@@ -30,6 +30,7 @@
         @csrf
             <input placeholder="キーワードを入力" name="search"  type="text">
             <button type="submit"><span class="material-icons-round search_icon">search</span></button>
+
         </form>
 
         <!-- セレクトで動かすのか？それ以外の何かで動かすのか？ -->
@@ -52,6 +53,8 @@
                 <div class="profile_icon_name">
                     <div class="friend_icon">
                         <a href="{{route('friend_prof')}}"><img src="{{ asset('./img/kuma.png')}}" alt="友だちのアイコン"></a>
+                        <a href="#"><img src="{{ asset('./img/kuma.png')}}" alt="友だちのアイコン"></a>
+
                     </div>
                     <div class="friend_name" id="{{$value['i_id']}}">
                         <a class="get_id" id="{{$value['id']}}" href="#">{{$value['name']}}<span class="material-icons-round friendname_stars">stars</span></a>

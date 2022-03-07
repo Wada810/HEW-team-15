@@ -1,48 +1,5 @@
 @import "../variable";
 
-:root {
-    --main_color: #3a9fa8;
-    --sub_color: #e2efef;
-    --frame_color: #379ea760; /* ボタンの枠の色 */
-    --fav_color: #ebcb4d;
-    --rank_point_font_size: 0.5rem;
-  }
-  
-
-  html {
-    width: 100%;
-    height: 100%;
-  }
-  
-  body {
-    background-color: var(--sub_color);
-    width: 100%;
-    height: 100%;
-  }
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "M PLUS 2", sans-serif;
-    font-weight: 600;
-  }
-  
-  header {
-    display: none;
-    width: 100%;
-    height: 13%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--main_color);
-    color: white;
-    position: relative;
-    z-index: 100;
-    font-weight: 600;
-  }
-  h1 {
-    font-size: 16px;
-  }
   .back_button {
     position: absolute;
     background-color: white;
@@ -98,8 +55,7 @@
   }
   .pattern {
     padding-top: 5px;
-    font-size: 0.4rem;
-    letter-spacing: 0px;
+    font-size: 0.5rem;
     font-weight: 600;
     color: $text_color;
   }
@@ -145,7 +101,7 @@
 
   .name {
     margin: 3% 0 3% 0;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
     font-weight: bold;
     color: $text_color;
   }
@@ -161,21 +117,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     top: -12px;
-    left: -6px;
+    left: -12px;
   }
 
   .rank {
     font-size: 10px;
-    line-height: 10px;
-    letter-spacing: 0px;
-    transform: scale(0.7);
+    transform: scale(0.8);
   }
   .rank_no {
-    font-size: 15px;
-    line-height: 16px;
-    font-family: 'Montserrat',sans-serif;
+    font-size: 14px;
   }
 
   .color_item{
@@ -369,8 +320,7 @@
     display: flex;
     justify-content: center;
     font-weight: 600;
-    color: var(--main_color);
-    font-family: 'Montserrat',sans-serif;
+    color: $text_color;;
   }
   .left_rank_point {
     padding-right: 1%;
@@ -385,7 +335,7 @@
   }
 
   .get_star_cover {
-    margin: 12px auto 0 auto;
+    margin: 10px auto 0 auto;
     display: flex;
     text-align: center;
     align-items: center;
@@ -397,15 +347,9 @@
     color: white;
     padding: 3px 0;
     font-weight: 600;
-    font-family: 'Montserrat',sans-serif;
-    
-    .material-icons-round{
-      font-size: 21px;
-
-    }
   }
   .get_star_num {
-    font-size: 0.6rem;
+    font-size: 0.75rem;
     padding-left: 0.5rem;
   }
 
@@ -453,7 +397,7 @@
   .text-divider::after {
     content: "";
     flex-grow: 1;
-    border-top: 2px dashed var(--main_color);
+    border-top: 4px dotted $sub_bg_color;
     display: block;
   }
   .text-divider::before {
@@ -474,11 +418,9 @@
   .sort {
   }
   .sort_seed {
-    padding-right: 5px;
   }
   .drop_arrow {
     font-size: 0.9rem !important;
-    padding-top: 2px;
   }
 
   .todo_scroll{
@@ -512,11 +454,28 @@
     padding-left: 3%;
     padding-top: 3%;
     padding-bottom: 3%;
-    border-bottom: 2px dashed $sub_bg_color;
+    border-bottom: 2px dotted $sub_bg_color;
     font-size: 0.6rem;
+
+    .todo_public_setting{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 25%;
+      .material-icons-round{
+        font-size: 20px;
+
+        &.on{
+          color: $sub_bg_color;
+        }
+        &.off{
+          color: rgb(199, 218, 212);
+        }
+      }
+    }
   }
   .todo_theme {
-    width: 75%;
+    width: 70%;
   }
 
   .under {
@@ -535,21 +494,16 @@
   }
   .lines_cover {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
   }
   .lines_icon {
-
-  }
-  .line_num{
-    padding-left: 5px;
   }
   .lines {
     font-size: 0.6rem;
-    padding-left: 3px;
   }
   .fav_cover {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     padding-right: 12%;
     color: $second_color;
   }
@@ -557,11 +511,10 @@
   }
   .fav {
     font-size: 0.6rem;
-    padding-left: 3px;
   }
   .data {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     padding-right: 6%;
     font-size: 0.6rem;
     font-weight: 600;
@@ -804,13 +757,15 @@
           .modal_top{
             width: 100%;
             height: 50%;
-            border-bottom: 3px dashed black;
+            border-bottom: 3px dotted black;
             .modal_close{
               position: absolute;
               top: -18px;
               right: -18px;
               .modal_close_icon{
                 font-size: 2.5rem;
+                background-color: $white;
+                border-radius: 100px;
               }
             }
             .modal_user_name{
@@ -826,6 +781,7 @@
               }
             }
             .modal_half{
+              margin-top: -1px;
               width: 100%;
               height: 33%;
               display: flex;
@@ -998,7 +954,7 @@
           width: 95%;
           margin: 0 auto;
           position: relative;
-          border-top: 3px dashed $sub_bg_color;
+          border-top: 3px dotted $sub_bg_color;
           .release_check_area{
             width: 90%;
             display: flex;
