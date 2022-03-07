@@ -32,7 +32,7 @@
                 <div class="close-btn" id="close-btn"><span class="material-icons-round">close</span></div>
                 <div class="profile_modal_main">
                     <div class="profile_modal_info">
-                        <h2>user</h2>
+                        <h2></h2>
                         <div class="star_point_content">
                             <span class="material-icons-round">stars</span>
                             <p>278</p>
@@ -110,7 +110,7 @@
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
-    const user = <?php print json_encode($user)?> ;
+    const user = <?php print json_encode($user)?>;
     const friendProf_url = "{{route('friendProf')}}";
 </script>
 <script src="{{asset('js/jquery.min.js')}}"></script>

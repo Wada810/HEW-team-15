@@ -14,9 +14,8 @@ class FriendProfileController extends Controller
         if ($request->has('user_id')) {
             //ユーザ情報
             $friend_prof = User::where('id', '=', 'user_id')->get();
-            return response()->json(true);
+            return response()->json($friend_prof);
         }
         return response()->json(false);
-        return view('public_instractions',compact('friend_prof'));
     }
 }

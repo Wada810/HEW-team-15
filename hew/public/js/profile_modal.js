@@ -10,6 +10,7 @@ for (let i = 0; i < openBtn.length; i++) {
         popup.classList.add('is-show');
         const user_id = document.getElementsByClassName('get_id')[i];
         const id = user_id.getAttribute('id');
+        console.log(id);
         $.ajax({
           type: 'GET',
           url: friendProf_url,
