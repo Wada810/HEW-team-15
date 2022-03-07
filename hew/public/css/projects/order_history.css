@@ -236,15 +236,20 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   top: -12px;
   left: -12px;
 }
 
 .rank {
   font-size: 10px;
-  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .rank_no {
@@ -501,6 +506,8 @@ main {
 
 .get_star_cover {
   margin: 10px auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-align: center;
   -webkit-box-align: center;
@@ -584,7 +591,9 @@ main {
 .text-divider::before,
 .text-divider::after {
   content: "";
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   border-top: 4px dotted var(--sub_bg_color);
   display: block;
 }
@@ -718,7 +727,9 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .lines {
@@ -729,7 +740,9 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   padding-right: 12%;
   color: var(--second_color);
 }
@@ -742,7 +755,9 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   padding-right: 6%;
   font-size: 0.6rem;
   font-weight: 600;
