@@ -3,12 +3,14 @@
 use Illuminate\Support\Facades\Route;
 
 use Illuminate\Support\Facades\Auth;
+
 use App\Http\Controllers\MypageController;
 use App\Http\Controllers\ColorController;
 use App\Http\Controllers\IconController;
 use App\Http\Controllers\PublicInstractionsController;
 use App\Http\Controllers\FriendProfileController;
 use APP\Http\Controllers\SortController;
+use APP\Http\Controllers\ChangepublicController;
 
 use App\Http\Controllers\Play\ThemeController;
 use App\Http\Controllers\Play\OrderController;
@@ -80,5 +82,7 @@ Route::get('mg',[IconController::class, 'index'])->name('img');
 Route::get('sort',[SortController::class, 'index'])->name('sort');
 
 Route::get('friendProf',[FriendProfileController::class, 'index'])->name('friendProf');
+
+Route::get('change_public',[ChangepublicController::class, 'index'])->name('change_public');
 
 require __DIR__.'/auth.php';

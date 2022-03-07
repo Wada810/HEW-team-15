@@ -45,15 +45,15 @@
     <div id="todo">
         <div class="todo_sort_cover">
             <div class="text-divider"><p class="todo_title">作ったやることリスト</p></div>
-            <div class="sort_cover"><p class="sort">ソート:</p><select class="sort_table" name='sort'><option value="updated_at" class="sort_seed">新しい順</option><option value="likes" class="sort_seed">いいね順</option><option value="lines" class="sort_seed">行数順</option></select><span class="material-icons-round drop_arrow">arrow_drop_down_circle</span></div>
+            <!-- <div class="sort_cover"><p class="sort">ソート:</p><select class="sort_table" name='sort'><option value="updated_at" class="sort_seed">新しい順</option><option value="likes" class="sort_seed">いいね順</option><option value="lines" class="sort_seed">行数順</option></select><span class="material-icons-round drop_arrow">arrow_drop_down_circle</span></div> -->
         </div>
         <div class="todo_scroll">
             <div class="todo_list_cover">
-                @foreach($instractions as $val)
-                <div class="todo_list">
+                @foreach($instractions as $key => $val)
+                <div class="todo_list {{$val['id']}} {{$val['is_shared']}} {{$key}} ">
                     <div class="top">
                         <p class="todo_theme">{{$val["theme"]}}</p>
-                        <div class="todo_public_setting">@if($val['is_shared'] == 1)<span class="material-icons-round on">public</span>@else<span class="material-icons-round off">public_off</span>@endif</div>
+                        <div class="todo_public_setting">@if($val['is_shared'] == 1)<span class="material-icons-round pub_stat on">public</span>@else<span class="material-icons-round pub_stat off">public_off</span>@endif</div>
                     </div>
                     <div class="under">
                         <div class="lines_cover">
@@ -163,8 +163,11 @@
                 </div>
                 <div class="release_under">
                     <div class="release_check_area">
-                        <div class="release_ok_area release_check_cover"><div class="release_ok_cover release_check_inner"><span class="material-icons-round release_ok_icon">public</span><p class="release_ok_p">公開</p></div><input class="check_ok check" type="radio" name="release_dete" value="1" ></div>
-                        <div class="release_no_area release_check_cover"><div class="release_no_cover release_check_inner"><span class="material-icons-round release_no_icon">public_off</span><p class="release_no_p">非公開</p></div><input class="check_no check" type="radio" name="release_dete" value="0"></div>
+                        <div class="release_ok_area release_check_cover"><div class="release_ok_cover release_check_inner"><span class="material-icons-round release_ok_icon">public</span><p class="release_ok_p">公開</p></div><input class="check_ok check" type="radio" name="public_value" value="1" ></div>
+                        <div class="release_no_area release_check_cover"><div class="release_no_cover release_check_inner"><span class="material-icons-round release_no_icon">public_off</span><p class="release_no_p">非公開</p></div><input class="check_no check" type="radio" name="public_value" value="0"></div>
+                        <input type="hidden" id="instraction_id">
+                        <input type="hidden" id="key">
+                        <input type="hidden" id="c_value">
                     </div>
                 </div>
                 <div class="release_comp"><p class="comp_p">適用</p></div>
@@ -178,6 +181,7 @@
     const user = <?php print json_encode($user)?> ;
     const url = "{{route('color')}}";
     const img_url = "{{route('img')}}";
+    const pub_url = "{{route('change_public')}}";
     const sort = "{{route('sort')}}";
 </script>
 <script src="{{asset('js/jquery.min.js')}}"></script>

@@ -93,6 +93,30 @@ document.getElementById("js-close-btn-2").addEventListener("click",()=>{
 })
 });
 
+
+//共有の変更
+document.querySelector(".comp_p").addEventListener("click",()=>{
+  let value = 0;
+  if(document.getElementsByName("public_value")[0].checked){
+    value = 1;
+  }
+  $.ajax({
+    type: 'GET',
+    url: pub_url,
+    data: {
+        'public': value,
+        'id': document.getElementById("instraction_id").value
+    },
+    dataType: 'json',
+  }).done((data)=>{
+    console.log(data);
+    if(data != false){
+      document.getElementsByClassName("pub_stat")[document.getElementById("key").value].textContent = data;
+    }
+  }).fail(()=>{
+})
+});
+
 // modal処理
 const close_btn = document.getElementsByClassName('modal_close')[0];
 const modal = document.getElementById('release_modal');
@@ -106,7 +130,17 @@ const modal_date = document.getElementsByClassName('modal_date')[0];
 
 
 for(let i = 0; i < todo_list.length; i++) {
-    todo_list[i].addEventListener('click',function (open_modal) {
+    todo_list[i].addEventListener('click',function (e) {
+        console.log(e.currentTarget);
+        document.getElementById("instraction_id").value = e.currentTarget.classList[1];
+        document.getElementById("key").value = e.currentTarget.classList[3];
+
+        if(e.currentTarget.classList[2] == 1){
+          document.querySelector(".check_ok").checked = true;
+        }else{
+          document.querySelector(".check_no").checked = true;
+        }
+
         let set_theme = document.getElementsByClassName('todo_theme')[i];
         let set_lines = document.getElementsByClassName('lines')[i];
         let set_date = document.getElementsByClassName('data')[i];
