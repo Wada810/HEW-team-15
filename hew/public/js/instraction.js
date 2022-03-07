@@ -142,3 +142,12 @@ document.querySelector("#comp_button").addEventListener("click",()=>{
     document.querySelector("#back_comp").classList.remove("hidden");
     comp_modal.classList.add("c_show");
 });
+
+//見せよう閉じる
+document.querySelector('.dokidoki').addEventListener("click",()=>{
+    document.querySelector('.player_change_modal').addEventListener("animationend",()=>{
+        document.querySelector('.player_change_modal').classList.remove("c_close_up");
+        document.querySelector('.player_change_modal').classList.add("hidden")
+    }, { once: true})
+    document.querySelector('.player_change_modal').classList.add("c_close_up")
+});

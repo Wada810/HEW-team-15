@@ -1,0 +1,52 @@
+@import "../variable";
+.player_change_modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $sub_bg_color;
+  color: $white;
+}
+.player_change_wrapp{
+  position: relative;
+  p{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.5rem;
+  }
+}
+
+.dokidoki {
+  animation-name: dokidoki;
+  animation-delay: 0s;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  width: 80%;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+@keyframes dokidoki {
+  0% {
+    font-size: 1rem;
+  }
+  40% {
+    font-size: 1rem;
+  }
+  50% {
+    font-size: 1.05rem;
+  }
+  60% {
+    font-size: 1rem;
+  }
+  100% {
+    font-size: 1rem;
+  }
+}

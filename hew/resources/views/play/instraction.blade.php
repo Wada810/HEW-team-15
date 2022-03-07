@@ -1,7 +1,7 @@
 @extends("layouts.layout")
 
 @section('css_link')
-    <!-- <link rel="stylesheet" href="{{ asset('css/projects/instraction.css') }}"> -->
+    <link rel="stylesheet" href="{{ asset('css/projects/player_change.css') }}">
 @endsection
 
 @section('title', 'やることリスト')
@@ -69,6 +69,14 @@
     </div>
 </section>
 
+<!-- 見せようモーダル -->
+<div class="player_change_modal">
+    <div class="player_change_wrapp">
+        <p>大人の人にみせよう！</p>
+        <p class="invisible">i</p>
+        <button class="btn-secondary dokidoki">やることリストを見せる</button>
+    </div>
+</div>
 <script>
     const order_json = <?php print json_encode($data["order"])?> ;
 </script>
