@@ -1,1 +1,64 @@
-@import "../variable"
+@import "../variable";
+
+.top{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    & > div{
+        text-align: center;
+        width: 100%;
+    }
+}
+.mb{
+    margin-bottom: 30px;
+}
+.mb2{
+    margin-bottom: 50px;
+}
+.title{
+    font-size: 1.5rem;
+}
+.up_side_down{
+    transform: rotate(180deg);
+    font-size: 3rem;
+}
+.p{
+    padding: 12px;
+    font-size: 1rem;
+    position: relative;
+}
+.panda_right{
+    position: absolute;
+    width: 70px;
+    transform: rotate(20deg) translateY(-45px);
+    z-index: -1;
+    top: 0;
+    right: 0;
+}
+.for_kids{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $sub_bg_color;
+    z-index: 1;
+    animation: slide .5s forwards;
+}
+
+
+@keyframes slide {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}

@@ -39,7 +39,7 @@ Route::get('home', function () {
 
 //遊び方
 Route::get('how_to_play', function () {
-    return view('how_to_play',compact("user"));
+    return view('how_to_play');
 })->name('how_to_play');
 
 /* マイページ */

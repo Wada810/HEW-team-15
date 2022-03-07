@@ -881,6 +881,7 @@ body {
 .l_home_header {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .l_home {
