@@ -109,12 +109,12 @@
     left: 0;
     z-index: 1;
 
-    .for_adults_window{
+    .for_adults_window_2{
         margin-top: 40px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 80%;
+        width: 70vw;
         height: 80vh;
 
         .for_adults_scroll_content{
@@ -141,8 +141,53 @@
                 color: $second_color;
             }
         }
+        .for_adults_scroll_content_2{
+            width: 100%;
+            height: 50%;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .for_adults_img_flame{
+                width: 70vw;
+                height: 70vw;
+                border-radius: 10px;
+
+                img{
+                    border-radius: 10px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    background-color: $sub_bg_color;
+                }
+            }
+        }
+        .for_adults_middle{
+            width: 70vw;
+            height: 40%;
+            margin: 5% auto;
+            overflow: auto;
+            .p-r{
+                padding-right: 5%;
+            }
+            h2{
+                font-size: 0.9rem;
+                font-weight: 800;
+            }
+            p{
+                font-size: 0.7rem;
+                font-weight: 600;
+            }
+            .scroll_content_list{
+                font-size: 0.7rem;
+                font-weight: 700;
+            }
+            .yellow{
+                color: $second_color;
+            }
+        }
         .for_adults_under{
-            
             .for_adults_buttons{
                 display: flex;
                 justify-content: space-between;
@@ -193,10 +238,10 @@
                     margin-left: 2px;
                 }
                 .light_on{ 
-                    background-color: $white;
+                    background-color: $sub_bg_color;
                 }
                 .light_off{
-                    background-color: $button_border;
+                    background-color: rgb(185, 185, 185);
                 }
             }
         }
