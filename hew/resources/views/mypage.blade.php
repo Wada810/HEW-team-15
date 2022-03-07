@@ -7,9 +7,12 @@
 @section('title', 'マイページ')
 
 @section('body')
-
+<form action="logout" method="post" id="logout">
+    @csrf
+</form>
 <header class="l_play_header p_play_header">
     <a href="{{ url()->previous()}}" class="p_play_header__back"><span class="material-icons-round">undo</span></a>
+    <button class="logout" form="logout"><span class="material-icons-round">logout</span></button>
     <div class="p_play_header__title">
         <span>マイページ</span>
     </div>
@@ -21,7 +24,7 @@
         <div class="prof_area">
             <div class="prof_cover">
                 <div class="rank_cover"><div class="rank_block"><p class="rank">RANK</p><p class="rank_no">{{$user["level"]}}</p></div></div>
-                <img class="prof_img" src="https://placehold.jp/100x100.png" alt="プロフ画像">
+                <img class="prof_img" src="{{asset('img/' . $user['icon_image'])}}" alt="プロフ画像">
                 <div class="edit_cover" id="modalOpenIcon"><span class="material-icons-round edit">edit</span></div>
             </div>
             <p class="name">{{$user["name"]}}</p>
@@ -60,22 +63,12 @@
         <div class="popup-inner">
             <div class="popup_header">カラーパターン</div>
                 <div class="modal_items">
-                    <div class="color_change_button" id="emerald">
-                        <div class="color_item emerald"></div>
-                        <p>エメラルド</p>
+                    @foreach($colors as $val)
+                    <div class="color_change_button" id="{{$val['name']}}">
+                        <div class="color_item {{$val['name']}}"></div>
+                        <p>{{$val['jp_name']}}</p>
                     </div>
-                    <div class="color_change_button" id="emerald_green">
-                        <div class="color_item emerald_green"></div>
-                        <p>エメラルドグリーン</p>
-                    </div>
-                    <div class="color_change_button" id="ocean_blue">
-                        <div class="color_item ocean_blue"></div>
-                        <p>オーシャンブルー</p>
-                    </div>
-                    <div class="color_change_button" id="strawberry">
-                        <div class="color_item strawberry"></div>
-                        <p>ストロベリー</p>
-                    </div>
+                    @endforeach
                 </div>
                 <button id="js-close-btn">OK</button>
             </div>
@@ -86,49 +79,23 @@
         <div class="popup-inner">
             <div class="popup_header">プロフィールアイコン</div>
                 <div class="modal_items_icon">
-                    <!-- active_icon 選択したアイコン -->
-                    <div class="icon_btn active_icon">
-                        <div class="icon_cover">
-                            <img class="icon_img" src="https://placehold.jp/50x50.png" alt="プロフ画像">
-                        </div>
-                        <p>ぱんだ</p>
-                    </div>
-                    <div class="icon_btn">
-                        <div class="icon_cover">
-                            <img class="icon_img" src="https://placehold.jp/100x100.png" alt="プロフ画像">
-                        </div>
-                        <p>うさぎ</p>
-                    </div>
-                    <div class="icon_btn">
-                        <div class="icon_cover">
-                            <img class="icon_img" src="https://placehold.jp/200x200.png" alt="プロフ画像">
-                        </div>
-                        <p>ちわわマグナム</p>
-                    </div>
-                    <div class="icon_btn">
-                        <div class="icon_cover">
-                            <img class="icon_img" src="https://placehold.jp/200x50.png" alt="プロフ画像">
-                        </div>
-                        <p>ぺんぎんぎん</p>
-                    </div>
-                    <div class="icon_btn">
-                        <div class="icon_cover">
-                            <img class="icon_img" src="https://placehold.jp/50x200.png" alt="プロフ画像">
-                        </div>
-                        <p>はむすた</p>
-                    </div>
-                    <div class="icon_btn">
-                        <div class="icon_cover">
-                            <img class="icon_img" src="https://placehold.jp/50x200.png" alt="プロフ画像">
-                        </div>
-                        <p>はむすた</p>
-                    </div>
-                    <div class="icon_btn">
-                        <div class="icon_cover">
-                            <img class="icon_img" src="https://placehold.jp/50x200.png" alt="プロフ画像">
-                        </div>
-                        <p>はむすた</p>
-                    </div>
+                    @foreach($icons as $val)
+                        @if($val['path'] == $user['icon_image'])
+                            <div class="icon_btn active_icon" id="{{$val['name']}}">
+                                <div class="icon_cover">
+                                    <img class="icon_img" src="{{asset('img/' . $val['path'])}}" alt="プロフ画像">
+                                </div>
+                                <p>{{$val["jp_name"]}}</p>
+                            </div>
+                        @else
+                            <div class="icon_btn" id="{{$val['name']}}">
+                                <div class="icon_cover">
+                                    <img class="icon_img" src="{{asset('img/' . $val['path'])}}" alt="プロフ画像">
+                                </div>
+                                <p>{{$val["jp_name"]}}</p>
+                            </div>
+                        @endif
+                    @endforeach
                 </div>
                 <button id="js-close-btn-2">OK</button>
             </div>
@@ -140,6 +107,7 @@
 <script>
     const user = <?php print json_encode($user)?> ;
     const url = "{{route('color')}}";
+    const img_url = "{{route('img')}}";
 </script>
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <script src="{{asset('js/pattern_change.js')}}"></script>

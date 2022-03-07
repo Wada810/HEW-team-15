@@ -56,3 +56,13 @@
     flex-direction: column;
     gap: 10px;
 }
+.l_finish{
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}

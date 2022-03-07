@@ -5,9 +5,12 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\MypageController;
 use App\Http\Controllers\ColorController;
+use App\Http\Controllers\IconController;
+
 use App\Http\Controllers\Play\ThemeController;
 use App\Http\Controllers\Play\OrderController;
 use App\Http\Controllers\Play\InstractionController;
+use App\Http\Controllers\Play\FinishController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,6 +50,9 @@ Route::post('play/order', [OrderController::class, 'post']);
 Route::get('play/instraction', [InstractionController::class, 'index'])->name('instraction');
 Route::post('play/instraction', [InstractionController::class, 'post']);
 
+Route::get('play/finish', [FinishController::class, 'index'])->name('finish');
+Route::post('play/finish', [FinishController::class, 'post']);
+
 /* 友達のプロフィール */
 Route::get('friend_prof', function (){
     return view('friend_prof');
@@ -54,5 +60,7 @@ Route::get('friend_prof', function (){
 
 /* 色変えAPI */
 Route::get('color',[ColorController::class, 'index'])->name('color');
+
+Route::get('mg',[IconController::class, 'index'])->name('img');
 
 require __DIR__.'/auth.php';

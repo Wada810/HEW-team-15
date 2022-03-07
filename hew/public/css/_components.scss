@@ -85,3 +85,15 @@
     @extend .input;
     padding: 12px 24px;
 }
+.logout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}

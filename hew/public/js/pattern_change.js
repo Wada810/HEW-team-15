@@ -57,6 +57,8 @@ let max_length_exp = document.querySelector(".level_box").clientWidth;
 let current_length_xp = (max_length_exp / user["next"]) * user["total_exp"];
 document.querySelector(".animation-box").setAttribute("style",`width: ${current_length_xp}px;`);
 
+
+//変更を保存
 let color_change_button = document.getElementsByClassName("color_change_button");
 for(let i = 0; i < color_change_button.length; i ++){
   color_change_button[i].addEventListener("click",(e)=>{
@@ -76,3 +78,20 @@ for(let i = 0; i < color_change_button.length; i ++){
     })
   })
 }
+
+//画像の変更
+document.getElementById("js-close-btn-2").addEventListener("click",()=>{
+  const path = document.querySelector(".active_icon").id;
+  $.ajax({
+    type: 'GET',
+    url: img_url,
+    data: {
+        'path': path,
+    },
+    dataType: 'json',
+  }).done((data)=>{
+    console.log(data);
+    document.querySelector(".prof_img").setAttribute("src",data);
+  }).fail(()=>{
+})
+});

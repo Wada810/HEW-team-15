@@ -63,7 +63,7 @@
             <p class="p_instraction_comp_modal_theme">{{$data["theme"] ?? ""}}</p>
             <div class="p_instraction_comp_modal_judge_box">
                 <a href="{{route('order')}}"><button class="fail"><span class="material-icons-round">clear</span><p>失敗</p></button></a>
-                <button class="success"><span class="material-icons-round">radio_button_unchecked</span><p>成功!</p></button>
+                <a href="{{route('finish')}}"><button class="success"><span class="material-icons-round">radio_button_unchecked</span><p>成功!</p></button></a>
             </div>
         </div>
     </div>

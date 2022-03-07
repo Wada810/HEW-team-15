@@ -62,7 +62,7 @@ main {
   position: absolute;
   right: 4%;
   top: -15%;
-  color: $sub_bg_color;
+  color: $text_color;
 }
 .palette_cover {
   width: 45px;
@@ -104,6 +104,7 @@ main {
   border: 5px solid $sub_bg_color;
   object-fit: cover;
   z-index: -10000;
+  object-fit: cover;
 }
 .edit_cover {
   position: absolute;
@@ -129,7 +130,7 @@ main {
   margin: 3% 0 3% 0;
   letter-spacing: 2px;
   font-weight: bold;
-  color: $sub_bg_color;
+  color: $text_color;
 }
 
 .rank_cover {
@@ -139,7 +140,7 @@ main {
   width: 38px;
   height: 38px;
   font-weight: 600;
-  color: $sub_bg_color;
+  color: $text_color;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -257,7 +258,7 @@ main {
   width: 100%;
   height: 1fr;
   background-color: $main_bg_color;
-  color: $sub_bg_color;
+  color: $text_color;
 }
 .todo_sort_cover {
   width: 100%;
@@ -365,6 +366,9 @@ main {
   align-items: flex-end;
   padding-right: 12%;
   color: $fav_color;
+  img{
+    object-fit: contain;
+  }
 }
 .fav_icon {
 }
@@ -492,35 +496,123 @@ main {
   }
 }
 .emerald{
-  &::after{
-    background-color: $emerald_main;
+  & + p{
+    margin-top: 5px;
+    color: $emerald_sub !important;
   }
-  &::before{
+  &::after{
     background-color: $emerald_sub;
   }
-}
-.emerald_green{
-  &::after{
-    background-color: $emerald_green_main;
-  }
   &::before{
-    background-color: $emerald_green_sub;
+    background-color: $emerald_main;
   }
 }
-.ocean_blue{
+.emeraldgreen{
+  & + p{
+    margin-top: 5px;
+    color: $emeraldgreen_sub !important;
+  }
   &::after{
-    background-color: $ocean_blue_main;
+    background-color: $emeraldgreen_sub;
   }
   &::before{
-    background-color: $ocean_blue_sub;
+    background-color: $emeraldgreen_main;
   }
 }
 .strawberry{
+  & + p{
+    margin-top: 5px;
+    color: $strawberry_sub !important;
+  }
   &::after{
-    background-color: $strawberry_main;
+    background-color: $strawberry_sub;
   }
   &::before{
-    background-color: $strawberry_sub;
+    background-color: $strawberry_main;
+  }
+}
+.oceanblue{
+  & + p{
+    margin-top: 5px;
+    color: $oceanblue_sub !important;
+  }
+  &::after{
+    background-color: $oceanblue_sub;
+  }
+  &::before{
+    background-color: $oceanblue_main;
+  }
+}
+.grapefruit{
+  & + p{
+    margin-top: 5px;
+    color: $grapefruit_sub !important;
+  }
+  &::after{
+    background-color: $grapefruit_sub;
+  }
+  &::before{
+    background-color: $grapefruit_main;
+  }
+}
+.amethyst{
+  & + p{
+    margin-top: 5px;
+    color: $amethyst_sub !important;
+  }
+  &::after{
+    background-color: $amethyst_sub;
+  }
+  &::before{
+    background-color: $amethyst_main;
+  }
+}
+.depth{
+  & + p{
+    margin-top: 5px;
+    color: $depth_sub !important;
+  }
+  &::after{
+    background-color: $depth_sub;
+  }
+  &::before{
+    background-color: $depth_main;
+  }
+}
+.jupiter{
+  & + p{
+    margin-top: 5px;
+    color: $jupiter_sub !important;
+  }
+  &::after{
+    background-color: $jupiter_sub;
+  }
+  &::before{
+    background-color: $jupiter_main;
+  }
+}
+.lipstick{
+  & + p{
+    margin-top: 5px;
+    color: $lipstick_sub !important;
+  }
+  &::after{
+    background-color: $lipstick_sub;
+  }
+  &::before{
+    background-color: $lipstick_main;
+  }
+}
+.roseiron{
+  & + p{
+    margin-top: 5px;
+    color: $roseiron_sub !important;
+  }
+  &::after{
+    background-color: $roseiron_sub;
+  }
+  &::before{
+    background-color: $roseiron_main;
   }
 }
 
