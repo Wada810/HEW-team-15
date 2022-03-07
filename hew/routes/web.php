@@ -71,8 +71,8 @@ Route::get('public_instractions', [PublicInstractionsController::class, 'index']
 Route::post('public_instractions', [PublicInstractionsController::class, 'post']);
 
 /* 友達のプロフィール */
-Route::get('friend_prof', [FriendController::class, 'index'])->name('friend_prof');
-Route::post('friend_prof', [FriendController::class, 'post']);
+Route::get('friend_prof', [App\Http\Controllers\FriendController::class, 'index'])->name('friend_prof');
+Route::post('friend_prof', [App\Http\Controllers\FriendController::class, 'post']);
 
 /* 色変えAPI */
 Route::get('color',[ColorController::class, 'index'])->name('color');
@@ -81,7 +81,7 @@ Route::get('mg',[IconController::class, 'index'])->name('img');
 
 Route::get('sort',[SortController::class, 'index'])->name('sort');
 
-Route::get('friendProf',[FriendProfileController::class, 'index'])->name('friendProf');
+Route::get('friendProf',[App\Http\Controllers\FriendProfileController::class, 'index'])->name('friendProf');
 
 Route::get('change_public',[App\Http\Controllers\ChangePublicController::class, 'index'])->name('change_public');
 

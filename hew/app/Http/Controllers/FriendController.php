@@ -17,7 +17,6 @@ class FriendController extends Controller
             'u.name',
             'i.theme',
             'i.updated_at',
-            'i.likes',
             'i.lines',
             'i.id as inst_id',
             'u.icon_image',
@@ -35,7 +34,6 @@ class FriendController extends Controller
             'u.name',
             'i.theme',
             'i.updated_at',
-            'i.likes',
             'i.lines',
             'i.id as inst_id',
             'u.icon_image',
@@ -50,7 +48,7 @@ class FriendController extends Controller
                 $q->orWhere('i.is_shared','=',1);
             })
           ->get();
-        
+
         $friend_star = User::where('user_id','=',1)
           ->sum('likes');
         return view('friend_prof', compact('friend_prof','friend_inst','friend_star'));
