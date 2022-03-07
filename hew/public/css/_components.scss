@@ -35,6 +35,7 @@
     align-items: center;
     padding: 0 14px;
     border-radius: 4px;
+    font-size: 0.8rem;
 }
 .btn{
     width: 100%;
@@ -49,13 +50,15 @@
     background-color: $sub_bg_color;
     border-color: $button_border;
     color: $white;
+    font-size: 0.8rem;
     font-weight: 800;
 }
 .btn-secondary{
     @extend .btn;
-    background-color: $main_bg_color;
+    background-color: $white;
     border-color: $sub_bg_color;
     color: $text_color;
+    font-size: 0.8rem;
     font-weight: 800;
 }
 .btn-white{
