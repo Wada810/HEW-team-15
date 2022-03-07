@@ -38,7 +38,7 @@
             </div>
             <div class="get_star_cover">
                 <span class="material-icons-round">stars</span>
-                <span class="get_star_num">999</span>
+                <span class="get_star_num">{{$favs}}</span>
             </div>
         </div>
     </div>
@@ -125,8 +125,8 @@
             <div class="release_modal">
                 <div class="release_cover">
                     <div class="modal_prof_img_area">
-                        <div class="modal_rank_area"><div class="modal_rank_cover"><p class="modal_rank">RANK</p><p class="modal_rank_sum">97</p></div></div>
-                        <img class="modal_prof_img" src="" alt="">
+                        <div class="modal_rank_area"><div class="modal_rank_cover"><p class="modal_rank">RANK</p><p class="modal_rank_sum">{{$user["level"]}}</p></div></div>
+                        <img class="modal_prof_img" src="{{asset('img/' . $user['icon_image'])}}" alt="">
                     </div>
                     <div class="modal_top">
                         <div class="modal_close"><span class="material-icons-round modal_close_icon">cancel</span></div>

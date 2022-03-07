@@ -24,7 +24,7 @@ class MypageController extends Controller
             $data["order"] = [];
         }
 
-        
+
         //ユーザ情報
         $user = Auth::user();
         $user["next"] = 0;
@@ -35,13 +35,13 @@ class MypageController extends Controller
         $colors = ColorPettern::where('level', '<=', $user["level"])->get();
         //アイコン
         $icons = IconImage::where('level', '<=', $user["level"])->get();
-        
+
         //ユーザやることリスト
-        $instraction = Instraction::where('user_id',$user['id'])->get();
-        
+        $instractions = Instraction::where('user_id',$user['id'])->get();
+
         //ユーザそういいね数
         $favs = Instraction::where('user_id',$user['id'])->sum('likes');
 
-        return view('mypage',compact("user","data","colors","icons","instraction","favs"));
+        return view('mypage',compact("user","data","colors","icons","instractions","favs"));
     }
 }

@@ -8,8 +8,8 @@ footer{
     }
 }
 /* タイトル画面 */
-.p_footer{
-}
+/* .p_footer{
+} */
 .p_home_logo{
     font-weight: 700;
     font-size: 3rem;
@@ -41,7 +41,7 @@ footer{
 .p_home_link{
     font-weight: 700;
     font-size: 1.1rem;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     animation: home_link 3s linear infinite;
     &:last-of-type{
         margin-bottom: 60px;

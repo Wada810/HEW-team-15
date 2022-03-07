@@ -1,4 +1,4 @@
-// const popup = document.getElementById('profile_modal');  
+// const popup = document.getElementById('profile_modal');
 // var openBtn = document.querySelectorAll('.open-btn');
 
 // const closeBtn = document.getElementById('close-btn');
@@ -20,13 +20,13 @@ window.setTimeout(function() {
     var popup = document.getElementById('rate_modal');
     if(!popup) return;
     popup.classList.add('is-show');
-  
+
     var closeBtn = document.getElementById('close-btn');
     // var blackBg = document.getElementById('black-bg');
-  
+
     closePopUp(closeBtn);
     // closePopUp(blackBg);
-  
+
     function closePopUp(elem) {
       if(!elem) return;
       elem.addEventListener('click', function() {

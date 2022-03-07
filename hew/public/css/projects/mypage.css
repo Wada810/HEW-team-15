@@ -142,17 +142,12 @@ main {
   height: 45px;
   background-color: var(--sub_bg_color);
   border-radius: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   justify-self: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   /* ボタンの枠 */
-  -webkit-box-shadow: var(--frame_color) 0px 0px 0px 4px;
-          box-shadow: var(--frame_color) 0px 0px 0px 4px;
+  box-shadow: var(--frame_color) 0px 0px 0px 4px;
 }
 
 .palette {
@@ -186,8 +181,7 @@ main {
   width: 100%;
   height: 100%;
   border: 5px solid var(--sub_bg_color);
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   z-index: -10000;
 }
 
@@ -197,15 +191,9 @@ main {
   height: 30px;
   background-color: var(--sub_bg_color);
   border-radius: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   bottom: 0;
   right: 0;
 }
@@ -233,23 +221,16 @@ main {
   height: 38px;
   font-weight: 600;
   color: var(--sub_bg_color);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   top: -12px;
   left: -12px;
 }
 
 .rank {
   font-size: 10px;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 .rank_no {
@@ -271,10 +252,8 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  -webkit-transform-origin: bottom left;
-          transform-origin: bottom left;
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
 }
 
 .color_item::before {
@@ -284,8 +263,7 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transform-origin: top right;
-          transform-origin: top right;
+  transform-origin: top right;
 }
 
 .color_item + p {
@@ -429,8 +407,7 @@ main {
   height: 18px;
   color: var(--sub_bg_color);
   margin: 0 auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 20px;
   background: rgba(0, 0, 0, 0.16);
 }
@@ -439,35 +416,20 @@ main {
   width: 100%;
   height: 100%;
   color: #333;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 20px;
 }
 
 .animation {
   background-color: #ebcb4d;
-  -webkit-animation-name: animation-sample;
-          animation-name: animation-sample;
+  animation-name: animation-sample;
   /*--アニメーション名--*/
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  animation-duration: 3s;
   /*--時間--*/
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  animation-iteration-count: 1;
   /*--実行回数--*/
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes animation-sample {
-  0% {
-    width: 5%;
-  }
-  100% {
-    width: 100%;
-  }
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
 }
 
 @keyframes animation-sample {
@@ -480,12 +442,8 @@ main {
 }
 
 .rank_point {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   font-weight: 600;
   color: var(--text_color);
 }
@@ -506,16 +464,10 @@ main {
 
 .get_star_cover {
   margin: 10px auto 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   background-color: #ebcb4d;
   border-radius: 30px;
   width: 100px;
@@ -556,44 +508,28 @@ main {
   margin: 0 auto;
   padding-bottom: 2vh;
   width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   font-size: 0.6rem;
 }
 
 .lines_num_cover {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-size: 0.6rem;
 }
 
 /* 左右ボーダー */
 .text-divider {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .text-divider::before,
 .text-divider::after {
   content: "";
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   border-top: 4px dotted var(--sub_bg_color);
   display: block;
 }
@@ -610,15 +546,9 @@ main {
   width: 90%;
   font-size: 0.6rem;
   padding-bottom: 2%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .drop_arrow {
@@ -640,14 +570,9 @@ main {
   width: 80%;
   height: auto;
   margin: 0 auto 5% auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap;
   border-left: 15px solid var(--sub_bg_color);
   border-radius: 5px;
   background-color: #fff;
@@ -657,15 +582,9 @@ main {
 .top {
   width: 100%;
   height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding-right: 3%;
   padding-left: 3%;
   padding-top: 3%;
@@ -675,15 +594,9 @@ main {
 }
 
 .top .todo_public_setting {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  align-items: center;
+  justify-content: flex-end;
   width: 25%;
 }
 
@@ -710,12 +623,8 @@ main {
   padding-left: 3%;
   padding-top: 3%;
   padding-bottom: 3%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   font-size: 0.6rem;
 }
 
@@ -724,12 +633,8 @@ main {
 }
 
 .lines_cover {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
 }
 
 .lines {
@@ -737,12 +642,8 @@ main {
 }
 
 .fav_cover {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
   padding-right: 12%;
   color: var(--second_color);
 }
@@ -752,12 +653,8 @@ main {
 }
 
 .data {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
   padding-right: 6%;
   font-size: 0.6rem;
   font-weight: 600;
@@ -772,7 +669,6 @@ main {
   z-index: 998;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: 0.6s;
   transition: 0.6s;
 }
 
@@ -792,15 +688,9 @@ main {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   border-radius: 5px 5px 0 0;
   font-weight: 800;
 }
@@ -809,8 +699,7 @@ main {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 80%;
   background-color: #fff;
   z-index: 2;
@@ -838,14 +727,9 @@ main {
 }
 
 .popup-inner .get_item_block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   padding: 30px 0 20px 0;
 }
 
@@ -874,14 +758,9 @@ main {
 }
 
 .modal_items {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
   height: 65vh;
   width: 90%;
   margin: 0 auto;
@@ -901,14 +780,9 @@ main {
 
 /* アイコン */
 .modal_items_icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
   width: 90%;
   height: 65vh;
   margin: 0 auto;
@@ -942,8 +816,7 @@ main {
   position: relative;
   border-radius: 50%;
   border: 5px solid var(--sub_bg_color);
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   z-index: -10000;
 }
 
@@ -968,13 +841,9 @@ main {
 }
 
 #release_modal .release_modal {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-self: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 #release_modal .release_modal .release_cover {
@@ -1015,15 +884,9 @@ main {
   height: 38px;
   font-weight: 600;
   color: var(--sub_bg_color);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   top: -70px;
   left: -12px;
   z-index: 100;
@@ -1055,20 +918,16 @@ main {
 
 #release_modal .release_modal .release_cover .modal_top .modal_close .modal_close_icon {
   font-size: 2.5rem;
+  background-color: #fbfeff;
+  border-radius: 100px;
 }
 
 #release_modal .release_modal .release_cover .modal_top .modal_user_name {
   width: 100%;
   height: 33%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  justify-content: center;
+  align-items: flex-end;
   background-color: var(--main_bg_color);
   border-radius: 10px 10px 0 0;
 }
@@ -1078,33 +937,21 @@ main {
 }
 
 #release_modal .release_modal .release_cover .modal_top .modal_half {
+  margin-top: -1px;
   width: 100%;
   height: 33%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--main_bg_color)), color-stop(50%, var(--main_bg_color)), color-stop(50%, #ffffff), to(#ffffff));
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(180deg, var(--main_bg_color) 0%, var(--main_bg_color) 50%, #ffffff 50%, #ffffff 100%);
 }
 
 #release_modal .release_modal .release_cover .modal_top .modal_half .modal_fav_cover {
   width: 25vw;
   padding: 0.5vh 0 0.5vh 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   z-index: 100;
   background: var(--second_color);
   border: 4px solid white;
@@ -1124,15 +971,9 @@ main {
 #release_modal .release_modal .release_cover .modal_top .modal_theme_cover {
   width: 100%;
   height: 33%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 #release_modal .release_modal .release_cover .modal_top .modal_theme_cover .modal_theme {
@@ -1150,74 +991,45 @@ main {
 }
 
 #release_modal .release_modal .release_cover .modal_under .modal_items .modal_lines_cover {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
 }
 
 #release_modal .release_modal .release_cover .modal_under .modal_items .modal_date_cover {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
   padding: 0 3vw 0 0;
 }
 
 #release_modal .release_modal .release_cover .modal_under .modal_items .modal_date_cover .modal_date {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 0 0 0 1vw;
 }
 
 #release_modal .release_modal .release_cover .modal_under .modal_items .modal_date_cover .modal_time {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 0 0 0 1vw;
 }
 
 #release_modal .release_modal .release_cover .modal_under .modal_button_cover {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 2vh 0 0 0;
 }
 
 #release_modal .release_modal .release_cover .modal_under .modal_button_cover .modal_lerease_btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   border: 3px solid var(--sub_bg_color);
   margin: 0 0 0.5vh 0;
 }
 
 #release_modal .release_modal .release_cover .modal_under .modal_button_cover .modal_play_btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   background-color: var(--sub_bg_color);
   color: white;
   margin: 0.5vh 0 0 0;
@@ -1235,12 +1047,8 @@ main {
   height: 100%;
   position: fixed;
   display: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -1256,15 +1064,9 @@ main {
 }
 
 #release_check_modal .release_check_modal_cover .release_top {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
   width: 85%;
   height: 35%;
@@ -1284,14 +1086,9 @@ main {
 
 #release_check_modal .release_check_modal_cover .release_under .release_check_area {
   width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 #release_check_modal .release_check_modal_cover .release_under .release_check_area .release_ok_area .check_ok {
@@ -1308,22 +1105,14 @@ main {
 
 #release_check_modal .release_check_modal_cover .release_under .release_check_area .release_check_cover {
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 2.5vh 4vw 0 4vw;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
 #release_check_modal .release_check_modal_cover .release_under .release_check_area .release_check_cover .release_check_inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1331,13 +1120,9 @@ main {
   position: absolute;
   bottom: -35px;
   left: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-radius: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   background-color: var(--sub_bg_color);
   width: 20vw;
   padding: 0.8vh 0 0.8vh 0;
@@ -1349,4 +1134,3 @@ main {
 #release_check_modal .release_check_modal_cover .release_comp .comp_p {
   color: #fbfeff;
 }
-/*# sourceMappingURL=order_history.css.map */

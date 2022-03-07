@@ -49,3 +49,46 @@ document.querySelector(".close_level_up").addEventListener("click",()=>{
     },{once: true})
     level_modal.classList.add("bg_fade_out");
 });
+
+let share = true;
+if(share){
+    document.querySelector(".animation").addEventListener("animationend",()=>{
+        var popup = document.getElementById('rate_modal');
+        if(!popup) return;
+        popup.classList.remove('hidden');
+        popup.classList.add('op');
+
+        var closeBtn = document.getElementById('close-btn');
+        // var blackBg = document.getElementById('black-bg');
+
+        closePopUp(closeBtn);
+        // closePopUp(blackBg);
+
+        function closePopUp(elem) {
+          if(!elem) return;
+          elem.addEventListener('click', function() {
+            popup.classList.remove('op');
+            popup.classList.add('hidden');
+          })
+        }
+    },{once: true})
+
+    // いいねボタン切り替え
+    let num = 1;
+    document.getElementById("star_num").innerText = num - 1;
+    const starBtnId = document.getElementById('starBtnId');
+    const star_btn = document.querySelector('.star_btn');
+    star_btn.addEventListener("click", function(){
+        star_btn.classList.toggle('star_btn_active');
+        const result = starBtnId.classList.contains('star_btn_active');
+        if(!result){
+            document.getElementById("star_num").innerText = num;
+            num++;
+            document.getElementById("like").checked = false;
+        } else{
+            document.getElementById("star_num").innerText = num;
+            num--;
+            document.getElementById("like").checked = true;
+        }
+    });
+}
