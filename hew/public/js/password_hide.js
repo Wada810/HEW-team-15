@@ -17,4 +17,11 @@ hide_off_btn.addEventListener('click',function () {
 
 const name_now = document.getElementsByClassName('name_now')[0];
 const pass_now = document.getElementsByClassName('pass_now')[0];
+const name_length = document.getElementById('name');
+const pass_length = document.getElementById('pass');
 
+
+function StringCount (countTarget, resultTarget) {
+    var len = document.getElementById(countTarget).value.length;
+    document.getElementById(resultTarget).innerText = len;
+}

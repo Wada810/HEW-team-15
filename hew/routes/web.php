@@ -7,6 +7,7 @@ use App\Http\Controllers\MypageController;
 use App\Http\Controllers\ColorController;
 use App\Http\Controllers\IconController;
 use App\Http\Controllers\PublicInstractionsController;
+use App\Http\Controllers\FriendProfileController;
 
 use App\Http\Controllers\Play\ThemeController;
 use App\Http\Controllers\Play\OrderController;
@@ -68,5 +69,7 @@ Route::get('friend_prof', function (){
 Route::get('color',[ColorController::class, 'index'])->name('color');
 
 Route::get('mg',[IconController::class, 'index'])->name('img');
+
+Route::get('friendProf',[FriendProfileController::class, 'index'])->name('friendProf');
 
 require __DIR__.'/auth.php';

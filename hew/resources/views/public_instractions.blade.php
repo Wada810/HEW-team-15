@@ -23,7 +23,7 @@
                 <a class="profile_modal_top">
                     <div class="profile_rank_tag">
                         <div class="profile_rank_str">RANK</div>
-                        <div class="profile_rank_int">{{$user["level"]}}</div>
+                        <div class="profile_rank_int">1</div>
                     </div>
                     <div class="profile_img">
                         <img src="{{ asset('./img/kuma.png')}}" alt="">
@@ -32,7 +32,7 @@
                 <div class="close-btn" id="close-btn"><span class="material-icons-round">close</span></div>
                 <div class="profile_modal_main">
                     <div class="profile_modal_info">
-                        <h2>HYPERウンチMAN</h2>
+                        <h2>user</h2>
                         <div class="star_point_content">
                             <span class="material-icons-round">stars</span>
                             <p>278</p>
@@ -63,7 +63,7 @@
 <!-- 検索バーと表示順ソート -->
 <div class="search_sort_content">
     <div class="search_sort_flex">
-        <form class="search_div" method="POST" action="{{ ('public_instractions')}}">
+        <form class="search_div" method="POST" action="{{ route('public_instractions')}}">
             <input placeholder="キーワードを入力" name=""  type="text">
             <button><span class="material-icons-round search_icon">search</span></button>
         </form>
@@ -79,9 +79,9 @@
 
     <div class="content_box">
         <!-- 検索件数 -->
-        <p class="search_num">検索件数:129件</p>
+        <p class="search_num">検索件数:{{$search}}件</p>
 
-        @-foreach($instractions as $value)
+        @foreach($instractions as $value)
         <div class="public_list">
             <!-- 友だちのマイページ画面へ飛ぶ -->
             <div class="profile_wrap">
@@ -90,7 +90,7 @@
                         <a href="#"><img src="{{ asset('./img/kuma.png')}}" alt="友だちのアイコン"></a>
                     </div>
                     <div class="friend_name">
-                        <a href="#"><span class="material-icons-round friendname_stars">stars</span></a>
+                        <a class="get_id" id="{{$value['id']}}" href="#">{{$value['name']}}<span class="material-icons-round friendname_stars">stars</span></a>
                     </div>
                 </div>
             </div>
@@ -99,14 +99,20 @@
                 <p class="theme">{{$value["theme"]}}</p><!-- 長い文章でも検証すること -->
                 <div class="icons_flex">
                     <div class="icon_items">
-                        <p><span class="material-icons-round row_icon">format_list_numbered_rtl</span>{{$value["rows"]}}</p>
-                        <p><span class="material-icons-round stars_icon">stars</span>{{$value["stars"]}}</p>
+                        <p><span class="material-icons-round row_icon">format_list_numbered_rtl</span>{{$value["lines"]}}</p>
+                        <p><span class="material-icons-round stars_icon">stars</span>{{$value["likes"]}}</p>
                     </div>
-                    <p class="data">{{$value["data"]}}</p>
+                    <p class="data">{{$value["updated_at"]}}</p>
                 </div>
             </div>
         </div>
-        @-endforeach
+        @endforeach
     </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    const user = <?php print json_encode($user)?> ;
+    const friendProf_url = "{{route('friendProf')}}";
+</script>
+<script src="{{asset('js/jquery.min.js')}}"></script>
 <script src="{{ asset('js/profile_modal.js') }}"></script>
 @endsection

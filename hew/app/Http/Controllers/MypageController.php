@@ -7,6 +7,7 @@ use App\Models\ColorPettern;
 use App\Models\IconImage;
 use Database\Seeders\ColorPetternSeeder;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Instraction;
 
 class MypageController extends Controller
 {
@@ -22,6 +23,8 @@ class MypageController extends Controller
         if(!isset($data["order"])){
             $data["order"] = [];
         }
+
+        
         //ユーザ情報
         $user = Auth::user();
         $user["next"] = 0;
@@ -32,7 +35,13 @@ class MypageController extends Controller
         $colors = ColorPettern::where('level', '<=', $user["level"])->get();
         //アイコン
         $icons = IconImage::where('level', '<=', $user["level"])->get();
+        
+        //ユーザやることリスト
+        $instraction = Instraction::where('user_id',$user['id'])->get();
+        
+        //ユーザそういいね数
+        $favs = Instraction::where('user_id',$user['id'])->sum('likes');
 
-        return view('mypage',compact("user","data","colors","icons"));
+        return view('mypage',compact("user","data","colors","icons","instraction","favs"));
     }
 }
