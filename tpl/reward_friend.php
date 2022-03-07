@@ -7,10 +7,10 @@
 
     <!-- cssリセットCDN -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    
+
     <!-- デフォルトCSS -->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    
+
     <!-- public_to_dolistモーダルのCSS -->
     <link rel="stylesheet" href="../css/reward_friend.css">
 
@@ -23,8 +23,6 @@
     <title>みんなのやることリスト</title>
 </head>
 <body>
-
-
     <section class="profile_modal" id="rate_modal">
         <div class="profile_area">
             <div class="profile_wrap">
@@ -37,7 +35,7 @@
 
                 <div class="profile_modal_main">
                     <div class="profile_modal_info">
-                        <h2>HYPERウンチMAN</h2>                        
+                        <h2>HYPERウンチMAN</h2>
                     </div>
                     <div class="profile_theme">ピーナッツバターサンドを作るううううううううううう</div>
                     <div class="star_point_wrapp">

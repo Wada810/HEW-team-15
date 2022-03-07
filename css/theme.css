@@ -15,7 +15,8 @@ body {
   height: 100vh;
   min-height: 100vh;
   background-color: #3a9fa8;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 header {
@@ -24,12 +25,18 @@ header {
   width: 100%;
   background-color: #3a9fa8;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .header_button {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 38px;
   height: 38px;
   margin-left: 3%;
@@ -52,6 +59,8 @@ header .header_title {
 }
 
 header .material-icons-round {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   vertical-align: middle;
 }
@@ -71,7 +80,8 @@ main .theme_wrapper {
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
 }
 
 main h1,
@@ -132,3 +142,4 @@ main form button {
   padding: 15px 0 15px 0;
   margin-top: 8%;
 }
+/*# sourceMappingURL=theme.css.map */
