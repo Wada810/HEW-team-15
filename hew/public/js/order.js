@@ -10,14 +10,7 @@ let alg_num = 0;
 
 insert.addEventListener('change', ()=>{
     alg_num = document.getElementsByClassName("ol_order").length;
-    /* 要素が一つ以上の時に完成ボタンを追加 */
-    if(document.getElementsByClassName("form_order").length == 0){
-        let complete_button = document.createElement("button");
-        complete_button.setAttribute("id","complete_button");
-        complete_button.setAttribute("class","btn-secondary");
-        complete_button.textContent = "完成!!";
-        form.appendChild(complete_button);
-    }
+    
 
     if(insert.value.trim() !== ""){
 
@@ -61,6 +54,15 @@ insert.addEventListener('change', ()=>{
         order_cnt++
         // inputをリセット
         insert.value = "";
+
+        /* 要素が一つ以上の時に完成ボタンを追加 */
+        if(document.getElementsByClassName("form_order").length == 1){
+            let complete_button = document.createElement("button");
+            complete_button.setAttribute("id","complete_button");
+            complete_button.setAttribute("class","btn-secondary");
+            complete_button.textContent = "完成!!";
+            form.appendChild(complete_button);
+        }
 
         // クリックしたらfocus にする処理
         li.addEventListener('click',function li_func(){
@@ -172,7 +174,7 @@ insert.addEventListener('change', ()=>{
                         e.stopPropagation();
                     }) */
 
-                    const fix_text = document.getElementById("fix_order");
+                    fix_text = document.getElementById("fix_order");
                     // 編集後の処理
                     document.querySelector(".algorithm_add_button").addEventListener("click", function fix_func(){
                         console.log(fix_text.value)

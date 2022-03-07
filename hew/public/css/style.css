@@ -561,7 +561,6 @@ body {
   background-color: var(--main_bg_color);
   line-height: 1.5;
   letter-spacing: 0.5px;
-  height: 100%;
 }
 
 .number_font {
@@ -714,6 +713,7 @@ body {
   align-items: center;
   padding: 0 14px;
   border-radius: 4px;
+  font-size: 0.8rem;
 }
 
 .btn, .btn-primary, .btn-secondary, .btn-white {
@@ -728,13 +728,15 @@ body {
   background-color: var(--sub_bg_color);
   border-color: var(--button_border);
   color: #fbfeff;
+  font-size: 0.8rem;
   font-weight: 800;
 }
 
 .btn-secondary {
-  background-color: var(--main_bg_color);
+  background-color: #fbfeff;
   border-color: var(--sub_bg_color);
   color: var(--text_color);
+  font-size: 0.8rem;
   font-weight: 800;
 }
 
@@ -1120,21 +1122,24 @@ footer .version {
 .p_play_header {
   background-color: var(--sub_bg_color);
   color: #fbfeff;
+  font-size: 0.9rem;
+  font-weight: 800;
 }
 
 .p_play_header__back {
   color: var(--text_color);
   background-color: #fbfeff;
   border-radius: 100px;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   top: 50%;
-  left: 10px;
+  left: 20px;
   transform: translateY(-50%);
 }
 
 .p_play_header__back span {
+  font-size: 18px;
   position: absolute;
   top: 50%;
   left: 50%;

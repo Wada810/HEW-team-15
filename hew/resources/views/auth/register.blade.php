@@ -41,9 +41,9 @@
             <div class="name_cover input_cover">
                 <x-label class="lavel" for="name" :value="__('ユーザーネーム')" />
 
-                <input id="name" class="input" type="text" name="name" :value="old('name')" required autofocus >
+                <input id="name" class="input" type="text" maxlength="15" name="name" :value="old('name')" required autofocus >
 
-                <div class="word_count"><p class="now_word">0</p><p class="slash">/</p><p class="max_word">15</p></div>
+                <div class="word_count"><p class="now_word" id="nameLen" >0</p><p class="slash">/</p><p class="max_word">15</p></div>
             </div>
 
             <!-- Password -->
@@ -53,9 +53,10 @@
                 <input id="pass" class="input"
                     type="text"
                     name="password"
+                    maxlength="15"
                     required autocomplete="new-password">
 
-                <div class="word_count"><p class="now_word">0</p><p class="slash">/</p><p class="max_word">15</p></div>
+                <div class="word_count"><p class="now_word" id="passLen">0</p><p class="slash">/</p><p class="max_word">15</p></div>
             </div>
 
 
@@ -72,4 +73,5 @@
         </form>
     </div>
 </main>
+<script src="{{ asset('js/login.js') }}"></script>
 @endsection

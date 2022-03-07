@@ -14,7 +14,7 @@ main{
       width: 90%;
       margin: 0 auto;
   }
-  
+
   .title_call{
     margin: 2vh auto 0 auto;
     width: 90%;
@@ -30,7 +30,7 @@ main{
 
   .login_home_img{
   }
-  
+
   .error_zone{
     display: flex;
     justify-self: center !important;
@@ -43,15 +43,15 @@ main{
     margin: 1vh auto 1vh auto;
     font-size: 0.6rem;
   }
-  
+
   .err_icon_cover{
     text-align: center;
   }
-  
+
   .err_icon{
     font-size: 18px;
   }
-  
+
   .error_msg{
     white-space: nowrap;
     margin: 0 auto;
@@ -79,16 +79,18 @@ main{
     display: block;
     position: absolute;
     right: 15px;
-    top: 34px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .visibility_off_icon{
     display: none;
     position: absolute;
     right: 15px;
-    top: 34px;
+    top: 50%;
+    transform: translateY(-50%);
   }
-  
+
   .log_input, .input-thick {
     display: block;
     width: 100%;
@@ -105,25 +107,25 @@ main{
   .input{
       text-align: left;
   }
-  
+
   .lavel{
     display: flex;
     justify-content: flex-start;
     margin: 0 0 5px 0;
     font-size: 0.7rem;
   }
-  
+
   .name_cover{
     margin: 2vh auto 0 auto;
   }
   .pass_cover{
-  
+
   }
-  
+
   .form_input{
-  
+
   }
-  
+
   .rem_cover{
       text-align: left !important;
       padding: 0 0 0 5vw;
@@ -143,7 +145,7 @@ main{
     justify-content: flex-end;
     font-size: 0.7rem;
   }
-  
+
   .btn_cover{
     width: 100%;
     display: flex;
@@ -155,7 +157,7 @@ main{
     width: 90%;
     height: 6vh;
     border-radius: 30px !important;
-    border: 5px solid $frame_color;
+    border: 5px solid $input_border;
   }
 
   .btn{
@@ -174,8 +176,7 @@ main{
     align-items: center;
     margin: 1vh auto;
   }
-  
-  
-  
+
+
+
   /* ログイン */
-  

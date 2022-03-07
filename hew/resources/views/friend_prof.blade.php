@@ -13,7 +13,7 @@
     <!-- ヘッダー -->
     <header class="l_play_header p_play_header">
         <!-- 前のページへ戻るリンク -->
-        <a href="{{ route('home') }}" class="p_play_header__back"><span class="material-icons-round">undo</span></a>
+        <a href="{{ url()->previous()}}" class="p_play_header__back"><span class="material-icons-round">undo</span></a>
         <div class="p_play_header__title">
             <span>ともだちのマイページ</span>
         </div>

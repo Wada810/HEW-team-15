@@ -127,13 +127,9 @@ main {
 }
 
 .error_zone {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-self: center !important;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 100%;
   height: 10vh;
   border-radius: 10px;
@@ -179,14 +175,16 @@ main {
   display: block;
   position: absolute;
   right: 15px;
-  top: 34px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .visibility_off_icon {
   display: none;
   position: absolute;
   right: 15px;
-  top: 34px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .log_input, .input-thick {
@@ -198,7 +196,6 @@ main {
   border-radius: 30px;
   color: #3A9FA8;
   border: 2px solid rgba(0, 0, 0, 0);
-  -webkit-transition: background-color 0.3s, border-color 0.3s;
   transition: background-color 0.3s, border-color 0.3s;
   padding: 6px 12px;
 }
@@ -208,12 +205,8 @@ main {
 }
 
 .lavel {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
   margin: 0 0 5px 0;
   font-size: 0.7rem;
 }
@@ -238,25 +231,16 @@ main {
 }
 
 .word_count {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
   font-size: 0.7rem;
 }
 
 .btn_cover {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 3vh 0 0 0;
 }
 
@@ -264,7 +248,7 @@ main {
   width: 90%;
   height: 6vh;
   border-radius: 30px !important;
-  border: 5px solid #379ea760;
+  border: 5px solid var(--input_border);
 }
 
 .btn {
@@ -273,28 +257,16 @@ main {
 }
 
 .reg_btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin: 1vh auto;
 }
 
 .log_btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin: 1vh auto;
 }
 

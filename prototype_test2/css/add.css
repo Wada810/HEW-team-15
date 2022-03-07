@@ -1,0 +1,267 @@
+#algorithm {
+  font-family: 'M PLUS 2', sans-serif;
+  font-weight: 500;
+  position: relative;
+  height: 78vh;
+  background-color: #E2EFEF;
+  width: 100%;
+}
+
+#algorithm #algorithm_flame {
+  width: 100%;
+  color: #3A9FA8;
+}
+
+#algorithm #algorithm_flame h2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10%;
+  padding-left: 10%;
+  margin-bottom: 20px;
+  height: 70px;
+  line-height: 25px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  background-color: #3A9FA8;
+  width: 100%;
+}
+
+#algorithm #algorithm_flame .algorithm_head {
+  font-size: 14px;
+  line-height: 34px;
+  width: 80%;
+  padding-bottom: 10px;
+  margin: 0 auto;
+}
+
+#algorithm #algorithm_flame ol {
+  overflow-y: auto;
+  height: calc(78vh - 210px);
+}
+
+#algorithm #algorithm_flame ol li {
+<<<<<<< HEAD
+  display: -webkit-box;
+  display: -ms-flexbox;
+=======
+>>>>>>> db7e59579c55df7a7bec0af782cf146191d91669
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: dashed 1px #3a9fa8a4;
+}
+
+#algorithm #algorithm_flame ol li:nth-last-of-type(1) {
+  border-bottom: dashed 1px transparent;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_number {
+  width: 25px;
+  font-size: 16px;
+  line-height: 22px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_contents {
+  width: 100%;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_contents.is-active {
+  background-color: white;
+  color: #3A9FA8;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_contents .algorithm_name {
+  width: 100%;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  font-weight: 600;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_contents .material_items {
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+<<<<<<< HEAD
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+=======
+  display: flex;
+  align-items: center;
+>>>>>>> db7e59579c55df7a7bec0af782cf146191d91669
+  border-top: 2.5px dotted #3A9FA8;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_contents .material_items button {
+<<<<<<< HEAD
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+=======
+  display: flex;
+  justify-content: center;
+>>>>>>> db7e59579c55df7a7bec0af782cf146191d91669
+  width: 35%;
+  height: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 15px;
+  color: #D8305E;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_contents .material_items button:nth-last-of-type(1) {
+  width: 65%;
+  height: 60px;
+  color: #3A9FA8;
+  border-left: 2.5px dotted #3A9FA8;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_contents .material_items button .material-icons-round {
+  width: 27px;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_contents .material_items button .delete {
+  font-size: 24px;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_contents .material_items button .border {
+  font-size: 22px;
+}
+
+#algorithm #algorithm_flame ol li .algorithm_contents .material_items button p {
+  line-height: 15px;
+  font-size: 15px;
+  height: 15px;
+}
+
+#algorithm .section_button {
+  position: absolute;
+  bottom: 13px;
+  width: 100%;
+  height: 45px;
+}
+
+#algorithm .section_button button {
+  display: block;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  color: #3A9FA8;
+  border: 3px solid #3A9FA8;
+  border-radius: 60px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.header {
+  height: 12vh;
+  background-color: #3A9FA8;
+}
+
+footer {
+  width: 100%;
+  height: 10vh;
+  background-color: #3A9FA8;
+}
+
+footer section {
+  padding-top: 15px;
+<<<<<<< HEAD
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+=======
+  display: flex;
+  justify-content: space-between;
+>>>>>>> db7e59579c55df7a7bec0af782cf146191d91669
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+footer section .algorithm_add_textbox {
+  width: 90%;
+  height: 45px;
+<<<<<<< HEAD
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+=======
+  box-sizing: border-box;
+>>>>>>> db7e59579c55df7a7bec0af782cf146191d91669
+}
+
+footer section .algorithm_add_textbox input {
+  display: block;
+  width: 95%;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 100%;
+  background-color: #ffffff;
+  color: #3A9FA8;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 45px;
+<<<<<<< HEAD
+  -webkit-box-sizing: none;
+          box-sizing: none;
+}
+
+footer section .algorithm_add_textbox input::-webkit-input-placeholder {
+  color: #cacaca;
+}
+
+footer section .algorithm_add_textbox input:-ms-input-placeholder {
+  color: #cacaca;
+}
+
+footer section .algorithm_add_textbox input::-ms-input-placeholder {
+  color: #cacaca;
+=======
+  box-sizing: none;
+>>>>>>> db7e59579c55df7a7bec0af782cf146191d91669
+}
+
+footer section .algorithm_add_textbox input::placeholder {
+  color: #cacaca;
+}
+
+footer section .algorithm_add_button {
+  width: 44.5px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+footer section .algorithm_add_button button {
+  color: #f1b50f;
+}
+
+footer section .algorithm_add_button button .material-icons-round {
+  font-size: 45px;
+}
+<<<<<<< HEAD
+/*# sourceMappingURL=add.css.map */
+=======
+>>>>>>> db7e59579c55df7a7bec0af782cf146191d91669
