@@ -111,7 +111,8 @@ document.querySelector(".comp_p").addEventListener("click",()=>{
   }).done((data)=>{
     console.log(data);
     if(data != false){
-      document.getElementsByClassName("pub_stat")[document.getElementById("key").value].textContent = data;
+      document.getElementsByClassName("pub_stat")[document.getElementById("key").value].textContent = data["pub"];
+      document.getElementsByClassName("pub_stat")[document.getElementById("key").value].classList = data["class"]
     }
   }).fail(()=>{
 })

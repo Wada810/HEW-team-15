@@ -148,7 +148,7 @@
                         </div>
                         <div class="modal_button_cover">
                             <div class="modal_button modal_lerease_btn"><span class="material-icons-round modal_lerease_icon">public</span><p class="modal_lerease_p">公開</p></div>
-                            <div class="modal_button modal_play_btn"><span class="material-icons-round modal_play_icon">play_circle</span><p class="modal_play_p">あそぶ</p></div>
+                            <!-- <div class="modal_button modal_play_btn"><span class="material-icons-round modal_play_icon">play_circle</span><p class="modal_play_p">あそぶ</p></div> -->
                         </div>
                     </div>
                 </div>

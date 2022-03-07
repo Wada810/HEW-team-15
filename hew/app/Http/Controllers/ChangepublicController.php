@@ -11,9 +11,11 @@ class ChangePublicController extends Controller
     public function index(Request $request)
     {
         if ($request->has('public')) {
-            $data = "public_off";
+                $data["pub"] = "public_off";
+                $data["class"] = "off";
             if($request->input("public") == 1){
-                $data = "public";
+                $data["pub"] = "public";
+                $data["class"] = "on";
             }
             //ユーザ情報
             Instraction::where('id', '=', $request->input("id"))->update([
