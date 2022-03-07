@@ -13,6 +13,7 @@ footer{
 .p_home_logo{
     font-weight: 700;
     font-size: 3rem;
+    animation: zoom-in-anim 3s linear infinite;
     img{
         width: 80vw;
     }
@@ -23,6 +24,7 @@ footer{
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    
     img{
         width: 50px;
         height: 50px;
@@ -47,17 +49,22 @@ footer{
         margin-bottom: 60px;
     }
 }
-@keyframes home_link {
-    0%{
-        transform: translateY(0px);
-    }
-    5%{
-        transform: translateY(-5px);
-    }
-    10%{
-        transform: translateY(0px);
+@keyframes zoom-in-anim {
+	0%, 100%{
+	transform: scale(1);
+	}
+    50%{
+        transform: scale(1.05);
     }
 }
+@keyframes home_link {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
 
 /* プレイ画面 */
 /* テーマ入力 */
