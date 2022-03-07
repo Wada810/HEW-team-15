@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\Instraction;
 
-class FriendPageController extends Controller
+class FriendController extends Controller
 {
     public function index(Request $request)
     {
