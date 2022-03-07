@@ -1,0 +1,273 @@
+@charset "UTF-8";
+:root {
+  --main_bg_color: #e1efef;
+  --sub_bg_color: #3A9FA8;
+  --text_color: #3A9FA8;
+  --button_border: #62BBC3;
+  --second_color: #eb9718;
+}
+
+:root[theme="strawberry"] {
+  --main_bg_color: #F5EAED;
+  --sub_bg_color: #DE4065;
+  --text_color: #DE4065;
+  --button_border: #EE90A6;
+  --second_color: #A6D114;
+  --input_border: #A6D114;
+}
+
+:root[theme="emerald"] {
+  --main_bg_color: #e1efef;
+  --sub_bg_color: #3A9FA8;
+  --text_color: #3A9FA8;
+  --button_border: #62BBC3;
+  --second_color: #eb9718;
+}
+
+:root[theme="emeraldgreen"] {
+  --main_bg_color: #E8F6EF;
+  --sub_bg_color: #0FAA6C;
+  --text_color: #0FAA6C;
+  --button_border: #82D8B3;
+  --second_color: #D51194;
+  --input_border: #D51194;
+}
+
+:root[theme="oceanblue"] {
+  --main_bg_color: #ECF2FF;
+  --sub_bg_color: #417ECE;
+  --text_color: #417ECE;
+  --button_border: #93B6E6;
+  --second_color: #A8D511;
+  --input_border: #A8D511;
+}
+
+:root[theme="grapefruit"] {
+  --main_bg_color: #F5F2EA;
+  --sub_bg_color: #FFAA00;
+  --text_color: #DF2588;
+  --button_border: #EA8AB8;
+  --second_color: #DF2588;
+  --input_border: #DF2588;
+}
+
+:root[theme="amethyst"] {
+  --main_bg_color: #F9ECFF;
+  --sub_bg_color: #7A4C9D;
+  --text_color: #030897;
+  --button_border: #B298CE;
+  --second_color: #030897;
+  --input_border: #030897;
+}
+
+:root[theme="depth"] {
+  --main_bg_color: #15277D;
+  --sub_bg_color: #0C1A60;
+  --text_color: #00BAFF;
+  --button_border: #B298CE;
+  --second_color: #00BAFF;
+  --input_border: #00BAFF;
+}
+
+:root[theme="jupiter"] {
+  --main_bg_color: #E5DEDC;
+  --sub_bg_color: #7E7473;
+  --text_color: #7E7473;
+  --button_border: #303030;
+  --second_color: #FF9100;
+  --input_border: #FF9100;
+}
+
+:root[theme="lipstick"] {
+  --main_bg_color: #D9D9D9;
+  --sub_bg_color: #A4A4A4;
+  --text_color: #FF406D;
+  --button_border: #C4C4C4 ;
+  --second_color: #FF406D;
+  --input_border: #FF406D;
+}
+
+:root[theme="roseiron"] {
+  --main_bg_color: #716D7D;
+  --sub_bg_color: #383340;
+  --text_color: #FF8000;
+  --button_border: #544F5E ;
+  --second_color: #FF8000;
+  --input_border: #FF8000;
+}
+
+/* color */
+/* 新規登録 */
+main {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--sub_color);
+  padding-top: 80px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0px;
+}
+
+#login_dev {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.title_call {
+  margin: 2vh auto 0 auto;
+  width: 90%;
+  line-height: 16px;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.login_home_img_cover {
+  width: 25vh;
+  margin: 0 auto;
+}
+
+.error_zone {
+  display: flex;
+  justify-self: center !important;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  border-radius: 10px;
+  background-color: var(--sub_color);
+  color: white;
+  margin: 1vh auto 1vh auto;
+  font-size: 0.6rem;
+}
+
+.err_icon_cover {
+  text-align: center;
+}
+
+.err_icon {
+  font-size: 18px;
+}
+
+.error_msg {
+  white-space: nowrap;
+  margin: 0 auto;
+  padding-top: 1vh;
+  width: 90%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.error_msg li {
+  padding-bottom: 5px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.input_cover {
+  width: 90%;
+  height: 79px;
+  margin: 0 auto;
+  padding-bottom: 1vh;
+  position: relative;
+}
+
+.visibility_on_icon {
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.visibility_off_icon {
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.log_input, .input-thick {
+  display: block;
+  width: 100%;
+  height: 5vh;
+  background-color: #fbfeff;
+  color: #3A9FA8;
+  border-radius: 30px;
+  color: #3A9FA8;
+  border: 2px solid rgba(0, 0, 0, 0);
+  transition: background-color 0.3s, border-color 0.3s;
+  padding: 6px 12px;
+}
+
+.input {
+  text-align: left;
+}
+
+.lavel {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 0 5px 0;
+  font-size: 0.7rem;
+}
+
+.name_cover {
+  margin: 2vh auto 0 auto;
+}
+
+.rem_cover {
+  text-align: left !important;
+  padding: 0 0 0 5vw;
+}
+
+.rem_cover span {
+  padding-left: 6px;
+  font-size: 0.7rem;
+}
+
+.p_pixel {
+  font-weight: 700;
+  font-size: 0.6rem;
+}
+
+.word_count {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.7rem;
+}
+
+.btn_cover {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 3vh 0 0 0;
+}
+
+.button {
+  width: 90%;
+  height: 6vh;
+  border-radius: 30px !important;
+  border: 5px solid var(--input_border);
+}
+
+.btn {
+  width: 90%;
+  margin: 2vh 0 0 0;
+}
+
+.reg_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh auto;
+}
+
+.log_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh auto;
+}
+
+/* ログイン */

@@ -4,7 +4,7 @@
     justify-content: space-between;
 }
 .l_home{
-    min-height: 100vh;
+    height: 100vh;
     width: 100vw;
     overflow: hidden;
     padding: 30px;
@@ -14,9 +14,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
-.l_pray_header{
+.l_play_header{
     position: fixed;
     top: 0;
     width: 100vw;
@@ -24,8 +23,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 10;
 }
-.l_pray_header__spacer{
+.l_play_header__spacer{
     width: 100vw;
     height: 60px;
 }
@@ -43,4 +43,25 @@
 }
 .l_algorithm{
     padding: 10px 30px;
+    //height: calc(100vh - 250px);
+    margin-bottom: 150px;
+}
+.l_instraction{
+    width: 100%;
+    background-color: $white;
+    min-height: calc(100vh - 90px);
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.l_finish{
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }

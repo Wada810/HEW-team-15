@@ -3,6 +3,7 @@ let form_list = [];
 let fix_list = [];
 
 function update(){
+    console.log("updated");
     ol_list = [];
     form_list = [];
     fix_list = [];
@@ -37,12 +38,17 @@ function update(){
             form.appendChild(fix_list[i])
         }
     }
+    let lists = document.getElementsByClassName("ol_order");
+    for(let i = 0; i < lists.length; i++ ){
+        lists[i].firstElementChild.textContent = (i + 1) + ".";
+    }
 }
 
 function sort(){
     new Sortable(order_list,{
         onEnd : update,
         filter: '.filtered',
+        handle: '.handle',
         animation: 150,
     })
 }
