@@ -1140,6 +1140,8 @@ footer .version {
 }
 
 /* タイトル画面 */
+/* .p_footer{
+} */
 .p_home_logo {
   font-weight: 700;
   font-size: 3rem;
@@ -1185,7 +1187,7 @@ footer .version {
 .p_home_link {
   font-weight: 700;
   font-size: 1.1rem;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   -webkit-animation: home_link 3s linear infinite;
           animation: home_link 3s linear infinite;
 }
