@@ -18,6 +18,8 @@ body {
 
 .search_sort_content .search_sort_flex {
   width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
 }
@@ -38,6 +40,18 @@ body {
   border-radius: 40px 0px 0px 40px;
   font-size: 13px;
   font-weight: 600;
+}
+
+.search_sort_content .search_sort_flex .search_div input::-webkit-input-placeholder {
+  color: #bababa;
+}
+
+.search_sort_content .search_sort_flex .search_div input:-ms-input-placeholder {
+  color: #bababa;
+}
+
+.search_sort_content .search_sort_flex .search_div input::-ms-input-placeholder {
+  color: #bababa;
 }
 
 .search_sort_content .search_sort_flex .search_div input::placeholder {
@@ -71,8 +85,12 @@ body {
   border-left: none;
   text-align: center;
   font-size: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .search_sort_content .search_sort_flex .sort_area .sort_content .material-icons-round {
@@ -83,9 +101,15 @@ body {
 .search_sort_content .search_sort_flex .sort_area .sort_content .sort_item {
   font-size: 12px;
   font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /* コンテンツ */
@@ -122,8 +146,12 @@ body {
 }
 
 .content_box .public_list .profile_wrap .profile_icon_name {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
@@ -134,7 +162,8 @@ body {
 }
 
 .content_box .public_list .profile_wrap .profile_icon_name .friend_icon img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 100%;
   border: orange 5px solid;
@@ -156,9 +185,15 @@ body {
   font-weight: 900;
   padding: 0px 5px;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 12px;
   text-decoration: none;
 }
@@ -187,20 +222,32 @@ body {
 }
 
 .content_box .public_list .todo_list .icons_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 85%;
   margin: 0 auto;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .content_box .public_list .todo_list .icons_flex .icon_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .content_box .public_list .todo_list .icons_flex .icon_items p {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px 0px;
   width: 70px;
   font-size: 13px;
@@ -223,8 +270,13 @@ body {
 }
 
 .content_box .public_list .todo_list .icons_flex .data {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 13px;
   font-weight: 600;
 }
+/*# sourceMappingURL=public_to_dolist.css.map */
