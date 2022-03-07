@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Instraction;
 use App\Http\Controllers\Controller;
 
-class ChangepublicController extends Controller
+class ChangePublicController extends Controller
 {
     public function index(Request $request)
     {

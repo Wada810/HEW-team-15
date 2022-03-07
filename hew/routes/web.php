@@ -10,7 +10,7 @@ use App\Http\Controllers\IconController;
 use App\Http\Controllers\PublicInstractionsController;
 use App\Http\Controllers\FriendProfileController;
 use APP\Http\Controllers\SortController;
-use APP\Http\Controllers\ChangepublicController;
+use APP\Http\Controllers\ChangePublicController;
 
 use App\Http\Controllers\Play\ThemeController;
 use App\Http\Controllers\Play\OrderController;
@@ -83,6 +83,6 @@ Route::get('sort',[SortController::class, 'index'])->name('sort');
 
 Route::get('friendProf',[FriendProfileController::class, 'index'])->name('friendProf');
 
-Route::get('change_public',[ChangepublicController::class, 'index'])->name('change_public');
+Route::get('change_public',[App\Http\Controllers\ChangePublicController::class, 'index'])->name('change_public');
 
 require __DIR__.'/auth.php';
