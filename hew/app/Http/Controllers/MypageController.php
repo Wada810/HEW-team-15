@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ColorPettern;
 use App\Models\IconImage;
+use App\Models\Instraction;
 use Database\Seeders\ColorPetternSeeder;
 use Illuminate\Support\Facades\Auth;
 
@@ -32,7 +33,8 @@ class MypageController extends Controller
         $colors = ColorPettern::where('level', '<=', $user["level"])->get();
         //アイコン
         $icons = IconImage::where('level', '<=', $user["level"])->get();
-
-        return view('mypage',compact("user","data","colors","icons"));
+        //お題
+        $instractions = Instraction::where('user_id', '=', $user["id"])->get();
+        return view('mypage',compact("user","data","colors","icons",'instractions'));
     }
 }
