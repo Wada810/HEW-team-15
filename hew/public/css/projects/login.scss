@@ -72,6 +72,21 @@ main{
     height: 79px;
     margin: 0 auto;
     padding-bottom: 1vh;
+    position: relative;
+  }
+
+  .visibility_on_icon{
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 34px;
+  }
+
+  .visibility_off_icon{
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 34px;
   }
   
   .log_input, .input-thick {
