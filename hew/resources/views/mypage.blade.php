@@ -1,7 +1,7 @@
 @extends("layouts.layout")
 
 @section('css_link')
-<link rel="stylesheet" href="{{asset('css/projects/order_history.css')}}">
+<link rel="stylesheet" href="{{asset('css/projects/mypage.css')}}">
 @endsection
 
 @section('title', 'マイページ')
