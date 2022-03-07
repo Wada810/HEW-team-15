@@ -50,7 +50,7 @@ Route::post('play/order', [OrderController::class, 'post']);
 Route::get('play/instraction', [InstractionController::class, 'index'])->name('instraction');
 Route::post('play/instraction', [InstractionController::class, 'post']);
 
-Route::get('play/finish', [FinishController::class, 'index'])->name('finish');
+Route::get('play/finish', [FinishController::class, 'index'])->middleware("auth")->name('finish');
 Route::post('play/finish', [FinishController::class, 'post']);
 
 /* 友達のプロフィール */
