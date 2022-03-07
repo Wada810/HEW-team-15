@@ -8,6 +8,8 @@ footer{
     }
 }
 /* タイトル画面 */
+.p_footer{
+}
 .p_home_logo{
     font-weight: 700;
     font-size: 3rem;
@@ -25,10 +27,11 @@ footer{
         width: 50px;
         height: 50px;
         border-radius: 50px;
-        background-color: $text_color;
-        border: 3px solid rgba(255, 255, 255, 0.5);
+        background-color: $main_bg_color;
+        border: 3px solid $button_border;
         box-sizing: content-box;
         position: relative;
+        object-fit: cover;
     }
     p{
         font-size: 0.7rem;
@@ -174,6 +177,15 @@ footer{
     font-size: 16px;
     line-height: 22px;
 
+    position: relative;
+    .handle{
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0.3;
+    }
+
     &.is-active{
         background-color: $white;
         color: $sub_bg_color;
@@ -237,13 +249,18 @@ footer{
 }
 
 .p_button_box{
+    height: 90px;
     background: $main_bg_color;
     position: fixed;
     left: 0;
     bottom: 59px;
     width: 100vw;
-    padding: 20px;
-
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    form{
+        width: 100%;
+    }
 }
 .p_button_box-only{
     @extend .p_button_box;
@@ -262,10 +279,22 @@ footer{
     }
 }
 .p_instraction_content{
-    border-bottom: 1px dashed $sub_bg_color;
+    border-bottom: 1px dashed transparent;
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 10px;
+    min-height: calc((1em * 1.5) + 30px);
+    font-size: 0.9rem;
+    span{
+        padding: 15px 0;
+    }
+    p{
+        padding: 15px;
+    }&:last-of-type{
+        border: none;
+    }
+}
+.filled{
+    border-color: $sub_bg_color;
 }
 .p_instraction_content_active{
     border-radius: $r;
@@ -274,22 +303,190 @@ footer{
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 10px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 .p_instraction__tools{
+    margin-top: 10px;
     display: flex;
     justify-content: center;
+    position: relative;
     .p_instraction__dots{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
         div{
             background-color: $sub_bg_color;
-            width: 20px;
-            height: 20px;
+            width: 12px;
+            height: 12px;
+            border-radius: 40px;
         }
         div:nth-of-type(2){
-            opacity: 0.8;
+            opacity: 0.7;
         }
         div:nth-of-type(3){
-            opacity: 0.6;
+            opacity: 0.5;
         }
+    }
+    .p_instraction_all{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        font-size: 0.9rem;
+    }
+}
+.p_instraction_all_list_modal{
+    border-left: 10px solid $sub_bg_color;
+    display: none;
+}
+.show{
+    display: block;
+    animation: show 0.5s forwards;
+}
+.close{
+    display: block;
+    animation: close 0.5s forwards;
+}
+@keyframes show {
+    0%{
+        position: absolute;
+        top: 90px;
+        transform: translateX(100%);
+    }
+    99%{
+        position: absolute;
+        top: 90px;
+        transform: translateX(1%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes close {
+    0%{
+        position: absolute;
+        top: 90px;
+        transform: translateX(0%);
+    }
+    99%{
+        position: absolute;
+        top: 90px;
+        transform: translateX(99%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+.p_instraction_comp_modal{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: $sub_bg_color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 11;
+}
+.p_instraction_comp_modal_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10vh;
+}
+.p_instraction_comp_modal_q{
+    text-align: center;
+    color: $white;
+    font-size: 1.4rem;
+}
+.p_instraction_comp_modal_window{
+    border-radius: $r;
+    background-color: $white;
+}
+.p_instraction_comp_modal_title{
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 50px;
+    width: 60%;
+    background-color: $sub_bg_color;
+    color: $white;
+    padding: 4px;
+}
+.p_instraction_comp_modal_theme{
+    margin: 20px auto;
+    text-align: center;
+}
+.p_instraction_comp_modal_judge_box{
+    border-top: 1px dashed $sub_bg_color;
+    display: flex;
+    button{
+        padding: 30px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        span{
+            font-size: 4rem;
+        }
+    }
+    .fail{
+        color: $disabled;
+        border-right: 1px dashed $sub_bg_color;
+    }
+    .success{
+        color: $valid;
+    }
+}
+#close_comp_modal{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(-50%) translateY(50%);
+    border: 0px solid $sub_bg_color;
+    background-color: $white;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    font-size: 30px;
+}
+
+.c_show{
+    display: flex;
+    animation: c_show 0.5s forwards;
+}
+.c_close{
+    display: flex;
+    animation: c_close 0.5s 0.5s forwards;
+}
+.c_close_up{
+    animation: c_close_up .8s forwards;
+}
+@keyframes c_show {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes c_close {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes c_close_up {
+    0%{
+        transform: translateY(0vh);
+    }
+    100%{
+        transform: translateY(-100vh);
     }
 }

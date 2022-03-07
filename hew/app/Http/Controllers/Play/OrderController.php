@@ -14,11 +14,11 @@ class OrderController extends Controller
     {
         // セッションからデータを取得
         $data = session()->all();
+        $user = Auth::user();
         if(!isset($data["order"])){
             $data["order"] = [];
         }
-
-        return view('play.order', compact('data'));
+        return view('play.order', compact('data','user'));
     }
 
     public function post(Request $request)

@@ -5,7 +5,7 @@ html {
     height: 100%;
     overflow-y: hidden;
   }
-  
+
   body {
     background-color: $main_bg_color;
     width: 100%;
@@ -18,7 +18,7 @@ html {
     box-sizing: border-box;
     font-family: "M PLUS 2", sans-serif;
   }
-  
+
   header {
     display: none;
     width: 100%;
@@ -49,7 +49,7 @@ html {
     padding-top: 10%;
     padding-left: 18%;
   }
-  
+
   main {
     width: 100%;
     height: 100%;
@@ -57,7 +57,7 @@ html {
     font-size: 0.8rem;
     position: relative;
   }
-  
+
   #prof {
     width: 100%;
     height: 35%;
@@ -130,14 +130,14 @@ html {
     height: 40px;
     color: white;
   }
-  
+
   .name {
     margin: 2vh 0 1vh 0;
     letter-spacing: 2px;
     font-weight: bold;
     color: $sub_bg_color;
   }
-  
+
   .rank_cover {
     position: absolute;
     background-color: white;
@@ -152,7 +152,7 @@ html {
     top: -12px;
     left: -12px;
   }
-  
+
   .rank {
     font-size: 10px;
     transform: scale(0.8);
@@ -160,7 +160,7 @@ html {
   .rank_no {
     font-size: 14px;
   }
-  
+
   /* .rank_bar_cover {
     position: relative;
     width: 100%;
@@ -219,7 +219,7 @@ html {
       width: 100%;
     }
   }
-  
+
   .rank_point {
     display: flex;
     justify-content: center;
@@ -237,7 +237,7 @@ html {
     padding-left: 1%;
 /*     font-size: $rank_point_font_size; */
   }
-  
+
   .get_star_cover {
     margin: 10px auto 0 auto;
     display: flex;
@@ -256,7 +256,7 @@ html {
     font-size: 0.75rem;
     padding-left: 0.5rem;
   }
-  
+
   #todo {
     width: 100%;
     height: 1fr;
@@ -292,7 +292,7 @@ html {
   .text-divider::after {
     margin-left: 10px;
   }
-  
+
   .sort_cover {
     width: 90%;
     font-size: 0.6rem;
@@ -308,7 +308,7 @@ html {
   .drop_arrow {
     font-size: 0.9rem !important;
   }
-  
+
   .todo_scroll{
     width: 100%;
     height: 310px;
@@ -346,7 +346,7 @@ html {
   .todo_theme {
     width: 70%;
   }
-  
+
   .under {
     width: 100%;
     height: 60%;
@@ -396,7 +396,7 @@ html {
   }
   .slash {
   }
-  
+
   .popup {
     position: fixed;
     left: 0;
@@ -408,12 +408,12 @@ html {
     visibility: hidden;
     transition: 0.6s;
   }
-  
+
   .popup.is-show {
     opacity: 1;
     visibility: visible;
   }
-  
+
   .popup_header {
     position: relative;
     background-color: $sub_bg_color;
@@ -431,7 +431,7 @@ html {
     border-radius: 5px 5px 0 0;
     font-weight: 800;
   }
-  
+
   .popup-inner {
     position: absolute;
     left: 50%;
@@ -446,12 +446,12 @@ html {
     border-radius: 5px;
     text-align: center;
   }
-  
+
   .popup-inner .get_text {
     font-weight: 700;
     font-size: 26px;
   }
-  
+
   .popup-inner button {
     position: relative;
     background-color: $second_color;
@@ -464,18 +464,18 @@ html {
     cursor: pointer;
     z-index: 999;
   }
-  
+
   .popup-inner .get_item_block {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 30px 0 20px 0;
   }
-  
+
   .popup-inner .get_item_block > div {
     width: 50%;
   }
-  
+
   .popup-inner img {
     width: auto;
     height: auto;
@@ -483,7 +483,7 @@ html {
   .popup-inner p {
     font-size: 12px;
   }
-  
+
   .black-background {
     position: absolute;
     left: 0;
@@ -494,7 +494,7 @@ html {
     z-index: 1;
     cursor: pointer;
   }
-  
+
   .modal_items {
     display: flex;
     flex-wrap: wrap;
@@ -510,8 +510,8 @@ html {
     width: 100px;
     height: auto;
   }
-  
-  
+
+
   /* 友達のマイページ */
   .star_cover{
     margin: 1vh auto 0 auto;
@@ -520,7 +520,7 @@ html {
     justify-content: center;
     align-items: center;
   }
-  
+
   .item_list{
     margin: 0 auto;
     padding-bottom: 2vh;
@@ -530,13 +530,13 @@ html {
     align-items: center;
     font-size: 0.6rem;
   }
-  
+
   .lines_num_cover{
     display: flex;
     align-items: center;
     font-size: 0.6rem;
   }
-  
+
   .line_num{
     padding-left: 20%;
   }
@@ -552,7 +552,7 @@ html {
     border-radius: 5px;
     padding: 0.4vh 0 0.4vh 0;
   }
-  
+
   .release_p{
     font-size: 0.4rem;
     font-weight: 400;
@@ -637,7 +637,7 @@ html {
             right: -18px;
             .modal_close_icon{
               font-size: 2.5rem;
-            } 
+            }
           }
           .modal_user_name{
             width: 100%;
@@ -885,6 +885,6 @@ html {
         }
       }
     }
-  } 
+  }
   .check{
   }

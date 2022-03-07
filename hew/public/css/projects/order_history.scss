@@ -57,16 +57,15 @@
     padding-top: 10%;
     padding-left: 18%;
   }
-  
+
   main {
     width: 100%;
     height: 100%;
-    padding-top: 60px;
     font-size: 0.8rem;
     position: relative;
     overflow-y: hidden;
   }
-  
+
   #prof {
     width: 100%;
     height: 35%;
@@ -76,12 +75,12 @@
     position: absolute;
     right: 4%;
     top: -12%;
-    color: var(--main_color);
+    color: $sub_bg_color;
   }
   .palette_cover {
     width: 45px;
     height: 45px;
-    background-color: var(--main_color);
+    background-color: $sub_bg_color;
     border-radius: 50px;
     display: flex;
     margin: 0 auto;
@@ -99,6 +98,7 @@
     font-size: 0.4rem;
     letter-spacing: 0px;
     font-weight: 600;
+    color: $text_color;
   }
   .prof_area {
     width: 100%;
@@ -116,7 +116,7 @@
     border-radius: 50px;
     width: 100%;
     height: 100%;
-    border: 5px solid var(--main_color);
+    border: 5px solid $sub_bg_color;
     object-fit: cover;
     z-index: -10000;
   }
@@ -124,7 +124,7 @@
     position: absolute;
     width: 30px;
     height: 30px;
-    background-color: var(--main_color);
+    background-color: $sub_bg_color;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -139,14 +139,14 @@
     height: 40px;
     color: white;
   }
-  
+
   .name {
     margin: 3% 0 3% 0;
     letter-spacing: 2px;
     font-weight: bold;
-    color: var(--main_color);
+    color: $text_color;
   }
-  
+
   .rank_cover {
     position: absolute;
     background-color: white;
@@ -154,7 +154,7 @@
     width: 38px;
     height: 38px;
     font-weight: 600;
-    color: var(--main_color);
+    color: $sub_bg_color;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -162,7 +162,7 @@
     top: -12px;
     left: -6px;
   }
-  
+
   .rank {
     font-size: 10px;
     line-height: 10px;
@@ -174,38 +174,166 @@
     line-height: 16px;
     font-family: 'Montserrat',sans-serif;
   }
-  
-  /* .rank_bar_cover {
+
+  .color_item{
     position: relative;
-    width: 100%;
-    height: 18px;
-    color: var(--main_color);
+    overflow: hidden;
+    border-radius: $r;
+    width: 100px;
+    height: 100px;
+    &::after{
+      content: "";
+      width: 200%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(-45deg);
+      transform-origin: bottom left;
+    }
+    &::before{
+      content: "";
+      width: 100%;
+      height: 200%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-origin: top right;
+    }
+    & + p{
+      white-space: nowrap;
+      margin-top: 5px;
+    }
   }
-  .rank_bar_tank {
-    width: 50%;
-    height: 100%;
-    margin: 0 auto;
-    background: #dcdcdc;
-    border-radius: 20px;
+  .emerald{
+    & + p{
+      color: $emerald_sub !important;
+    }
+    &::after{
+      background-color: $emerald_sub;
+    }
+    &::before{
+      background-color: $emerald_main;
+    }
   }
-  .rank_bar {
-    position: absolute;
-    width: 34%;
-    height: 100%;
-    margin: 0 auto;
-    background: var(--fav_color);
-    border-radius: 20px;
-  } */
+  .emeraldgreen{
+    & + p{
+      margin-top: 5px;
+      color: $emeraldgreen_sub !important;
+    }
+    &::after{
+      background-color: $emeraldgreen_sub;
+    }
+    &::before{
+      background-color: $emeraldgreen_main;
+    }
+  }
+  .strawberry{
+    & + p{
+      margin-top: 5px;
+      color: $strawberry_sub !important;
+    }
+    &::after{
+      background-color: $strawberry_sub;
+    }
+    &::before{
+      background-color: $strawberry_main;
+    }
+  }
+  .oceanblue{
+    & + p{
+      margin-top: 5px;
+      color: $oceanblue_sub !important;
+    }
+    &::after{
+      background-color: $oceanblue_sub;
+    }
+    &::before{
+      background-color: $oceanblue_main;
+    }
+  }
+  .grapefruit{
+    & + p{
+      margin-top: 5px;
+      color: $grapefruit_sub !important;
+    }
+    &::after{
+      background-color: $grapefruit_sub;
+    }
+    &::before{
+      background-color: $grapefruit_main;
+    }
+  }
+  .amethyst{
+    & + p{
+      margin-top: 5px;
+      color: $amethyst_sub !important;
+    }
+    &::after{
+      background-color: $amethyst_sub;
+    }
+    &::before{
+      background-color: $amethyst_main;
+    }
+  }
+  .depth{
+    & + p{
+      margin-top: 5px;
+      color: $depth_sub !important;
+    }
+    &::after{
+      background-color: $depth_sub;
+    }
+    &::before{
+      background-color: $depth_main;
+    }
+  }
+  .jupiter{
+    & + p{
+      margin-top: 5px;
+      color: $jupiter_sub !important;
+    }
+    &::after{
+      background-color: $jupiter_sub;
+    }
+    &::before{
+      background-color: $jupiter_main;
+    }
+  }
+  .lipstick{
+    & + p{
+      margin-top: 5px;
+      color: $lipstick_sub !important;
+    }
+    &::after{
+      background-color: $lipstick_sub;
+    }
+    &::before{
+      background-color: $lipstick_main;
+    }
+  }
+  .roseiron{
+    & + p{
+      margin-top: 5px;
+      color: $roseiron_sub !important;
+    }
+    &::after{
+      background-color: $roseiron_sub;
+    }
+    &::before{
+      background-color: $roseiron_main;
+    }
+  }
   /* レベルメーター */
   .level_box {
     position: relative;
     width: 70%;
     height: 18px;
-    color: var(--main_color);
+    color: $sub_bg_color;
     margin: 0 auto;
     box-sizing: border-box;
     border-radius: 20px;
-    background: #dcdcdc;
+    background: rgba(0, 0, 0, 0.16);
   }
   .animation-box {
     width: 100%;
@@ -215,7 +343,7 @@
     border-radius: 20px;
   }
   .animation {
-    background-color: var(--fav_color);
+    background-color: $fav_color;
     animation-name: animation-sample;
     /*--アニメーション名--*/
     animation-duration: 3s;
@@ -233,7 +361,7 @@
       width: 100%;
     }
   }
-  
+
   .rank_point {
     display: flex;
     justify-content: center;
@@ -243,23 +371,23 @@
   }
   .left_rank_point {
     padding-right: 1%;
-    font-size: var(--rank_point_font_size);
+    font-size: 0.5rem;
   }
   .center_rank_point {
-    font-size: var(--rank_point_font_size);
+    font-size: 0.5rem;
   }
   .right_rank_point {
     padding-left: 1%;
-    font-size: var(--rank_point_font_size);
+    font-size: 0.5rem;
   }
-  
+
   .get_star_cover {
     margin: 12px auto 0 auto;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-    background-color: var(--fav_color);
+    background-color: $fav_color;
     border-radius: 30px;
     width: 100px;
     border: white solid 2px;
@@ -277,16 +405,17 @@
     font-size: 0.6rem;
     padding-left: 0.5rem;
   }
-  
+
   #todo {
     width: 100%;
     height: 1fr;
     background-color: var(--sub_color);
-    color: var(--main_color);
+    color: $sub_bg_color;
   }
   .todo_sort_cover {
     width: 100%;
     height: 10%;
+    color: $text_color;
   }
   .todo_title {
     text-align: center;
@@ -294,6 +423,7 @@
     padding-top: 5%;
     padding-bottom: 5%;
     font-weight: bold;
+    color: $text_color;
   }
 
   .item_list{
@@ -329,7 +459,7 @@
   .text-divider::after {
     margin-left: 10px;
   }
-  
+
   .sort_cover {
     width: 90%;
     font-size: 0.6rem;
@@ -347,7 +477,7 @@
     font-size: 0.9rem !important;
     padding-top: 2px;
   }
-  
+
   .todo_scroll{
     width: 100%;
     height: 310px;
@@ -385,7 +515,7 @@
   .todo_theme {
     width: 75%;
   }
-  
+
   .under {
     width: 100%;
     height: 60%;
@@ -442,7 +572,7 @@
   .slash {
   }
 
-  
+
   .popup {
     position: fixed;
     left: 0;
@@ -454,15 +584,15 @@
     visibility: hidden;
     transition: 0.6s;
   }
-  
+
   .popup.is-show {
     opacity: 1;
     visibility: visible;
   }
-  
+
   .popup_header {
     position: relative;
-    background-color: var(--main_color);
+    background-color: $sub_bg_color;
     color: white;
     width: 100%;
     height: 50px;
@@ -477,30 +607,28 @@
     border-radius: 5px 5px 0 0;
     font-weight: 800;
   }
-  
+
   .popup-inner {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    max-width: 95%;
-    max-height: 80vh;
     background-color: #fff;
     z-index: 2;
     color: #3a9fa8;
     border-radius: 5px;
     text-align: center;
   }
-  
+
   .popup-inner .get_text {
     font-weight: 700;
     font-size: 26px;
   }
-  
+
   .popup-inner button {
     position: relative;
-    background-color: var(--fav_color);
+    background-color: $fav_color;
     border-radius: 40px;
     border: #e7d9a2 solid 6px;
     color: white;
@@ -510,18 +638,18 @@
     cursor: pointer;
     z-index: 999;
   }
-  
+
   .popup-inner .get_item_block {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 30px 0 20px 0;
   }
-  
+
   .popup-inner .get_item_block > div {
     width: 50%;
   }
-  
+
   .popup-inner img {
     width: auto;
     height: auto;
@@ -529,7 +657,7 @@
   .popup-inner p {
     font-size: 12px;
   }
-  
+
   .black-background {
     position: absolute;
     left: 0;
@@ -540,13 +668,13 @@
     z-index: 1;
     cursor: pointer;
   }
-  
+
   .modal_items {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    height: 65vh;
     width: 90%;
-    height: 10vh;
     margin: 0 auto;
     text-align: center;
     overflow-y: scroll;
@@ -559,7 +687,7 @@
     width: 90px;
     height: auto;
   }
-  
+
   /* アイコン */
   .modal_items_icon {
     display: flex;
@@ -593,19 +721,19 @@
     height: 100%;
     position: relative;
     border-radius: 50%;
-    border: 5px solid var(--main_color);
+    border: 5px solid $sub_bg_color;
     object-fit: cover;
     z-index: -10000;
   }
-  
+
   /* 選択中のアイコン */
   .active_icon {
-    background-color: var(--main_color);
+    background-color: $sub_bg_color;
     border-radius: 20px;
     z-index: -100;
     color: white;
   }
-  
+
     /* modal */
     #release_modal{
       display: none;
@@ -680,7 +808,7 @@
               right: -18px;
               .modal_close_icon{
                 font-size: 2.5rem;
-              } 
+              }
             }
             .modal_user_name{
               width: 100%;
@@ -741,13 +869,13 @@
                 display: flex;
                 align-items: flex-end;
                 .modal_lines_icon{
-  
+
                 }
                 .cross{
-  
+
                 }
                 .modal_lines{
-  
+
                 }
               }
               .modal_date_cover{
@@ -755,35 +883,35 @@
                 align-items: flex-end;
                 padding: 0 3vw 0 0;
                 .modal_calendar_icon{
-  
+
                 }
                 .modal_date{
                   display: flex;
                   padding: 0 0 0 1vw;
                   .modal_year{
-  
+
                   }
                   .modal_slash{
-  
+
                   }
                   .modal_month{
-  
+
                   }
                   .modal_day{
-  
+
                   }
                 }
                 .modal_time{
                   display: flex;
                   padding: 0 0 0 1vw;
                   .modal_hour{
-  
+
                   }
                   .modal_dott{
-  
+
                   }
                   .modal_minutes{
-  
+
                   }
                 }
               }
@@ -800,10 +928,10 @@
                 border: 3px solid $sub_bg_color;
                 margin: 0 0 0.5vh 0;
                 .modal_release_icon{
-  
+
                 }
                 .modal_release_p{
-  
+
                 }
               }
               .modal_play_btn{
@@ -814,10 +942,10 @@
                 color: white;
                 margin: 0.5vh 0 0 0;
                 .modal_play_icon{
-  
+
                 }
                 .modal_play_p{
-  
+
                 }
               }
               .modal_button{
@@ -830,7 +958,7 @@
         }
       }
     }
-  
+
     //checkModal
     #release_check_modal{
       background-color: $modal_main_bg_color;
@@ -875,27 +1003,27 @@
             .release_ok_area{
               .release_ok_cover{
                 .release_ok_icon{
-  
+
                 }
                 .release_ok_p{
-  
+
                 }
               }
               .check_ok{
-  
+
               }
             }
             .release_no_area{
               .release_no_cover{
                 .release_no_icon{
-  
+
                 }
                 .release_no_p{
-  
+
                 }
               }
               .check_no{
-  
+
               }
             }
             .release_check_cover{
@@ -929,7 +1057,6 @@
           }
         }
       }
-    } 
+    }
     .check{
     }
-  

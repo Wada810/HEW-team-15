@@ -1,14 +1,141 @@
-$main_bg_color: #E2EFEF;
-$sub_bg_color: #3A9FA8;
-$text_color: #3A9FA8;
+:root {
+    --main_bg_color: #e1efef;
+    --sub_bg_color: #3A9FA8;
+    --text_color: #3A9FA8;
+    --button_border: #62BBC3;
+    --second_color: #eb9718;
+}
+:root[theme="strawberry"] {
+    --main_bg_color: #F5EAED;
+    --sub_bg_color: #DE4065;
+    --text_color: #DE4065;
+    --button_border: #EE90A6;
+    --second_color: #A6D114;
+    --input_border: #A6D114;
+}
+:root[theme="emerald"] {
+    --main_bg_color: #e1efef;
+    --sub_bg_color: #3A9FA8;
+    --text_color: #3A9FA8;
+    --button_border: #62BBC3;
+    --second_color: #eb9718;
+}
+
+:root[theme="emeraldgreen"] {
+    --main_bg_color: #E8F6EF;
+    --sub_bg_color: #0FAA6C;
+    --text_color: #0FAA6C;
+    --button_border: #82D8B3;
+    --second_color: #D51194;
+    --input_border: #D51194;
+}
+
+:root[theme="oceanblue"] {
+    --main_bg_color: #ECF2FF;
+    --sub_bg_color: #417ECE;
+    --text_color: #417ECE;
+    --button_border: #93B6E6;
+    --second_color: #A8D511;
+    --input_border: #A8D511;
+}
+
+:root[theme="grapefruit"] {
+    --main_bg_color: #F5F2EA;
+    --sub_bg_color: #FFAA00;
+    --text_color: #DF2588;
+    --button_border: #EA8AB8;
+    --second_color: #DF2588;
+    --input_border: #DF2588;
+}
+
+:root[theme="amethyst"] {
+    --main_bg_color: #F9ECFF;
+    --sub_bg_color: #7A4C9D;
+    --text_color: #030897;
+    --button_border: #B298CE;
+    --second_color: #030897;
+    --input_border: #030897;
+}
+
+:root[theme="depth"] {
+    --main_bg_color: #15277D;
+    --sub_bg_color: #0C1A60;
+    --text_color: #00BAFF;
+    --button_border: #B298CE;
+    --second_color: #00BAFF;
+    --input_border: #00BAFF;
+}
+
+:root[theme="jupiter"] {
+    --main_bg_color: #E5DEDC;
+    --sub_bg_color: #7E7473;
+    --text_color: #7E7473;
+    --button_border: #303030;
+    --second_color: #FF9100;
+    --input_border: #FF9100;
+}
+
+:root[theme="lipstick"] {
+    --main_bg_color: #D9D9D9;
+    --sub_bg_color: #A4A4A4;
+    --text_color: #FF406D;
+    --button_border: #C4C4C4 ;
+    --second_color: #FF406D;
+    --input_border: #FF406D;
+}
+
+:root[theme="roseiron"] {
+    --main_bg_color: #716D7D;
+    --sub_bg_color: #383340;
+    --text_color: #FF8000;
+    --button_border: #544F5E ;
+    --second_color: #FF8000;
+    --input_border: #FF8000;
+}
+
+$main_bg_color: var(--main_bg_color);
+$sub_bg_color: var(--sub_bg_color);
+$text_color: var(--text_color);
+$button_border: var(--button_border);
+$second_color: var(--second_color);
+$input_border: var(--input_border);
+
 $white: #fbfeff;
-$text_black: rgb(17, 17, 17);
+$text_black: #111111;
 $greyish: #D9E7EB;
-$button_border: #62BBC3;
-$second_color: #eb9718;
-$input_border: #eb9718ab;
 $disabled: #EE3F7A;
+$valid: #0fdd69;
 $r: 4px;
-$frame_color: #379ea760;/* ボタンの枠の色 */
-$rank_point_font_size: 0.5rem;/* ランクポイントのフォントサイズ */
 $modal_main_bg_color: #e2efefbe;
+$fav_color: #ebcb4d;
+
+/* color */
+$strawberry_main: #F5EAED;
+$strawberry_sub: #DE4065;
+
+$emerald_main:#e1efef;
+$emerald_sub:#3A9FA8;
+
+$emeraldgreen_main:#E8F6EF;
+$emeraldgreen_sub:#0FAA6C;
+
+$oceanblue_main: #ECF2FF;
+$oceanblue_sub: #417ECE ;
+
+$grapefruit_main: #F5F2EA;
+$grapefruit_sub: #FFAA00 ;
+
+$amethyst_main: #F9ECFF;
+$amethyst_sub: #7A4C9D ;
+
+$depth_main: #15277D;
+$depth_sub: #0C1A60 ;
+
+$jupiter_main: #E5DEDC;
+$jupiter_sub: #7E7473;
+
+$lipstick_main: #D9D9D9;
+$lipstick_sub: #A4A4A4 ;
+
+$roseiron_main: #716D7D;
+$roseiron_sub: #383340 ;
