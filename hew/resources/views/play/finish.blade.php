@@ -130,7 +130,7 @@
                         </div>     -->
                     </div>
                     <div class="close-btn" id="close-btn"><span class="material-icons-round">close</span></div>
-                    <input type="checkbox" for="form" id="like" name="like" value="true">
+                    <input type="checkbox" for="form" id="like" name="like" value="true" class="hidden">
                 </div>
             </div>
         </div>
