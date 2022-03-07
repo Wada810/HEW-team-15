@@ -918,6 +918,8 @@ main {
 
 #release_modal .release_modal .release_cover .modal_top .modal_close .modal_close_icon {
   font-size: 2.5rem;
+  background-color: #fbfeff;
+  border-radius: 100px;
 }
 
 #release_modal .release_modal .release_cover .modal_top .modal_user_name {
@@ -935,6 +937,7 @@ main {
 }
 
 #release_modal .release_modal .release_cover .modal_top .modal_half {
+  margin-top: -1px;
   width: 100%;
   height: 33%;
   display: flex;
