@@ -561,7 +561,6 @@ body {
   background-color: var(--main_bg_color);
   line-height: 1.5;
   letter-spacing: 0.5px;
-  height: 100%;
 }
 
 .number_font {
@@ -671,7 +670,7 @@ body {
 
 /* color */
 .s {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .l {
@@ -714,6 +713,7 @@ body {
   align-items: center;
   padding: 0 14px;
   border-radius: 4px;
+  font-size: 0.8rem;
 }
 
 .btn, .btn-primary, .btn-secondary, .btn-white {
@@ -728,13 +728,15 @@ body {
   background-color: var(--sub_bg_color);
   border-color: var(--button_border);
   color: #fbfeff;
+  font-size: 0.8rem;
   font-weight: 800;
 }
 
 .btn-secondary {
-  background-color: var(--main_bg_color);
+  background-color: #fbfeff;
   border-color: var(--sub_bg_color);
   color: var(--text_color);
+  font-size: 0.8rem;
   font-weight: 800;
 }
 
@@ -879,6 +881,7 @@ body {
 .l_home_header {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .l_home {
@@ -1060,10 +1063,12 @@ footer .version {
 }
 
 /* タイトル画面 */
+/* .p_footer{
+} */
 .p_home_logo {
   font-weight: 700;
   font-size: 3rem;
-  margin: 10vh 0 15vh 0;
+  margin: 40px 0 70px 0;
 }
 
 .p_home_logo img {
@@ -1095,8 +1100,9 @@ footer .version {
 
 .p_home_link {
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   margin-bottom: 30px;
+  animation: home_link 3s linear infinite;
 }
 
 .p_home_link:last-of-type {
@@ -1120,21 +1126,24 @@ footer .version {
 .p_play_header {
   background-color: var(--sub_bg_color);
   color: #fbfeff;
+  font-size: 0.9rem;
+  font-weight: 800;
 }
 
 .p_play_header__back {
   color: var(--text_color);
   background-color: #fbfeff;
   border-radius: 100px;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   top: 50%;
-  left: 10px;
+  left: 20px;
   transform: translateY(-50%);
 }
 
 .p_play_header__back span {
+  font-size: 18px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1790,7 +1799,7 @@ footer .version {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 11;
+  z-index: 12;
   opacity: 0;
   align-items: center;
   justify-content: center;

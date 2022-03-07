@@ -37,7 +37,9 @@ for (let i = 0; i < openBtn.length; i++) {
             let lines = value.lines;
             let updated = value.updated_at;
             let updated_at = updated.substr(0 , 10);
+
             let inst_id = value.inst_id;
+
         html = `
         <div class="profile_area">
             <div class="profile_wrap">
@@ -71,10 +73,13 @@ for (let i = 0; i < openBtn.length; i++) {
                                 <p>${updated_at}</p>
                             </div>
                         </div>
+
                         <form method="POST" action="{{ route('play/instraction')}}">
                         <input type="hidden" name="inst_id" value="${inst_id}">
                         <button type="submit" name="other_theme" value="play"><span class="material-icons-round">play_circle</span><span class="play">あそぶ</span></button>
                         </form>
+
+
                     </div>
                 </div>
             </div>
@@ -100,4 +105,5 @@ for (let i = 0; i < openBtn.length; i++) {
         })
     });
 };
+
 
