@@ -1,46 +1,8 @@
-:root {
-  --main_bg_color: hsl(180, 29%, 91%);
-  --sub_bg_color: #3a9fa8;
-  --text_color: #3a9fa8;
-  --button_border: #62bbc3;
-  --second_color: #eb9718;
-  --input_border: #eb9718ab;
-}
-:root[theme="pink"] {
-  --main_bg_color: hsl(296, 30%, 91%);
-  --sub_bg_color: #a83aa3;
-  --text_color: #a83a90;
-  --button_border: #bb62c3;
-  --second_color: #18ebcf;
-  --input_border: #42eb18ab;
-}
-:root[theme="dark"] {
-  --main_bg_color: hsl(0, 0%, 35%);
-  --sub_bg_color: #373136;
-  --text_color: #e4e4e4;
-  --button_border: #e2e2e2;
-  --second_color: #c3fdf6;
-  --input_border: #98d18aab;
-}
-
-$main_bg_color: var(--main_bg_color);
-$sub_bg_color: var(--sub_bg_color);
-$text_color: var(--text_color);
-$button_border: var(--button_border);
-$second_color: var(--second_color);
-$input_border: var(--input_border);
-
-$white: #fbfeff;
-$black: black;
-$text_black: #111111;
-$greyish: #d9e7eb;
-$disabled: #ee3f7a;
-$valid: #0fdd69;
-$r: 4px;
-$modal_main_bg_color: #e2efefbe;
-$fav_color: #ebcb4d;
-
+@import "../variable";
 // ポップアップ
+.op{
+  opacity: 1 !important;
+}
 .profile_modal {
   font-family: "M PLUS 2", sans-serif;
   position: fixed;
@@ -48,9 +10,8 @@ $fav_color: #ebcb4d;
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 99;
+  z-index: 11;
   opacity: 0;
-  visibility: hidden;
   transition: 0.6s;
 
   .profile_area {
@@ -236,7 +197,7 @@ $fav_color: #ebcb4d;
             }
 
             .share_icon_cover {
-              border: solid 2px $black;
+              border: solid 2px black;
               span {
                 font-size: 40px;
               }
