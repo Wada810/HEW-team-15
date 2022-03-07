@@ -24,8 +24,11 @@
             @if (Route::has('login'))
                 @auth
                     <a href="{{ route('theme') }}" class="p_home_link">あたらしく作る</a>
-                    <a href="" class="p_home_link">みんなのやることリスト</a>
+
+                    <a href="{{ route('public_instractions') }}" class="p_home_link">みんなの指示書をみる</a>
+
                     <a href="{{route('how_to_play')}}" class="p_home_link">あそびかた</a>
+
                 @else
                     @if (Route::has('register'))
                     <a href="{{ route('register') }}" class="btn-primary mb-s">新規登録</a>

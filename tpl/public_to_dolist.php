@@ -8,11 +8,11 @@
     <!-- cssリセットCDN -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <!-- デフォルトCSS -->
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../hew/public/css/style.css">
     <!-- public_to_dolistのCSS -->
     <link rel="stylesheet" type="text/css" href="../css/public_to_dolist.css">
     <!-- public_to_dolistモーダルのCSS -->
-    <link rel="stylesheet" href="css/public_to_do_list_modal.css">
+    <link rel="stylesheet" href="../css/public_to_do_list_modal.css">
 
 
     <!-- フォント -->
@@ -29,7 +29,7 @@
                 <a class="profile_modal_top">
                     <div class="profile_rank_tag">
                         <div class="profile_rank_str">RANK</div>
-                        <div class="profile_rank_int">72</div>
+                        <div class="profile_rank_int">1</div>
                     </div>
                     <div class="profile_img">
                         <img src="./img/public_to_dolist/kuma.png" alt="">
@@ -38,22 +38,22 @@
                 <div class="close-btn" id="close-btn"><span class="material-icons-round">close</span></div>
                 <div class="profile_modal_main">
                     <div class="profile_modal_info">
-                        <h2>HYPERウンチMAN</h2>
+                        <h2 class="profile_name"></h2>
                         <div class="star_point_content">
                             <span class="material-icons-round">stars</span>
-                            <p>278</p>
+                            <p class="star_sum"></p>
                         </div>
                     </div>
                     <div class="profile_modal_todo">
-                        <div class="profile_theme">ピーナッツバターサンドを作るううううううううううう</div>
+                        <div class="profile_theme"></div>
                         <div class="profile_icon_container">
                             <div class="rows">
                                 <span class="material-icons-round">format_list_numbered_rtl</span>
-                                <p>x 18</p>
+                                <p class="rows_sum"></p>
                             </div>
                             <div class="date">
                                 <span class="material-icons-round">calendar_today</span>
-                                <p>2022/02/13</p>
+                                <p class="date_sum"></p>
                             </div>
                         </div>
                         <button type=""><span class="material-icons-round">play_circle</span><span class="play">あそぶ</span></button>
@@ -96,7 +96,7 @@
                         <a href="#"><img src="./img/public_to_dolist/kuma.png" alt="友だちのアイコン"></a>
                     </div>
                     <div class="friend_name">
-                        <a href="#">つついつついつついつついつついつ<span class="material-icons-round friendname_stars">stars</span></a>
+                        <a class="friend_prof_name" href="#">つついつついつついつついつついつ<span class="material-icons-round friendname_stars">stars</span></a>
                     </div>
                 </div>
             </div>
@@ -105,8 +105,8 @@
                 <p class="theme">ピーナッツバターサンドを作る！ピーナッツバターサンドを作る！</p><!-- 長い文章でも検証すること -->
                 <div class="icons_flex">
                     <div class="icon_items">
-                        <p><span class="material-icons-round row_icon">format_list_numbered_rtl</span>18</p>
-                        <p><span class="material-icons-round stars_icon">stars</span>125</p>
+                        <p class="prof_rows_sum"><span class="material-icons-round row_icon">format_list_numbered_rtl</span>18</p>
+                        <p class="prof_star_sum"><span class="material-icons-round stars_icon">stars</span>125</p>
                     </div>
                     <p class="data">2022/02/13</p>
                 </div>
@@ -121,7 +121,7 @@
                         <a href="#"><img src="./img/public_to_dolist/kuma.png" alt="友だちのアイコン"></a>
                     </div>
                     <div class="friend_name">
-                        <a href="#">つついつついつついつついつついつ<span class="material-icons-round friendname_stars">stars</span></a>
+                        <a class="friend_prof_name" href="#">つついつついつついつついつついつ<span class="material-icons-round friendname_stars">stars</span></a>
                     </div>
                 </div>
             </div>
@@ -130,8 +130,8 @@
                 <p class="theme">ピーナッツバターサンドを作る！</p><!-- 長い文章でも検証すること -->
                 <div class="icons_flex">
                     <div class="icon_items">
-                        <p><span class="material-icons-round row_icon">format_list_numbered_rtl</span>18</p>
-                        <p><span class="material-icons-round stars_icon">stars</span>125</p>
+                        <p class="prof_rows_sum"><span class="material-icons-round row_icon">format_list_numbered_rtl</span>18</p>
+                        <p class="prof_star_sum"><span class="material-icons-round stars_icon">stars</span>125</p>
                     </div>
                     <p class="data">2022/02/13</p>
                 </div>
@@ -146,7 +146,7 @@
                         <a href="#"><img src="./img/public_to_dolist/kuma.png" alt="友だちのアイコン"></a>
                     </div>
                     <div class="friend_name">
-                        <a href="#">つついつついつついつついつついつ<span class="material-icons-round friendname_stars">stars</span></a>
+                        <a class="friend_prof_name" href="#">つついつついつついつついつついつ<span class="material-icons-round friendname_stars">stars</span></a>
                     </div>
                 </div>
             </div>
@@ -155,8 +155,8 @@
                 <p class="theme">ピーナッツバターサンドを作る！</p><!-- 長い文章でも検証すること -->
                 <div class="icons_flex">
                     <div class="icon_items">
-                        <p><span class="material-icons-round row_icon">format_list_numbered_rtl</span>18</p>
-                        <p><span class="material-icons-round stars_icon">stars</span>125</p>
+                        <p class="prof_rows_sum"><span class="material-icons-round row_icon">format_list_numbered_rtl</span>18</p>
+                        <p class="prof_star_sum"><span class="material-icons-round stars_icon">stars</span>125</p>
                     </div>
                     <p class="data">2022/02/13</p>
                 </div>
@@ -171,7 +171,7 @@
                         <a href="#"><img src="./img/public_to_dolist/kuma.png" alt="友だちのアイコン"></a>
                     </div>
                     <div class="friend_name">
-                        <a href="#">つついつついつついつついつついつ<span class="material-icons-round friendname_stars">stars</span></a>
+                        <a class="friend_prof_name" href="#">つついつついつついつついつついつ<span class="material-icons-round friendname_stars">stars</span></a>
                     </div>
                 </div>
             </div>
@@ -180,8 +180,8 @@
                 <p class="theme">ピーナッツバターサンドを作る！</p><!-- 長い文章でも検証すること -->
                 <div class="icons_flex">
                     <div class="icon_items">
-                        <p><span class="material-icons-round row_icon">format_list_numbered_rtl</span>18</p>
-                        <p><span class="material-icons-round stars_icon">stars</span>125</p>
+                        <p class="prof_rows_sum"><span class="material-icons-round row_icon">format_list_numbered_rtl</span>18</p>
+                        <p class="prof_star_sum"><span class="material-icons-round stars_icon">stars</span>125</p>
                     </div>
                     <p class="data">2022/02/13</p>
                 </div>
@@ -196,7 +196,7 @@
                         <a href="#"><img src="./img/public_to_dolist/kuma.png" alt="友だちのアイコン"></a>
                     </div>
                     <div class="friend_name">
-                        <a href="#">つついつついつついつついつついつ<span class="material-icons-round friendname_stars">stars</span></a>
+                        <a class="friend_prof_name" href="#">つついつついつついつついつついつ<span class="material-icons-round friendname_stars">stars</span></a>
                     </div>
                 </div>
             </div>
@@ -205,14 +205,14 @@
                 <p class="theme">ピーナッツバターサンドを作る！</p><!-- 長い文章でも検証すること -->
                 <div class="icons_flex">
                     <div class="icon_items">
-                        <p><span class="material-icons-round row_icon">format_list_numbered_rtl</span>18</p>
-                        <p><span class="material-icons-round stars_icon">stars</span>125</p>
+                        <p class="prof_rows_sum"><span class="material-icons-round row_icon">format_list_numbered_rtl</span>18</p>
+                        <p class="prof_star_sum"><span class="material-icons-round stars_icon">stars</span>125</p>
                     </div>
                     <p class="data">2022/02/13</p>
                 </div>
             </div>
         </div>
     </div>
-<script src="js/profile_modal.js"></script>
+<script src="../js/profile_modal.js"></script>
 </body>
 </html>

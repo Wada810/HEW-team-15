@@ -1309,6 +1309,18 @@ main {
   display: block;
 }
 
+#release_check_modal .release_check_modal_cover .release_under .release_check_area .release_ok_area .check_ok {
+  display: block;
+}
+
+#release_check_modal .release_check_modal_cover .release_under .release_check_area .release_no_area {
+  display: block;
+}
+
+#release_check_modal .release_check_modal_cover .release_under .release_check_area .release_no_area .check_no {
+  display: block;
+}
+
 #release_check_modal .release_check_modal_cover .release_under .release_check_area .release_check_cover {
   margin: 0 auto;
   display: -webkit-box;

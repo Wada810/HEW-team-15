@@ -35,13 +35,15 @@ class MypageController extends Controller
         $colors = ColorPettern::where('level', '<=', $user["level"])->get();
         //アイコン
         $icons = IconImage::where('level', '<=', $user["level"])->get();
-
+        
         //ユーザやることリスト
-        $instractions = Instraction::where('user_id',$user['id'])->get();
-
+        $instraction = Instraction::where('user_id',$user['id'])->get();
+        
         //ユーザそういいね数
         $favs = Instraction::where('user_id',$user['id'])->sum('likes');
 
-        return view('mypage',compact("user","data","colors","icons","instractions","favs"));
+
+        return view('mypage',compact("user","data","colors","icons","instraction","favs"));
+
     }
 }

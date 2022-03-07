@@ -25,14 +25,14 @@
             <div id="prof">
                 <div class="prof_area">
                     <div class="prof_cover">
-                        <div class="rank_cover"><div class="rank_block"><p class="rank">RANK</p><p class="rank_no">99</p></div></div>
-                        <img class="prof_img" src="https://placehold.jp/100x100.png" alt="プロフ画像">
+                        <div class="rank_cover"><div class="rank_block"><p class="rank">RANK</p><p class="rank_no">{{$friend_prof['level']}}</p></div></div>
+                        <img class="prof_img" src="image/ {{$friend_prof['icon_image']}}" alt="プロフ画像">
                     </div>
                     <p class="name">プロフ太郎</p>
                     <div class="star_cover">
                         <div class="friend_get_star_cover get_star_cover">
                             <span class="material-icons-round">stars</span>
-                            <span class="get_star_num">999</span>
+                            <span class="get_star_num">{{$friend_star}}</span>
                         </div>
                     </div>
                 </div>
@@ -47,22 +47,13 @@
                 </div>
                 <div class="todo_scroll">
                     <div class="todo_list_cover">
-                        <div class="todo_list"><div class="top"><p class="todo_theme">構成成分は「水35ℓ、炭素20kg、アンモニア4ℓ、石</p></div><div class="under"><div class="lines_cover"><span class="material-icons-round lines_icon">format_list_numbered</span><p class="cross">×</p><p class="lines">13</p></div><div class="fav_cover"><span class="material-icons-round fav_icon">stars</span><p class="cross">×</p><p class="fav">123</p></div><div class="data"><p class="year">2022</p><p class="slash">/</p><p class="month">02</p><p class="slash">/</p><p class="day">12</p></div></div></div>
-                        <div class="todo_list"><div class="top"><p class="todo_theme">ピーナッツバターサンドを作る！</p></div><div class="under"><div class="lines_cover"><span class="material-icons-round lines_icon">format_list_numbered</span><p class="cross">×</p><p class="lines">13</p></div><div class="fav_cover"><span class="material-icons-round fav_icon">stars</span><p class="cross">×</p><p class="fav">123</p></div><div class="data"><p class="year">2022</p><p class="slash">/</p><p class="month">02</p><p class="slash">/</p><p class="day">12</p></div></div></div>
-                        <div class="todo_list"><div class="top"><p class="todo_theme">ピーナッツバターサンドを作る！</p></div><div class="under"><div class="lines_cover"><span class="material-icons-round lines_icon">format_list_numbered</span><p class="cross">×</p><p class="lines">13</p></div><div class="fav_cover"><span class="material-icons-round fav_icon">stars</span><p class="cross">×</p><p class="fav">123</p></div><div class="data"><p class="year">2022</p><p class="slash">/</p><p class="month">02</p><p class="slash">/</p><p class="day">12</p></div></div></div>
-                        <div class="todo_list"><div class="top"><p class="todo_theme">ピーナッツバターサンドを作る！</p></div><div class="under"><div class="lines_cover"><span class="material-icons-round lines_icon">format_list_numbered</span><p class="cross">×</p><p class="lines">13</p></div><div class="fav_cover"><span class="material-icons-round fav_icon">stars</span><p class="cross">×</p><p class="fav">123</p></div><div class="data"><p class="year">2022</p><p class="slash">/</p><p class="month">02</p><p class="slash">/</p><p class="day">12</p></div></div></div>
-                        <div class="todo_list"><div class="top"><p class="todo_theme">ピーナッツバターサンドを作る！</p></div><div class="under"><div class="lines_cover"><span class="material-icons-round lines_icon">format_list_numbered</span><p class="cross">×</p><p class="lines">13</p></div><div class="fav_cover"><span class="material-icons-round fav_icon">stars</span><p class="cross">×</p><p class="fav">123</p></div><div class="data"><p class="year">2022</p><p class="slash">/</p><p class="month">02</p><p class="slash">/</p><p class="day">12</p></div></div></div>
-                        <div class="todo_list"><div class="top"><p class="todo_theme">ピーナッツバターサンドを作る！</p></div><div class="under"><div class="lines_cover"><span class="material-icons-round lines_icon">format_list_numbered</span><p class="cross">×</p><p class="lines">13</p></div><div class="fav_cover"><span class="material-icons-round fav_icon">stars</span><p class="cross">×</p><p class="fav">123</p></div><div class="data"><p class="year">2022</p><p class="slash">/</p><p class="month">02</p><p class="slash">/</p><p class="day">12</p></div></div></div>
-                        <div class="todo_list"><div class="top"><p class="todo_theme">ピーナッツバターサンドを作る！</p></div><div class="under"><div class="lines_cover"><span class="material-icons-round lines_icon">format_list_numbered</span><p class="cross">×</p><p class="lines">13</p></div><div class="fav_cover"><span class="material-icons-round fav_icon">stars</span><p class="cross">×</p><p class="fav">123</p></div><div class="data"><p class="year">2022</p><p class="slash">/</p><p class="month">02</p><p class="slash">/</p><p class="day">12</p></div></div></div>
-                        <div class="todo_list"><div class="top"><p class="todo_theme">ピーナッツバターサンドを作る！</p></div><div class="under"><div class="lines_cover"><span class="material-icons-round lines_icon">format_list_numbered</span><p class="cross">×</p><p class="lines">13</p></div><div class="fav_cover"><span class="material-icons-round fav_icon">stars</span><p class="cross">×</p><p class="fav">123</p></div><div class="data"><p class="year">2022</p><p class="slash">/</p><p class="month">02</p><p class="slash">/</p><p class="day">12</p></div></div></div>
-                        <div class="todo_list"><div class="top"><p class="todo_theme">ピーナッツバターサンドを作る！</p></div><div class="under"><div class="lines_cover"><span class="material-icons-round lines_icon">format_list_numbered</span><p class="cross">×</p><p class="lines">13</p></div><div class="fav_cover"><span class="material-icons-round fav_icon">stars</span><p class="cross">×</p><p class="fav">123</p></div><div class="data"><p class="year">2022</p><p class="slash">/</p><p class="month">02</p><p class="slash">/</p><p class="day">12</p></div></div></div>
-                        <div class="todo_list"><div class="top"><p class="todo_theme">ピーナッツバターサンドを作る！</p></div><div class="under"><div class="lines_cover"><span class="material-icons-round lines_icon">format_list_numbered</span><p class="cross">×</p><p class="lines">13</p></div><div class="fav_cover"><span class="material-icons-round fav_icon">stars</span><p class="cross">×</p><p class="fav">123</p></div><div class="data"><p class="year">2022</p><p class="slash">/</p><p class="month">02</p><p class="slash">/</p><p class="day">12</p></div></div></div>
-                        <div class="todo_list"><div class="top"><p class="todo_theme">ピーナッツバターサンドを作る！123</p></div><div class="under"><div class="lines_cover"><span class="material-icons-round lines_icon">format_list_numbered</span><p class="cross">×</p><p class="lines">13</p></div><div class="fav_cover"><span class="material-icons-round fav_icon">stars</span><p class="cross">×</p><p class="fav">123</p></div><div class="data"><p class="year">2022</p><p class="slash">/</p><p class="month">02</p><p class="slash">/</p><p class="day">12</p></div></div></div>
+                        @foreach($friend_inst as $key => $value)
+                        <div class="todo_list"><div class="top"><p class="todo_theme">{{$value['theme']}}</p></div><div class="under"><div class="lines_cover"><span class="material-icons-round lines_icon">format_list_numbered</span><p class="cross">×</p><p class="lines">{{$value['lines']}}</p></div><div class="fav_cover"><span class="material-icons-round fav_icon">stars</span><p class="cross">×</p><p class="fav">{{$value['likes']}}</p></div><div class="data">{{$value['updated_at']}}</div></div></div>
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
-
 
         <!-- prof.modal -->
         <div id="release_modal">
@@ -99,22 +90,6 @@
             </div>
         </div>
 
-        <!-- releaseCheck.modal -->
-        <div id="release_check_modal">
-            <div class="release_check_modal_cover">
-                <div class="release_top">
-                    <p class="release_p">みんなにやることリストを公開しよう!!</p>
-                </div>
-                <div class="release_under">
-                    <div class="release_check_area">
-                        <div class="release_ok_area release_check_cover"><div class="release_ok_cover release_check_inner"><span class="material-icons-round release_ok_icon">public</span><p class="release_ok_p">公開</p></div><input class="check_ok check" type="radio" name="release_dete" value="1"></div>
-                        <div class="release_no_area release_check_cover"><div class="release_no_cover release_check_inner"><span class="material-icons-round release_no_icon">public_off</span><p class="release_no_p">非公開</p></div><input class="check_no check" type="radio" name="release_dete" value="0"></div>
-                    </div>
-                </div>
-                <div class="release_comp"><p class="comp_p">適用</p></div>
-            </div>
-        </div>
-        </form>
     </main>
 
     <script src="{{ asset('js/friends_prof.js') }}"></script>
