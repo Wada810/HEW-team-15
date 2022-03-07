@@ -123,6 +123,14 @@
   width: 100%;
 }
 
+.yellow {
+  color: #ebcb4d;
+}
+
+.red {
+  color: #EE3F7A;
+}
+
 .mb {
   margin-bottom: 30px;
 }
@@ -159,31 +167,93 @@
 
 .for_kids {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background-color: var(--sub_bg_color);
   z-index: 1;
-  -webkit-animation: slide .5s forwards;
-          animation: slide .5s forwards;
 }
 
-@-webkit-keyframes slide {
-  0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
+.for_kids_window {
+  border-radius: 4px;
+  background-color: #fbfeff;
+  width: 80%;
+  position: relative;
+}
+
+.kids_panda {
+  position: absolute;
+  width: 70px;
+  transform: translateY(-40px);
+  top: 0;
+  left: 10px;
+  z-index: -1;
+}
+
+.kids_image_box {
+  width: 100%;
+  padding: 20px;
+}
+
+.kids_image_box img {
+  width: 100%;
+}
+
+.kids_text_box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main_bg_color);
+  padding: 20px;
+}
+
+.kids_text_box > p {
+  min-height: 20vw;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.button_box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+}
+
+.button_box > div {
+  background-color: var(--sub_bg_color);
+  border: 2px solid var(--button_border);
+  border-radius: 50px;
+  color: #fbfeff;
+}
+
+.back_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+}
+
+.next_button {
+  text-align: center;
+}
+
+/* animation */
+.slide_in {
+  animation: slide .5s forwards;
 }
 
 @keyframes slide {
   0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(100%);
   }
   100% {
     -webkit-transform: translateX(0%);

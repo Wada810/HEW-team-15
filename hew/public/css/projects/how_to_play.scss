@@ -16,6 +16,12 @@
         width: 100%;
     }
 }
+.yellow{
+    color: $fav_color;
+}
+.red{
+    color: $disabled;
+}
 .mb{
     margin-bottom: 30px;
 }
@@ -44,19 +50,82 @@
 }
 .for_kids{
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background-color: $sub_bg_color;
     z-index: 1;
-    animation: slide .5s forwards;
+}
+.for_kids_window{
+    border-radius: $r;
+    background-color: $white;
+    width: 80%;
+    position: relative;
+}
+.kids_panda{
+    position: absolute;
+    width: 70px;
+    transform: translateY(-40px);
+    top: 0;
+    left: 10px;
+    z-index: -1;
+}
+.kids_image_box{
+    width: 100%;
+    padding: 20px;
+    img{
+        width: 100%;
+    }
+}
+.kids_text_box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $main_bg_color;
+    padding: 20px;
+    & > p{
+        min-height: 20vw;
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+}
+.button_box{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    & > div{
+        background-color: $sub_bg_color;
+        border: 2px solid $button_border;
+        border-radius: 50px;
+        color: $white;
+    }
+}
+.back_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+}
+.next_button{
+    text-align: center;
 }
 
-
+/* animation */
+.slide_in{
+    animation: slide .5s forwards;;
+}
 @keyframes slide {
     0%{
-        transform: translateX(-100%);
+        transform: translateX(100%);
     }
     100%{
         transform: translateX(0%);

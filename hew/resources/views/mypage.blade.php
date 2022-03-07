@@ -119,6 +119,57 @@
             </div>
         <div class="black-background" id="js-black-bg-2"></div>
     </div>
+            <!-- prof.modal -->
+            <div id="release_modal">
+            <div class="release_modal">
+                <div class="release_cover">
+                    <div class="modal_prof_img_area">
+                        <div class="modal_rank_area"><div class="modal_rank_cover"><p class="modal_rank">RANK</p><p class="modal_rank_sum">97</p></div></div>
+                        <img class="modal_prof_img" src="" alt="">
+                    </div>
+                    <div class="modal_top">
+                        <div class="modal_close"><span class="material-icons-round modal_close_icon">cancel</span></div>
+                        <div class="modal_user_name"><p class="modal_name">{{$user['name']}}</p></div>
+                        <div class="modal_half"><div class="modal_fav_cover"><span class="material-icons-round moda_fav_icon">stars</span><p class="modal_sums">{{$favs}}</p></div></div>
+                        <div class="modal_theme_cover"><p class="modal_theme">テーマ</p></div>
+                    </div>
+                    <div class="modal_under">
+                        <div class="modal_items">
+                            <div class="modal_lines_cover">
+                                <span class="material-icons-round modal_lines_icon">format_list_numbered</span>
+                                <p class="cross">×</p>
+                                <p class="modal_lines">13</p>
+                            </div>
+                            <div class="modal_date_cover">
+                                <span class="material-icons-round modal_calendar_icon">event</span>
+                                <div class="modal_date"></div>
+                            </div>
+                        </div>
+                        <div class="modal_button_cover">
+                            <div class="modal_button modal_lerease_btn"><span class="material-icons-round modal_lerease_icon">public</span><p class="modal_lerease_p">公開</p></div>
+                            <div class="modal_button modal_play_btn"><span class="material-icons-round modal_play_icon">play_circle</span><p class="modal_play_p">あそぶ</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- releaseCheck.modal -->
+        <div id="release_check_modal">
+            <div class="release_check_modal_cover">
+                <div class="release_top">
+                    <p class="release_p">みんなにやることリストを公開しよう!!</p>
+                </div>
+                <div class="release_under">
+                    <div class="release_check_area">
+                        <div class="release_ok_area release_check_cover"><div class="release_ok_cover release_check_inner"><span class="material-icons-round release_ok_icon">public</span><p class="release_ok_p">公開</p></div><input class="check_ok check" type="radio" name="release_dete" value="1" ></div>
+                        <div class="release_no_area release_check_cover"><div class="release_no_cover release_check_inner"><span class="material-icons-round release_no_icon">public_off</span><p class="release_no_p">非公開</p></div><input class="check_no check" type="radio" name="release_dete" value="0"></div>
+                    </div>
+                </div>
+                <div class="release_comp"><p class="comp_p">適用</p></div>
+            </div>
+        </div>
+    </form>
 </main>
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
