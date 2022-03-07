@@ -1,3 +1,4 @@
+let kids_data =
 //子供用を始める
 document.getElementById("howto_kids").addEventListener("click",()=>{
     document.querySelector(".for_kids").classList.remove("hidden");
