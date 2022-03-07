@@ -40,6 +40,11 @@ Route::get('home', function () {
     return view('home',compact("user"));
 })->name('home');
 
+Route::get('how_to_play', function () {
+    $user = Auth::user();
+    return view('how_to_play',compact("user"));
+})->name('how_to_play');
+
 /* マイページ */
 Route::get('mypage', [MypageController::class, 'index'])->middleware("auth")->name('mypage');
 
