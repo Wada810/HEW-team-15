@@ -49,8 +49,8 @@
         </div>
         <div class="todo_scroll">
             <div class="todo_list_cover">
-                @foreach($instractions as $key => $val)
-                <div class="todo_list {{$val['id']}} {{$val['is_shared']}} {{$key}} ">
+                @foreach($instraction as $key => $val)
+                <div class="todo_list {{$val['id']}} @if($val['is_shared']) true @else false @endif k{{$key}} ">
                     <div class="top">
                         <p class="todo_theme">{{$val["theme"]}}</p>
                         <div class="todo_public_setting">@if($val['is_shared'] == 1)<span class="material-icons-round pub_stat on">public</span>@else<span class="material-icons-round pub_stat off">public_off</span>@endif</div>

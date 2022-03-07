@@ -111,15 +111,17 @@ document.querySelector(".comp_p").addEventListener("click",()=>{
   }).done((data)=>{
     console.log(data);
     if(data != false){
-      document.getElementsByClassName("pub_stat")[document.getElementById("key").value].textContent = data["pub"];
-      document.getElementsByClassName("pub_stat")[document.getElementById("key").value].classList = data["class"]
+      console.log(document.getElementById("key").value);
+      document.getElementsByClassName("pub_stat")[document.getElementById("key").value.replace("k","")].textContent = data["pub"];
+      document.getElementsByClassName("pub_stat")[document.getElementById("key").value.replace("k","")].classList = `material-icons-round pub_stat ${data["class"]}`;
+      console.log(document.getElementsByClassName("pub_stat")[document.getElementById("key").value.replace("k","")].classList);
     }
   }).fail(()=>{
 })
 });
 
 //ソート
-const sort_seed = document.getElementsByClassName("sort_seed");
+/* const sort_seed = document.getElementsByClassName("sort_seed");
 var select_state = document.querySelector("select[name=sort]");
 
 select_state.addEventListener('change',function(){
@@ -139,7 +141,7 @@ select_state.addEventListener('change',function(){
   }).fail(()=>{
     console.log('aaaa');
   })
-});
+}); */
 
 /* for(let j = 0; j < sort_seed.length; j++){
   sort_seed[j].addEventListener("click", function(){
@@ -182,7 +184,7 @@ for(let i = 0; i < todo_list.length; i++) {
         document.getElementById("instraction_id").value = e.currentTarget.classList[1];
         document.getElementById("key").value = e.currentTarget.classList[3];
 
-        if(e.currentTarget.classList[2] == 1){
+        if(e.currentTarget.classList[2] == "true"){
           document.querySelector(".check_ok").checked = true;
         }else{
           document.querySelector(".check_no").checked = true;
