@@ -32,9 +32,6 @@
 </header>
 
 
-
-
-
 <main>
     <div class="reward_wrapper">
        <p class="reward_text">ここの文字どうする？</p>
@@ -43,9 +40,10 @@
            <p class="next_level">NEXT RANK:<span>2</span></p>
            <!-- レベル　メーター -->
            <div class="level_box">
-               <div class="animation animation-box"></div>
+               <div class="animation animation-box">
+               </div>
            </div>
-       </section>    
+       </section>
     </div>
 
     <div class="popup" id="js-popup">

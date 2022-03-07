@@ -38,6 +38,11 @@ insert.addEventListener('change', ()=>{
         div_contents.className = "algorithm_contents";
         li.appendChild(div_contents);
 
+        let handle = document.createElement("span");
+        handle.setAttribute("class", "material-icons-round handle " + "h-" + order_cnt)
+        handle.textContent = "drag_handle";
+        div_contents.appendChild(handle);
+
         let p = document.createElement('p');
         p.className = "algorithm_name";
         p.textContent = insert.value;
@@ -59,9 +64,9 @@ insert.addEventListener('change', ()=>{
 
         // クリックしたらfocus にする処理
         li.addEventListener('click',function li_func(){
-
             // 初期
             if(rock == 0){
+                document.querySelector(`.h-${li.classList[1]}`).classList.add("hidden");
                 rock = 1;
 
                 disable =  li.classList[1];
@@ -89,6 +94,7 @@ insert.addEventListener('change', ()=>{
                 fix_button.innerHTML = '<span class="material-icons-round border">border_color</span>編集';
             }
             else if(disable == li.classList[1]){
+                document.querySelector(`.h-${li.classList[1]}`).classList.remove("hidden");
                 // 元に戻す
                 let fix_button =  document.getElementById('fix');
                 let del_button =  document.getElementById('delete');
@@ -155,6 +161,10 @@ insert.addEventListener('change', ()=>{
                     new_inp.setAttribute("class","input");
                     fix_point.appendChild(new_inp);
                     document.getElementById("fix_order").value = content.textContent;
+                    setTimeout(() => {
+                        console.log("a");
+                        document.getElementById("fix_order").focus();
+                    }, 60);
 
                     //fix_point.innerHTML = '<input type="text" id="fix_order" autofocus value="'+fix_point.textContent +'" ></input>'
 
@@ -162,8 +172,7 @@ insert.addEventListener('change', ()=>{
                         e.stopPropagation();
                     }) */
 
-                    const fix_text  = document.getElementById("fix_order");
-
+                    const fix_text = document.getElementById("fix_order");
                     // 編集後の処理
                     document.querySelector(".algorithm_add_button").addEventListener("click", function fix_func(){
                         console.log(fix_text.value)
@@ -189,6 +198,30 @@ insert.addEventListener('change', ()=>{
                         document.getElementById("order_input").classList.remove("hidden");
                     } ,false);
 
+                    fix_text.addEventListener("focusout",()=>{
+                        console.log(fix_text.value)
+                        if(fix_text.value.trim() == ""){
+                            fix_button =  document.getElementById('fix');
+                            const group  = document.getElementsByClassName(fix_button.value);
+                            disable = 0;
+                            rock = 0;
+                            fix_flag = 0;
+                            // ol　+ form で計２回
+                            group[0].remove();
+                            group[0].remove();
+                            return;
+                        }
+
+                        group[1].value = fix_text.value;
+                        console.log(group[1]);
+                        // 元に戻す
+                        content.textContent = fix_text.value;
+                        fix_text.remove();
+                        fix.disabled = false;
+                        document.getElementById("order_input").classList.remove("hidden");
+
+                    }, { once: true})
+
                 });
 
                 fix_flag = 1;
@@ -208,7 +241,7 @@ order_json.forEach(val => {
     if(document.getElementsByClassName("form_order").length == 0){
         let complete_button = document.createElement("button");
         complete_button.setAttribute("id","complete_button");
-        complete_button.setAttribute("class","btn-secondary");
+        complete_button.setAttribute("class","btn-white");
         complete_button.textContent = "完成!!";
         form.appendChild(complete_button);
     }
@@ -232,6 +265,11 @@ order_json.forEach(val => {
         div_contents.className = "algorithm_contents";
         li.appendChild(div_contents);
 
+        let handle = document.createElement("span");
+        handle.setAttribute("class", "material-icons-round handle " + "h-" + order_cnt)
+        handle.textContent = "drag_handle";
+        div_contents.appendChild(handle);
+
         let p = document.createElement('p');
         p.className = "algorithm_name";
         p.textContent = val;
@@ -252,10 +290,10 @@ order_json.forEach(val => {
         val = "";
 
         // クリックしたらfocus にする処理
-        li.addEventListener('click',function li_func(){
-
+        li.addEventListener('click',function li_func(e){
             // 初期
             if(rock == 0){
+            document.querySelector(`.h-${li.classList[1]}`).classList.add("hidden");
                 rock = 1;
 
                 disable =  li.classList[1];
@@ -283,6 +321,7 @@ order_json.forEach(val => {
                 fix_button.innerHTML = '<span class="material-icons-round border">border_color</span>編集';
             }
             else if(disable == li.classList[1]){
+                document.querySelector(`.h-${li.classList[1]}`).classList.remove("hidden");
                 // 元に戻す
                 let fix_button =  document.getElementById('fix');
                 let del_button =  document.getElementById('delete');
@@ -349,6 +388,10 @@ order_json.forEach(val => {
                     new_inp.setAttribute("class","input");
                     fix_point.appendChild(new_inp);
                     document.getElementById("fix_order").value = content.textContent;
+                    setTimeout(() => {
+                        console.log("a");
+                        document.getElementById("fix_order").focus();
+                    }, 60);
 
                     //fix_point.innerHTML = '<input type="text" id="fix_order" autofocus value="'+fix_point.textContent +'" ></input>'
 
@@ -382,6 +425,30 @@ order_json.forEach(val => {
                         this.removeEventListener('click', fix_func);
                         document.getElementById("order_input").classList.remove("hidden");
                     } ,false);
+
+                    fix_text.addEventListener("focusout",()=>{
+                        console.log(fix_text.value)
+                        if(fix_text.value.trim() == ""){
+                            fix_button =  document.getElementById('fix');
+                            const group  = document.getElementsByClassName(fix_button.value);
+                            disable = 0;
+                            rock = 0;
+                            fix_flag = 0;
+                            // ol　+ form で計２回
+                            group[0].remove();
+                            group[0].remove();
+                            return;
+                        }
+
+                        group[1].value = fix_text.value;
+                        console.log(group[1]);
+                        // 元に戻す
+                        content.textContent = fix_text.value;
+                        fix_text.remove();
+                        fix.disabled = false;
+                        document.getElementById("order_input").classList.remove("hidden");
+
+                    }, { once: true})
 
                 });
 

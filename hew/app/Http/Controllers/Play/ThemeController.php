@@ -12,8 +12,9 @@ class ThemeController extends Controller
     {
         // セッションからデータを取得
         $data = session()->all();
+        $user = Auth::user();
 
-        return view('play.theme', compact('data'));
+        return view('play.theme', compact('data','user'));
     }
 
     public function post(Request $request)

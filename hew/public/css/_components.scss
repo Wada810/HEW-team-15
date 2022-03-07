@@ -17,6 +17,14 @@
 .hidden{
     display: none !important;
 }
+.invisible{
+    opacity: 0;
+    pointer-events: none;
+}
+.logo_color{
+    stroke: $sub_bg_color;
+}
+
 .c_bg-white{
     background-color: $white !important;
 }
@@ -50,6 +58,13 @@
     color: $text_color;
     font-weight: 800;
 }
+.btn-white{
+    @extend .btn;
+    background-color: $white;
+    border-color: $sub_bg_color;
+    color: $text_color;
+    font-weight: 800;
+}
 
 .input{
     display: block;
@@ -69,4 +84,16 @@
 .input-thick{
     @extend .input;
     padding: 12px 24px;
+}
+.logout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
 }

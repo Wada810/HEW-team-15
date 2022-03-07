@@ -10,7 +10,8 @@
 @section('body')
 <!-- ヘッダー -->
 <header class="l_play_header p_play_header">
-    <a href="{{ route('home') }}" class="p_play_header__back"><span class="material-icons-round">undo</span></a>
+    <!-- 前のページへ戻るリンク -->
+    <a href="{{ url()->previous()}}" class="p_play_header__back"><span class="material-icons-round">undo</span></a>
     <div class="p_play_header__title">
         <span>新規登録</span>
     </div>
@@ -27,7 +28,7 @@
         </div>
 
         <!-- error zone -->
-        
+
         <!-- Validation Errors -->
         <div class="error_zone">
             <x-auth-validation-errors class="error_msg" :errors="$errors" />

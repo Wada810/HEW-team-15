@@ -8,10 +8,9 @@ buttonOpen.addEventListener('click',function(){
     var popup = document.getElementById('js-popup');
     if(!popup) return;
     popup.classList.add('is-show');
-  
     var closeBtn = document.getElementById('js-close-btn');
     var blackBg = document.getElementById('js-black-bg');
-  
+
     closePopUp(closeBtn);
     closePopUp(blackBg);
 
@@ -28,10 +27,8 @@ buttonOpen2.addEventListener('click',function(){
     var popup = document.getElementById('js-popup-2');
     if(!popup) return;
     popup.classList.add('is-show');
-  
     var closeBtn = document.getElementById('js-close-btn-2');
     var blackBg = document.getElementById('js-black-bg-2');
-  
     closePopUp(closeBtn);
     closePopUp(blackBg);
 
@@ -52,8 +49,52 @@ for (let i = icon_btn.length - 1; i >= 0; i--) {
     });
 }
 
+//経験値バーの長さ
+let max_length_exp = document.querySelector(".level_box").clientWidth;
+let current_length_xp = (max_length_exp / user["next"]) * user["total_exp"];
+document.querySelector(".animation-box").setAttribute("style",`width: ${current_length_xp}px;`);
+
+
+//変更を保存
+let color_change_button = document.getElementsByClassName("color_change_button");
+for(let i = 0; i < color_change_button.length; i ++){
+  color_change_button[i].addEventListener("click",(e)=>{
+    const theme = e.currentTarget.id;
+    $.ajax({
+      type: 'GET',
+      url: url, //後述するweb.phpのURLと同じ形にする
+      data: {
+          'theme': theme, //ここはサーバーに贈りたい情報。今回は検索ファームのバリューを送りたい。
+      },
+      dataType: 'json', //json形式で受け取る
+    }).done((data)=>{
+      console.log(data);
+      document.documentElement.setAttribute("theme",theme)
+    }).fail(()=>{
+
+    })
+  })
+}
+
+//画像の変更
+document.getElementById("js-close-btn-2").addEventListener("click",()=>{
+  const path = document.querySelector(".active_icon").id;
+  $.ajax({
+    type: 'GET',
+    url: img_url,
+    data: {
+        'path': path,
+    },
+    dataType: 'json',
+  }).done((data)=>{
+    console.log(data);
+    document.querySelector(".prof_img").setAttribute("src",data);
+  }).fail(()=>{
+})
+});
+
 // modal処理
-const close_btn = document.getElementsByClassName('modal_close')[0];
+/* const close_btn = document.getElementsByClassName('modal_close')[0];
 const modal = document.getElementById('release_modal');
 const todo_list = document.getElementsByClassName('todo_list');
 const modal_name = document.getElementsByClassName('modal_name')[0];
@@ -73,7 +114,7 @@ for(let i = 0; i < todo_list.length; i++) {
         let set_year = document.getElementsByClassName('year')[i];
         let set_month = document.getElementsByClassName('month')[i];
         let set_day = document.getElementsByClassName('day')[i];
-        
+
         modal.style.display = 'block';
         modal_theme.innerHTML = set_theme.innerHTML;
         modal_lines.innerHTML = set_lines.innerHTML;
@@ -81,7 +122,7 @@ for(let i = 0; i < todo_list.length; i++) {
         modal_month.innerHTML = set_month.innerHTML;
         modal_day.innerHTML = set_day.innerHTML;
     });
-    
+
 };
 
 close_btn.addEventListener('click', function (close_modal) {
@@ -101,4 +142,4 @@ release_btn.addEventListener('click',function () {
 close_check_btn.addEventListener('click',function () {
     release_check_modal.style.display = 'none';
 });
-
+ */
