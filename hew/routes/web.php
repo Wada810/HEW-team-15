@@ -63,8 +63,4 @@ Route::get('color',[ColorController::class, 'index'])->name('color');
 
 Route::get('mg',[IconController::class, 'index'])->name('img');
 
-Route::get('order_history', function (){
-    return view('order_history');
-})->name('order_history');
-
 require __DIR__.'/auth.php';

@@ -1,21 +1,5 @@
 @import "../variable";
 
-  header {
-    display: none;
-    width: 100%;
-    height: 13%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--main_color);
-    color: white;
-    position: relative;
-    z-index: 100;
-    font-weight: 600;
-  }
-  h1 {
-    font-size: 16px;
-  }
   .back_button {
     position: absolute;
     background-color: white;
@@ -34,7 +18,6 @@
   main {
     width: 100%;
     height: 100%;
-    padding-top: 60px;
     font-size: 0.8rem;
     position: relative;
     overflow-y: hidden;
@@ -49,12 +32,12 @@
     position: absolute;
     right: 4%;
     top: -12%;
-    color: var(--main_color);
+    color: $sub_bg_color;
   }
   .palette_cover {
     width: 45px;
     height: 45px;
-    background-color: var(--main_color);
+    background-color: $sub_bg_color;
     border-radius: 50px;
     display: flex;
     margin: 0 auto;
@@ -71,6 +54,7 @@
     padding-top: 5px;
     font-size: 0.5rem;
     font-weight: 600;
+    color: $text_color;
   }
   .prof_area {
     width: 100%;
@@ -88,7 +72,7 @@
     border-radius: 50px;
     width: 100%;
     height: 100%;
-    border: 5px solid var(--main_color);
+    border: 5px solid $sub_bg_color;
     object-fit: cover;
     z-index: -10000;
   }
@@ -96,7 +80,7 @@
     position: absolute;
     width: 30px;
     height: 30px;
-    background-color: var(--main_color);
+    background-color: $sub_bg_color;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -116,7 +100,7 @@
     margin: 3% 0 3% 0;
     letter-spacing: 2px;
     font-weight: bold;
-    color: var(--main_color);
+    color: $text_color;
   }
 
   .rank_cover {
@@ -126,7 +110,7 @@
     width: 38px;
     height: 38px;
     font-weight: 600;
-    color: var(--main_color);
+    color: $sub_bg_color;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,37 +126,165 @@
     font-size: 14px;
   }
 
-  /* .rank_bar_cover {
+  .color_item{
     position: relative;
-    width: 100%;
-    height: 18px;
-    color: var(--main_color);
+    overflow: hidden;
+    border-radius: $r;
+    width: 100px;
+    height: 100px;
+    &::after{
+      content: "";
+      width: 200%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(-45deg);
+      transform-origin: bottom left;
+    }
+    &::before{
+      content: "";
+      width: 100%;
+      height: 200%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-origin: top right;
+    }
+    & + p{
+      white-space: nowrap;
+      margin-top: 5px;
+    }
   }
-  .rank_bar_tank {
-    width: 50%;
-    height: 100%;
-    margin: 0 auto;
-    background: #dcdcdc;
-    border-radius: 20px;
+  .emerald{
+    & + p{
+      color: $emerald_sub !important;
+    }
+    &::after{
+      background-color: $emerald_sub;
+    }
+    &::before{
+      background-color: $emerald_main;
+    }
   }
-  .rank_bar {
-    position: absolute;
-    width: 34%;
-    height: 100%;
-    margin: 0 auto;
-    background: var(--fav_color);
-    border-radius: 20px;
-  } */
+  .emeraldgreen{
+    & + p{
+      margin-top: 5px;
+      color: $emeraldgreen_sub !important;
+    }
+    &::after{
+      background-color: $emeraldgreen_sub;
+    }
+    &::before{
+      background-color: $emeraldgreen_main;
+    }
+  }
+  .strawberry{
+    & + p{
+      margin-top: 5px;
+      color: $strawberry_sub !important;
+    }
+    &::after{
+      background-color: $strawberry_sub;
+    }
+    &::before{
+      background-color: $strawberry_main;
+    }
+  }
+  .oceanblue{
+    & + p{
+      margin-top: 5px;
+      color: $oceanblue_sub !important;
+    }
+    &::after{
+      background-color: $oceanblue_sub;
+    }
+    &::before{
+      background-color: $oceanblue_main;
+    }
+  }
+  .grapefruit{
+    & + p{
+      margin-top: 5px;
+      color: $grapefruit_sub !important;
+    }
+    &::after{
+      background-color: $grapefruit_sub;
+    }
+    &::before{
+      background-color: $grapefruit_main;
+    }
+  }
+  .amethyst{
+    & + p{
+      margin-top: 5px;
+      color: $amethyst_sub !important;
+    }
+    &::after{
+      background-color: $amethyst_sub;
+    }
+    &::before{
+      background-color: $amethyst_main;
+    }
+  }
+  .depth{
+    & + p{
+      margin-top: 5px;
+      color: $depth_sub !important;
+    }
+    &::after{
+      background-color: $depth_sub;
+    }
+    &::before{
+      background-color: $depth_main;
+    }
+  }
+  .jupiter{
+    & + p{
+      margin-top: 5px;
+      color: $jupiter_sub !important;
+    }
+    &::after{
+      background-color: $jupiter_sub;
+    }
+    &::before{
+      background-color: $jupiter_main;
+    }
+  }
+  .lipstick{
+    & + p{
+      margin-top: 5px;
+      color: $lipstick_sub !important;
+    }
+    &::after{
+      background-color: $lipstick_sub;
+    }
+    &::before{
+      background-color: $lipstick_main;
+    }
+  }
+  .roseiron{
+    & + p{
+      margin-top: 5px;
+      color: $roseiron_sub !important;
+    }
+    &::after{
+      background-color: $roseiron_sub;
+    }
+    &::before{
+      background-color: $roseiron_main;
+    }
+  }
   /* レベルメーター */
   .level_box {
     position: relative;
     width: 70%;
     height: 18px;
-    color: var(--main_color);
+    color: $sub_bg_color;
     margin: 0 auto;
     box-sizing: border-box;
     border-radius: 20px;
-    background: #dcdcdc;
+    background: rgba(0, 0, 0, 0.16);
   }
   .animation-box {
     width: 100%;
@@ -182,7 +294,7 @@
     border-radius: 20px;
   }
   .animation {
-    background-color: var(--fav_color);
+    background-color: $fav_color;
     animation-name: animation-sample;
     /*--アニメーション名--*/
     animation-duration: 3s;
@@ -205,18 +317,18 @@
     display: flex;
     justify-content: center;
     font-weight: 600;
-    color: var(--main_color);
+    color: $text_color;;
   }
   .left_rank_point {
     padding-right: 1%;
-    font-size: var(--rank_point_font_size);
+    font-size: 0.5rem;
   }
   .center_rank_point {
-    font-size: var(--rank_point_font_size);
+    font-size: 0.5rem;
   }
   .right_rank_point {
     padding-left: 1%;
-    font-size: var(--rank_point_font_size);
+    font-size: 0.5rem;
   }
 
   .get_star_cover {
@@ -225,7 +337,7 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    background-color: var(--fav_color);
+    background-color: $fav_color;
     border-radius: 30px;
     width: 100px;
     border: white solid 2px;
@@ -242,11 +354,12 @@
     width: 100%;
     height: 1fr;
     background-color: var(--sub_color);
-    color: var(--main_color);
+    color: $sub_bg_color;
   }
   .todo_sort_cover {
     width: 100%;
     height: 10%;
+    color: $text_color;
   }
   .todo_title {
     text-align: center;
@@ -254,6 +367,7 @@
     padding-top: 5%;
     padding-bottom: 5%;
     font-weight: bold;
+    color: $text_color;
   }
 
   .item_list{
@@ -280,7 +394,7 @@
   .text-divider::after {
     content: "";
     flex-grow: 1;
-    border-top: 4px dotted var(--main_color);
+    border-top: 4px dotted $sub_bg_color;
     display: block;
   }
   .text-divider::before {
@@ -414,7 +528,7 @@
 
   .popup_header {
     position: relative;
-    background-color: var(--main_color);
+    background-color: $sub_bg_color;
     color: white;
     width: 100%;
     height: 50px;
@@ -436,8 +550,6 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    max-width: 95%;
-    max-height: 80vh;
     background-color: #fff;
     z-index: 2;
     color: #3a9fa8;
@@ -452,7 +564,7 @@
 
   .popup-inner button {
     position: relative;
-    background-color: var(--fav_color);
+    background-color: $fav_color;
     border-radius: 40px;
     border: #e7d9a2 solid 6px;
     color: white;
@@ -497,8 +609,8 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    height: 65vh;
     width: 90%;
-    height: 10vh;
     margin: 0 auto;
     text-align: center;
     overflow-y: scroll;
@@ -545,14 +657,14 @@
     height: 100%;
     position: relative;
     border-radius: 50%;
-    border: 5px solid var(--main_color);
+    border: 5px solid $sub_bg_color;
     object-fit: cover;
     z-index: -10000;
   }
 
   /* 選択中のアイコン */
   .active_icon {
-    background-color: var(--main_color);
+    background-color: $sub_bg_color;
     border-radius: 20px;
     z-index: -100;
     color: white;

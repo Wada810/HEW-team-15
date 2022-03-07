@@ -21,7 +21,7 @@ class FInishController extends Controller{
         }
         $user["total_exp"] += 1;
         $user["level_up"] = false;
-        if($user["total_exp"] == $user["next"]){
+        if($user["total_exp"] >= $user["next"]){
             $user["level_up"] = true;
         }
         $colors = ColorPettern::where('level', '=', $user["level"] + 1)->get();
@@ -44,7 +44,7 @@ class FInishController extends Controller{
             $user["next"] += $i;
         }
         $user["total_exp"] += 1;
-        if($user["total_exp"] == $user["next"]){
+        if($user["total_exp"] >= $user["next"]){
             User::where('id', '=', $user["id"])->update([
                 'level' => $user["level"] + 1,
                 'total_exp' => $user["total_exp"]

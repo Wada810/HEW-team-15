@@ -94,7 +94,7 @@ document.getElementById("js-close-btn-2").addEventListener("click",()=>{
 });
 
 // modal処理
-const close_btn = document.getElementsByClassName('modal_close')[0];
+/* const close_btn = document.getElementsByClassName('modal_close')[0];
 const modal = document.getElementById('release_modal');
 const todo_list = document.getElementsByClassName('todo_list');
 const modal_name = document.getElementsByClassName('modal_name')[0];
@@ -142,4 +142,4 @@ release_btn.addEventListener('click',function () {
 close_check_btn.addEventListener('click',function () {
     release_check_modal.style.display = 'none';
 });
-
+ */

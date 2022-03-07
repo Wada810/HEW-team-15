@@ -14,7 +14,7 @@
                 @auth
                     <a href="mypage" class="p_home_user_icon">
                         <img src="{{asset('img/' . $user['icon_image'])}}" alt="">
-                        <p>プロフィール</p>
+                        <p>{{$user["name"] ?? ""}}</p>
                     </a>
                 @endauth
             @endif
