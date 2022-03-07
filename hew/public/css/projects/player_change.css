@@ -102,15 +102,9 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   background-color: var(--sub_bg_color);
   color: #fbfeff;
 }
@@ -126,40 +120,16 @@
 }
 
 .dokidoki {
-  -webkit-animation-name: dokidoki;
-          animation-name: dokidoki;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-name: dokidoki;
+  animation-delay: 0s;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
   width: 80%;
   position: fixed;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
-}
-
-@-webkit-keyframes dokidoki {
-  0% {
-    font-size: 1rem;
-  }
-  40% {
-    font-size: 1rem;
-  }
-  50% {
-    font-size: 1.05rem;
-  }
-  60% {
-    font-size: 1rem;
-  }
-  100% {
-    font-size: 1rem;
-  }
+  transform: translateX(-50%) translateY(-50%);
 }
 
 @keyframes dokidoki {
@@ -179,4 +149,3 @@
     font-size: 1rem;
   }
 }
-/*# sourceMappingURL=player_change.css.map */

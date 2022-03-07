@@ -1,6 +1,7 @@
 @extends("layouts.layout")
 
 @section('css_link')
+    <link rel="stylesheet" href="{{ asset('css/projects/reward_friend.css') }}">
 @endsection
 
 @section('title', 'おわり！')
@@ -34,7 +35,7 @@
         </div>
     </section>
 
-    <form method="post">
+    <form method="post" id="form">
     @csrf
         <div class="public_setting">
             <div class="public_text">みんなにやることリストを<br>公開しよう</div>
@@ -94,6 +95,48 @@
     </div>
 </section>
 
+<!-- 評価モーダル -->
+<section class="profile_modal hidden" id="rate_modal">
+    <div class="profile_area">
+        <div class="profile_wrap">
+            <a class="profile_modal_top">
+                <div class="profile_img">
+                    <img src="https://placehold.jp/500x500.png" alt="ともだちのアイコン">
+                </div>
+            </a>
+            <div class="profile_modal_main">
+                <div class="profile_modal_info">
+                    <h2>username</h2>
+                </div>
+                <div class="profile_theme">theme</div>
+                <div class="star_point_wrapp">
+                    <div class="star_point_content">
+                        <span class="material-icons-round">stars</span>
+                        <p id="star_num"><!--いいね数変数--></p>
+                    </div>
+                </div>
+                <div class="profile_modal_todo">
+                    <div class="profile_modal_cover">
+                        <div class="btn_content">
+                            <p>評価をつけよう!!</p>
+                            <div id="starBtnId" class="btn_wrapp star_btn">
+                                <div class="btncover star_icon_cover"><span class="material-icons-round">stars</span></div>
+                                <p>いいね！</p>
+                            </div>
+                        </div>
+                        <!-- <div class="btn_wrapp">
+                            <div class="btncover share_icon_cover"><span class="material-icons-round">share</span></div>
+                            <p>シェア</p>
+                        </div>     -->
+                    </div>
+                    <div class="close-btn" id="close-btn"><span class="material-icons-round">close</span></div>
+                    <input type="checkbox" for="form" id="like" name="like" value="true">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="black-background" id="black-bg"></div>
+</section>
 <script>
     const user = <?php print json_encode($user)?> ;
 </script>

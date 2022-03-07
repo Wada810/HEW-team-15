@@ -5,8 +5,6 @@
 }
 
 .material-icons-round {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   vertical-align: middle;
 }
@@ -23,8 +21,7 @@ body {
   height: 100vh;
   min-height: 100vh;
   background-color: #3a9fa8;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 header {
@@ -34,18 +31,12 @@ header {
   width: 100%;
   background-color: #3a9fa8;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 header .header_button {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 38px;
   height: 38px;
   margin-left: 3%;
@@ -68,8 +59,6 @@ header .header_title {
 }
 
 header .material-icons-round {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   vertical-align: middle;
 }
@@ -119,8 +108,7 @@ main .level_wrapper .level_box {
   width: 70%;
   height: 30px;
   margin: 0 auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 50px;
   background-color: #bebebe;
 }
@@ -129,35 +117,20 @@ main .level_wrapper .animation-box {
   width: 100%;
   height: 100%;
   color: #333;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 50px;
 }
 
 main .level_wrapper .animation {
   background-color: #49b5ec;
-  -webkit-animation-name: animation-sample;
-          animation-name: animation-sample;
+  animation-name: animation-sample;
   /*--アニメーション名--*/
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  animation-duration: 3s;
   /*--時間--*/
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  animation-iteration-count: 1;
   /*--実行回数--*/
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes animation-sample {
-  0% {
-    width: 5%;
-  }
-  100% {
-    width: 100%;
-  }
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
 }
 
 @keyframes animation-sample {
@@ -201,7 +174,6 @@ footer button a {
   z-index: 998;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: 0.6s;
   transition: 0.6s;
 }
 
@@ -221,15 +193,9 @@ footer button a {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   border-radius: 5px 5px 0 0;
   font-weight: 800;
 }
@@ -238,8 +204,7 @@ footer button a {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 80%;
   max-width: 95%;
   background-color: #fff;
@@ -268,14 +233,9 @@ footer button a {
 }
 
 .popup-inner .get_item_block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   padding: 30px 0 20px 0;
 }
 
@@ -303,4 +263,3 @@ footer button a {
   z-index: 1;
   cursor: pointer;
 }
-/*# sourceMappingURL=reward.css.map */

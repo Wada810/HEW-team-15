@@ -25,7 +25,8 @@
         </div>
         <div class="btn-secondary mb p" id="howto_adults">大人用</div>
     </section>
-    <section class="for_kids hidden">
+
+    <section class="for_kids">
         <div class="for_kids_window">
             <img src="{{asset('img/panda.png')}}" class="kids_panda">
             <div class="kids_image_box">

@@ -45,7 +45,7 @@
     <div id="todo">
         <div class="todo_sort_cover">
             <div class="text-divider"><p class="todo_title">作ったやることリスト</p></div>
-            <div class="sort_cover"><p class="sort">ソート:</p><p class="sort_seed">新しい順</p><span class="material-icons-round drop_arrow">arrow_drop_down_circle</span></div>
+            <div class="sort_cover"><p class="sort">ソート:</p><select class="sort_table" name='sort'><option value="updated_at" class="sort_seed">新しい順</option><option value="likes" class="sort_seed">いいね順</option><option value="lines" class="sort_seed">行数順</option></select><span class="material-icons-round drop_arrow">arrow_drop_down_circle</span></div>
         </div>
         <div class="todo_scroll">
             <div class="todo_list_cover">
@@ -119,8 +119,9 @@
             </div>
         <div class="black-background" id="js-black-bg-2"></div>
     </div>
-            <!-- prof.modal -->
-            <div id="release_modal">
+
+        <!-- prof.modal -->
+        <div id="release_modal">
             <div class="release_modal">
                 <div class="release_cover">
                     <div class="modal_prof_img_area">
@@ -177,6 +178,7 @@
     const user = <?php print json_encode($user)?> ;
     const url = "{{route('color')}}";
     const img_url = "{{route('img')}}";
+    const sort = "{{route('sort')}}";
 </script>
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <script src="{{asset('js/pattern_change.js')}}"></script>

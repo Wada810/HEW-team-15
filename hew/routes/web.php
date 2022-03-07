@@ -8,6 +8,7 @@ use App\Http\Controllers\ColorController;
 use App\Http\Controllers\IconController;
 use App\Http\Controllers\PublicInstractionsController;
 use App\Http\Controllers\FriendProfileController;
+use APP\Http\Controllers\SortController;
 
 use App\Http\Controllers\Play\ThemeController;
 use App\Http\Controllers\Play\OrderController;
@@ -40,6 +41,7 @@ Route::get('home', function () {
     return view('home',compact("user"));
 })->name('home');
 
+//遊び方
 Route::get('how_to_play', function () {
     $user = Auth::user();
     return view('how_to_play',compact("user"));
@@ -74,6 +76,8 @@ Route::get('friend_prof', function (){
 Route::get('color',[ColorController::class, 'index'])->name('color');
 
 Route::get('mg',[IconController::class, 'index'])->name('img');
+
+Route::get('sort',[SortController::class, 'index'])->name('sort');
 
 Route::get('friendProf',[FriendProfileController::class, 'index'])->name('friendProf');
 
