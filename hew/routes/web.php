@@ -9,6 +9,7 @@ use App\Http\Controllers\IconController;
 use App\Http\Controllers\PublicInstractionsController;
 use App\Http\Controllers\FriendProfileController;
 use APP\Http\Controllers\SortController;
+use APP\Http\Controllers\FriendPageController;
 
 use App\Http\Controllers\Play\ThemeController;
 use App\Http\Controllers\Play\OrderController;
@@ -62,9 +63,7 @@ Route::get('public_instractions', [PublicInstractionsController::class, 'index']
 Route::post('public_instractions', [PublicInstractionsController::class, 'post']);
 
 /* 友達のプロフィール */
-Route::get('friend_prof', function (){
-    return view('friend_prof');
-})->name('friend_prof');
+Route::get('friend_prof', [FriendPageController::class, 'index'])->name('friend_prof');
 
 /* 色変えAPI */
 Route::get('color',[ColorController::class, 'index'])->name('color');

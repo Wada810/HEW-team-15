@@ -21,6 +21,7 @@ class FriendProfileController extends Controller
                 'i.updated_at',
                 'i.likes',
                 'i.lines',
+                'i.id as inst_id',
               ])
               ->from('instractions as i')
               ->join('users as u', function($join) {
