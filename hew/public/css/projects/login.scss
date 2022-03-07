@@ -16,9 +16,10 @@ main{
   }
   
   .title_call{
-    margin: 1vh auto 0 auto;
+    margin: 2vh auto 0 auto;
     width: 90%;
     line-height: 16px;
+    font-size: 0.7rem;
     text-align: center;
   }
 
@@ -40,7 +41,7 @@ main{
     background-color: var(--sub_color);
     color: white;
     margin: 1vh auto 1vh auto;
-    font-size: 12px;
+    font-size: 0.6rem;
   }
   
   .err_icon_cover{
@@ -48,7 +49,7 @@ main{
   }
   
   .err_icon{
-    font-size: 1px;
+    font-size: 18px;
   }
   
   .error_msg{
@@ -58,7 +59,13 @@ main{
     width: 90%;
     height: 100%;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.5) !important;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+
+    li{
+      padding-bottom: 5px;
+      width: 85%;
+      margin: 0 auto;
+    }
   }
   .input_cover{
     width: 90%;
@@ -87,7 +94,8 @@ main{
   .lavel{
     display: flex;
     justify-content: flex-start;
-    margin: 0 0 1vh 0;
+    margin: 0 0 5px 0;
+    font-size: 0.7rem;
   }
   
   .name_cover{
@@ -104,6 +112,10 @@ main{
   .rem_cover{
       text-align: left !important;
       padding: 0 0 0 5vw;
+    span{
+      padding-left: 6px;
+      font-size: 0.7rem;
+    }
   }
 
   .p_pixel{
@@ -114,6 +126,7 @@ main{
   .word_count{
     display: flex;
     justify-content: flex-end;
+    font-size: 0.7rem;
   }
   
   .btn_cover{
