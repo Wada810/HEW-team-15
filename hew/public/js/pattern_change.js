@@ -93,6 +93,52 @@ document.getElementById("js-close-btn-2").addEventListener("click",()=>{
 })
 });
 
+//ソート
+const sort_seed = document.getElementsByClassName("sort_seed");
+var select_state = document.querySelector("select[name=sort]");
+
+select_state.addEventListener('change',function(){
+  $.ajax({
+    type: 'GET',
+    url: sort,
+    data: {
+        'sort': select_state.value,
+    },
+    dataType: 'json', //json形式で受け取る
+  }).done((data)=>{
+    console.log(data);
+
+    $.each(data, function (index, value) { //dataの中身からvalueを取り出す
+
+    })
+  }).fail(()=>{
+    console.log('aaaa');
+  })
+});
+
+/* for(let j = 0; j < sort_seed.length; j++){
+  sort_seed[j].addEventListener("click", function(){
+    const sort_value = sort_seed[j].getAttribute('value');
+    console.log('aa');
+    $.ajax({
+      type: 'GET',
+      url: sort_url,
+      data: {
+          'sort': sort_value,
+      },
+      dataType: 'json', //json形式で受け取る
+    }).done((data)=>{
+      console.log(data);
+
+      $.each(data, function (index, value) { //dataの中身からvalueを取り出す
+
+      })
+    }).fail(()=>{
+      document.log('aaaa');
+    })
+  })
+} */
+
 // modal処理
 const close_btn = document.getElementsByClassName('modal_close')[0];
 const modal = document.getElementById('release_modal');
