@@ -50,6 +50,48 @@
             </div>
         </div>
     </section>
-    <section class="for_adults"></section>
+    <section class="for_adults">
+        <div class="for_adults_window">
+            <div class="for_adults_scroll_content">
+                <h2 class="p-b p-r">はじめに</h2>
+
+                <p class="p-b p-r">コンピュータは人間の意図をくみ取って動作することはありません。<br>
+                プログラムとは、<span class="yellow">コンピュータへの命令をひとつひとつ順番に書き出したもの</span>です。</p>
+
+                <p class="p-b p-r">ロボットに「<span class="yellow">歩く</span>」という動作をさせたい場合に、ロボットに「<span class="yellow">歩け</span>」と命令しただけではロボットは歩けません。ロボットに「<span class="yellow">歩け</span>」という動作を命令させる場合は</p>
+
+                <ul class="p-b p-r">
+                    <li class="scroll_content_list">・「右足をあげる」</li>
+                    <li class="scroll_content_list">・「左足だけでバランスをとる」</li>
+                    <li class="scroll_content_list">・「右足を前に出す」</li>
+                    <li class="scroll_content_list">・「右足を着地させる」</li>
+                    <li class="scroll_content_list">・「左足をあげる」</li>
+                </ul>
+
+                <p class="p-b p-r">といった明確かつコンピュータが理解できる命令が必要です。<br>
+                上の例でいうと、右足を上げるだけでも<br>「<span class="yellow">××モーターに××vの電流を××秒流す</span>」などもっと細かく沢山の命令を出さなければいけません。</p>
+
+                <p class="p-b p-r">そういった命令を順番に記述したものがプログラムです。<br>algoはそんなコンピュータのプログラムを人間の動作に当てはめて子供が<span class="yellow">大人をプログラミングする</span>為のアプリです。</p>
+            </div>
+            <div class="for_adults_under">
+                <div class="for_adults_buttons">
+                    <button id="adults_prev" class="adults_prev"><span class="material-icons-round">chevron_left</span></button>
+                    <button id="adults_next" class="adults_next">次へ</button>
+                </div>
+                <ul>
+                    <li class="light_on"></li>
+                    <li class="light_off"></li>
+                    <li class="light_off"></li>
+                    <li class="light_off"></li>
+                    <li class="light_off"></li>
+                    <li class="light_off"></li>
+                    <li class="light_off"></li>
+                    <li class="light_off"></li>
+                    <li class="light_off"></li>
+                    <li class="light_off"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
     <script src="{{asset('js/how_to.js')}}"></script>
 @endsection
