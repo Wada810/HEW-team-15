@@ -40,6 +40,7 @@ Route::get('home', function () {
     return view('home',compact("user"));
 })->name('home');
 
+//遊び方
 Route::get('how_to_play', function () {
     $user = Auth::user();
     return view('how_to_play',compact("user"));
