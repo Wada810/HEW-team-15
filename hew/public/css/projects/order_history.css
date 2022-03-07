@@ -208,6 +208,7 @@ main {
   letter-spacing: 2px;
   font-weight: bold;
   color: var(--text_color);
+  font-size: 0.9rem;
 }
 
 .rank_cover {
