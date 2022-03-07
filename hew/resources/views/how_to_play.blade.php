@@ -32,10 +32,10 @@
                 <img id="kids_image" src="{{asset('img/how_to_kids/1.png')}}">
             </div>
             <div class="kids_text_box">
-                まずは<span class="yellow">お題</span>を決めよう!
+                <p>まずは<span class="yellow">お題</span>を決めよう!</p>
                 <div class="button_box">
-                    <div id="back_button"><span class="material-icons-round">arrow_back_ios_new</span></div>
-                    <div id="next_button">次へ</div>
+                    <div class="back_button" id="back_button"><span class="material-icons-round">arrow_back_ios_new</span></div>
+                    <div class="next_button" id="next_button">次へ</div>
                 </div>
             </div>
             <div class="page_dots">
