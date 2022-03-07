@@ -13,3 +13,8 @@ hide_off_btn.addEventListener('click',function () {
     hide_on_btn.style.display = 'block';
     hide_off_btn.style.display = 'none';
 });
+
+
+const name_now = document.getElementsByClassName('name_now')[0];
+const pass_now = document.getElementsByClassName('pass_now')[0];
+

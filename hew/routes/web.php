@@ -6,11 +6,13 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\MypageController;
 use App\Http\Controllers\ColorController;
 use App\Http\Controllers\IconController;
+use App\Http\Controllers\PublicInstractionsController;
 
 use App\Http\Controllers\Play\ThemeController;
 use App\Http\Controllers\Play\OrderController;
 use App\Http\Controllers\Play\InstractionController;
 use App\Http\Controllers\Play\FinishController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -52,6 +54,10 @@ Route::post('play/instraction', [InstractionController::class, 'post']);
 
 Route::get('play/finish', [FinishController::class, 'index'])->middleware("auth")->name('finish');
 Route::post('play/finish', [FinishController::class, 'post']);
+
+/* みんなのやることリスト */
+Route::get('public_instractions', [PublicInstractionsController::class, 'index'])->name('public_instractions');
+Route::post('public_instractions', [PublicInstractionsController::class, 'post']);
 
 /* 友達のプロフィール */
 Route::get('friend_prof', function (){

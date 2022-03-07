@@ -113,12 +113,15 @@
   padding-left: 18%;
 }
 
+html {
+  overflow-y: hidden;
+}
+
 main {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   font-size: 0.8rem;
   position: relative;
-  overflow-y: hidden;
 }
 
 #prof {
@@ -596,7 +599,7 @@ main {
 
 .under {
   width: 100%;
-  height: 60%;
+  height: 100%;
   padding-right: 3%;
   padding-left: 3%;
   padding-top: 3%;
@@ -961,6 +964,7 @@ main {
 }
 
 #release_modal .release_modal .release_cover .modal_under .modal_items {
+  height: 30%;
   font-size: 0.6rem;
 }
 
@@ -1065,6 +1069,18 @@ main {
   flex-wrap: wrap;
 }
 
+#release_check_modal .release_check_modal_cover .release_under .release_check_area .release_ok_area .check_ok {
+  display: block;
+}
+
+#release_check_modal .release_check_modal_cover .release_under .release_check_area .release_no_area {
+  display: block;
+}
+
+#release_check_modal .release_check_modal_cover .release_under .release_check_area .release_no_area .check_no {
+  display: block;
+}
+
 #release_check_modal .release_check_modal_cover .release_under .release_check_area .release_check_cover {
   margin: 0 auto;
   display: flex;
@@ -1096,3 +1112,4 @@ main {
 #release_check_modal .release_check_modal_cover .release_comp .comp_p {
   color: #fbfeff;
 }
+/*# sourceMappingURL=order_history.css.map */

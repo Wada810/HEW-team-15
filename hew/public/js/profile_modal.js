@@ -16,3 +16,4 @@ closeBtn.addEventListener('click', function() {
 blackBg.addEventListener('click', function() {
     popup.classList.remove('is-show');
 });
+

@@ -63,7 +63,6 @@
             </div>
         </div>
 
-
         <!-- prof.modal -->
         <div id="release_modal">
             <div class="release_modal">
@@ -99,22 +98,6 @@
             </div>
         </div>
 
-        <!-- releaseCheck.modal -->
-        <div id="release_check_modal">
-            <div class="release_check_modal_cover">
-                <div class="release_top">
-                    <p class="release_p">みんなにやることリストを公開しよう!!</p>
-                </div>
-                <div class="release_under">
-                    <div class="release_check_area">
-                        <div class="release_ok_area release_check_cover"><div class="release_ok_cover release_check_inner"><span class="material-icons-round release_ok_icon">public</span><p class="release_ok_p">公開</p></div><input class="check_ok check" type="radio" name="release_dete" value="1"></div>
-                        <div class="release_no_area release_check_cover"><div class="release_no_cover release_check_inner"><span class="material-icons-round release_no_icon">public_off</span><p class="release_no_p">非公開</p></div><input class="check_no check" type="radio" name="release_dete" value="0"></div>
-                    </div>
-                </div>
-                <div class="release_comp"><p class="comp_p">適用</p></div>
-            </div>
-        </div>
-        </form>
     </main>
 
     <script src="{{ asset('js/friends_prof.js') }}"></script>

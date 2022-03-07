@@ -41,9 +41,9 @@
             <div class="name_cover input_cover">
                 <x-label class="lavel" for="name" :value="__('ユーザーネーム')" />
 
-                <input id="name" class="input" type="text" name="name" :value="old('name')" required autofocus >
+                <input id="name" class="input" type="text" name="name" :value="old('name')" required autofocus onkeyup="ShowLength(value);">
 
-                <div class="word_count"><p class="now_word">0</p><p class="slash">/</p><p class="max_word">15</p></div>
+                <div class="word_count"><p class="now_word name_now">0</p><p class="slash">/</p><p class="max_word">15</p></div>
             </div>
 
             <!-- Password -->
@@ -53,9 +53,10 @@
                 <input id="pass" class="input"
                     type="text"
                     name="password"
-                    required autocomplete="new-password">
+                    required autocomplete="new-password"
+                    onkeyup="ShowLength(value);">
 
-                <div class="word_count"><p class="now_word">0</p><p class="slash">/</p><p class="max_word">15</p></div>
+                <div class="word_count"><p class="now_word pass_now">0</p><p class="slash">/</p><p class="max_word">15</p></div>
             </div>
 
 
