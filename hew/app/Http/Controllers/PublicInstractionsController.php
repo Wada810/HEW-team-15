@@ -19,6 +19,7 @@ class PublicInstractionsController extends Controller
             'i.updated_at',
             'i.likes',
             'i.lines',
+            'i.id as i_id',
           ])
           ->from('instractions as i')
           ->join('users as u', function($join) {

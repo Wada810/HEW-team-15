@@ -2,30 +2,41 @@
 const popup = document.getElementById('profile_modal');
 var openBtn = document.querySelectorAll('.open-btn');
 
-/* const closeBtn = document.getElementById('close-btn'); */
-const blackBg = document.getElementById('black-bg');
+/* const closeBtn = document.getElementById('close-btn');
+const blackBg = document.getElementById('black-bg'); */
 
 for (let i = 0; i < openBtn.length; i++) {
     openBtn[i].addEventListener('click', function() {
         popup.classList.add('is-show');
-        const user_id = document.getElementsByClassName('get_id')[i];
-        const id = user_id.getAttribute('id');
+        let user_id = document.getElementsByClassName('get_id')[i];
+        let id = user_id.getAttribute('id');
+        let inst_id = document.getElementsByClassName('friend_name')[i];
+        let inst_get_id = inst_id.getAttribute('id');
+
         $.ajax({
           type: 'GET',
-          url: '/user/index/' + sort,
+          url: friendProf_url,
           data: {
               'user_id': id,
+              'inst_id': inst_get_id,
           },
           dataType: 'json',
         }).done((data)=>{
-          console.log(data);
-          let html = '';
+            $(document).on('click', openBtn , function () {
+                $('.profile_area').remove();
+            });
+            $(document).on('click', openBtn , function () {
+                $('#black-bg').remove();
+            });
+            console.log(data);
+            let html = '';
           $.each(data, function (index, value) {
             let name = value.name;
             let stars = value.likes;
             let theme = value.theme;
-            let lines = value.rows;
-            let updated_at = value.updated_at;
+            let lines = value.lines;
+            let updated = value.updated_at;
+            let updated_at = updated.substr(0 , 10);
         html = `
         <div class="profile_area">
             <div class="profile_wrap">
@@ -63,12 +74,15 @@ for (let i = 0; i < openBtn.length; i++) {
                     </div>
                 </div>
             </div>
-        </div>`
+        </div>
+        <div class="black-background" id="black-bg"></div>
+        `
         })
 
         $('#profile_modal').append(html);
 
         const closeBtn = document.getElementById('close-btn');
+        const blackBg = document.getElementById('black-bg');
 
         closeBtn.addEventListener('click', function() {
             popup.classList.remove('is-show');
@@ -82,10 +96,5 @@ for (let i = 0; i < openBtn.length; i++) {
         })
     });
 };
-/* closeBtn.addEventListener('click', function() {
-    popup.classList.remove('is-show');
-});
-blackBg.addEventListener('click', function() {
-    popup.classList.remove('is-show');
-}); */
+
 

@@ -18,44 +18,7 @@
 </header>
 <div class="l_play_header__spacer"></div>
 <section class="profile_modal" id="profile_modal">
-        <div class="profile_area">
-            <div class="profile_wrap">
-                <a class="profile_modal_top">
-                    <div class="profile_rank_tag">
-                        <div class="profile_rank_str">RANK</div>
-                        <div class="profile_rank_int">1</div>
-                    </div>
-                    <div class="profile_img">
-                        <img src="{{ asset('./img/kuma.png')}}" alt="">
-                    </div>
-                </a>
-                <div class="close-btn" id="close-btn"><span class="material-icons-round">close</span></div>
-                <div class="profile_modal_main">
-                    <div class="profile_modal_info">
-                        <h2></h2>
-                        <div class="star_point_content">
-                            <span class="material-icons-round">stars</span>
-                            <p>278</p>
-                        </div>
-                    </div>
-                    <div class="profile_modal_todo">
-                        <div class="profile_theme"></div>
-                        <div class="profile_icon_container">
-                            <div class="rows">
-                                <span class="material-icons-round">format_list_numbered_rtl</span>
-                                <p>x 18</p>
-                            </div>
-                            <div class="date">
-                                <span class="material-icons-round">calendar_today</span>
-                                <p>2022/02/13</p>
-                            </div>
-                        </div>
-                        <button type=""><span class="material-icons-round">play_circle</span><span class="play">あそぶ</span></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="black-background" id="black-bg"></div>
+
 </section>
 
 <div class="header"></div><!-- 仮ヘッダー -->
@@ -81,7 +44,7 @@
         <!-- 検索件数 -->
         <p class="search_num">検索件数:{{$search}}件</p>
 
-        @foreach($instractions as $value)
+        @foreach($instractions as $key => $value)
         <div class="public_list">
             <!-- 友だちのマイページ画面へ飛ぶ -->
             <div class="profile_wrap">
@@ -89,7 +52,7 @@
                     <div class="friend_icon">
                         <a href="#"><img src="{{ asset('./img/kuma.png')}}" alt="友だちのアイコン"></a>
                     </div>
-                    <div class="friend_name">
+                    <div class="friend_name" id="{{$value['i_id']}}">
                         <a class="get_id" id="{{$value['id']}}" href="#">{{$value['name']}}<span class="material-icons-round friendname_stars">stars</span></a>
                     </div>
                 </div>
