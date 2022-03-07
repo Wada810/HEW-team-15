@@ -1,7 +1,7 @@
 @extends("layouts.layout")
 
 @section('css_link')
-<link rel="stylesheet" href="{{asset('css/projects/order_history.css')}}">
+<link rel="stylesheet" href="{{asset('css/projects/mypage.css')}}">
 @endsection
 
 @section('title', 'マイページ')
@@ -45,15 +45,13 @@
     <div id="todo">
         <div class="todo_sort_cover">
             <div class="text-divider"><p class="todo_title">作ったやることリスト</p></div>
-            <div class="sort_cover"><p class="sort">ソート:</p><p class="sort_seed">新しい順</p><span class="material-icons-round drop_arrow">arrow_drop_down_circle</span></div>
+            <div class="sort_cover"><p class="sort">ソート:</p><select class="sort_table" name='sort'><option value="updated_at" class="sort_seed">新しい順</option><option value="likes" class="sort_seed">いいね順</option><option value="lines" class="sort_seed">行数順</option></select><span class="material-icons-round drop_arrow">arrow_drop_down_circle</span></div>
         </div>
         <div class="todo_scroll">
             <div class="todo_list_cover">
-                <div class="todo_list"><div class="top"><p class="todo_theme">ピーナッツバターサンドを作る！</p></div><div class="under"><div class="lines_cover"><span class="material-icons-round lines_icon">format_list_numbered</span><p class="cross">×</p><p class="lines">13</p></div><div class="fav_cover"><span class="material-icons-round fav_icon">stars</span><p class="cross">×</p><p class="fav">123</p></div><div class="data"><p class="year">2022</p><p class="slash">/</p><p class="month">02</p><p class="slash">/</p><p class="day">12</p></div></div></div>
-                <div class="todo_list"><div class="top"><p class="todo_theme">ピーナッツバターサンドを作る！</p></div><div class="under"><div class="lines_cover"><span class="material-icons-round lines_icon">format_list_numbered</span><p class="cross">×</p><p class="lines">13</p></div><div class="fav_cover"><span class="material-icons-round fav_icon">stars</span><p class="cross">×</p><p class="fav">123</p></div><div class="data"><p class="year">2022</p><p class="slash">/</p><p class="month">02</p><p class="slash">/</p><p class="day">12</p></div></div></div>
-                <div class="todo_list"><div class="top"><p class="todo_theme">ピーナッツバターサンドを作る！</p></div><div class="under"><div class="lines_cover"><span class="material-icons-round lines_icon">format_list_numbered</span><p class="cross">×</p><p class="lines">13</p></div><div class="fav_cover"><span class="material-icons-round fav_icon">stars</span><p class="cross">×</p><p class="fav">123</p></div><div class="data"><p class="year">2022</p><p class="slash">/</p><p class="month">02</p><p class="slash">/</p><p class="day">12</p></div></div></div>
-                <div class="todo_list"><div class="top"><p class="todo_theme">ピーナッツバターサンドを作る！</p></div><div class="under"><div class="lines_cover"><span class="material-icons-round lines_icon">format_list_numbered</span><p class="cross">×</p><p class="lines">13</p></div><div class="fav_cover"><span class="material-icons-round fav_icon">stars</span><p class="cross">×</p><p class="fav">123</p></div><div class="data"><p class="year">2022</p><p class="slash">/</p><p class="month">02</p><p class="slash">/</p><p class="day">12</p></div></div></div>
-                <div class="todo_list"><div class="top"><p class="todo_theme">ピーナッツバターサンドを作る！</p></div><div class="under"><div class="lines_cover"><span class="material-icons-round lines_icon">format_list_numbered</span><p class="cross">×</p><p class="lines">13</p></div><div class="fav_cover"><span class="material-icons-round fav_icon">stars</span><p class="cross">×</p><p class="fav">123</p></div><div class="data"><p class="year">2022</p><p class="slash">/</p><p class="month">02</p><p class="slash">/</p><p class="day">12</p></div></div></div>
+                @foreach($instraction as $key => $value)
+                <div class="todo_list"><div class="top"><p class="todo_theme">{{$value['theme']}}</p></div><div class="under"><div class="lines_cover"><span class="material-icons-round lines_icon">format_list_numbered</span><p class="cross">×</p><p class="lines">{{$value['lines']}}</p></div><div class="fav_cover"><span class="material-icons-round fav_icon">stars</span><p class="cross">×</p><p class="fav">{{$value['likes']}}</p></div><div class="data">{{$value['updated_at']}}</div></div></div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -101,6 +99,58 @@
             </div>
         <div class="black-background" id="js-black-bg-2"></div>
     </div>
+
+        <!-- prof.modal -->
+        <div id="release_modal">
+            <div class="release_modal">
+                <div class="release_cover">
+                    <div class="modal_prof_img_area">
+                        <div class="modal_rank_area"><div class="modal_rank_cover"><p class="modal_rank">RANK</p><p class="modal_rank_sum">97</p></div></div>
+                        <img class="modal_prof_img" src="" alt="">
+                    </div>
+                    <div class="modal_top">
+                        <div class="modal_close"><span class="material-icons-round modal_close_icon">cancel</span></div>
+                        <div class="modal_user_name"><p class="modal_name">{{$user['name']}}</p></div>
+                        <div class="modal_half"><div class="modal_fav_cover"><span class="material-icons-round moda_fav_icon">stars</span><p class="modal_sums">{{$favs}}</p></div></div>
+                        <div class="modal_theme_cover"><p class="modal_theme">テーマ</p></div>
+                    </div>
+                    <div class="modal_under">
+                        <div class="modal_items">
+                            <div class="modal_lines_cover">
+                                <span class="material-icons-round modal_lines_icon">format_list_numbered</span>
+                                <p class="cross">×</p>
+                                <p class="modal_lines">13</p>
+                            </div>
+                            <div class="modal_date_cover">
+                                <span class="material-icons-round modal_calendar_icon">event</span>
+                                <div class="modal_date"></div>
+                            </div>
+                        </div>
+                        <div class="modal_button_cover">
+                            <div class="modal_button modal_lerease_btn"><span class="material-icons-round modal_lerease_icon">public</span><p class="modal_lerease_p">公開</p></div>
+                            <div class="modal_button modal_play_btn"><span class="material-icons-round modal_play_icon">play_circle</span><p class="modal_play_p">あそぶ</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- releaseCheck.modal -->
+        <div id="release_check_modal">
+            <div class="release_check_modal_cover">
+                <div class="release_top">
+                    <p class="release_p">みんなにやることリストを公開しよう!!</p>
+                </div>
+                <div class="release_under">
+                    <div class="release_check_area">
+                        <div class="release_ok_area release_check_cover"><div class="release_ok_cover release_check_inner"><span class="material-icons-round release_ok_icon">public</span><p class="release_ok_p">公開</p></div><input class="check_ok check" type="radio" name="release_dete" value="1" ></div>
+                        <div class="release_no_area release_check_cover"><div class="release_no_cover release_check_inner"><span class="material-icons-round release_no_icon">public_off</span><p class="release_no_p">非公開</p></div><input class="check_no check" type="radio" name="release_dete" value="0"></div>
+                    </div>
+                </div>
+                <div class="release_comp"><p class="comp_p">適用</p></div>
+            </div>
+        </div>
+    </form>
 </main>
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -108,6 +158,7 @@
     const user = <?php print json_encode($user)?> ;
     const url = "{{route('color')}}";
     const img_url = "{{route('img')}}";
+    const sort = "{{route('sort')}}";
 </script>
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <script src="{{asset('js/pattern_change.js')}}"></script>

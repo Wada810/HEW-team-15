@@ -58,12 +58,15 @@
     padding-left: 18%;
   }
 
+  html{
+    overflow-y: hidden;
+  }
+
   main {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     font-size: 0.8rem;
     position: relative;
-    overflow-y: hidden;
   }
 
   #prof {
@@ -518,7 +521,7 @@
 
   .under {
     width: 100%;
-    height: 60%;
+    height: 100%;
     padding-right: 3%;
     padding-left: 3%;
     padding-top: 3%;
@@ -864,6 +867,7 @@
             width: 100%;
             height: 50%;
             .modal_items{
+              height: 30%;
               font-size: 0.6rem;
               .modal_lines_cover{
                 display: flex;
@@ -1010,10 +1014,11 @@
                 }
               }
               .check_ok{
-
+                display: block;
               }
             }
             .release_no_area{
+              display: block;
               .release_no_cover{
                 .release_no_icon{
 
@@ -1023,7 +1028,7 @@
                 }
               }
               .check_no{
-
+                display: block;
               }
             }
             .release_check_cover{

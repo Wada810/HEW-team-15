@@ -1,0 +1,224 @@
+body{
+    font-family: 'M PLUS 2', sans-serif;
+    color: #373737;
+
+    position: relative;
+    // font-family: 'Montserrat', sans-serif;
+}
+
+
+//検索とソート
+.search_sort_content{
+    width: 100%;
+    padding: 10px 0;
+    height: 70px;
+    
+    .search_sort_flex{
+        width: 90%;
+        display: flex;
+
+        margin: 0 auto;
+        .search_div{
+            position: relative;
+            width: 70%;
+            height: 40px;
+            input{
+                display: block;
+                background-color: #EEF1F1;
+                width: 100%;
+                height: 100%;
+                border: 1px solid #B5B5B5;
+
+                padding: 0 20px;
+                border-radius: 40px 0px 0px 40px;
+                font-size: 13px;
+
+                font-weight: 600;
+
+                &::placeholder{
+                    color: rgb(186, 186, 186);
+                }
+            }
+            button{
+                width: 25px;
+                height: 25px;
+
+                position: absolute;
+                top: 19%;
+                right: 3%;
+                .material-icons-round{
+                    background-color: #EEF1F1;
+                    color: #404040;
+                    width: 100%;
+                }
+            }
+        }
+        .sort_area{
+            width: 30%;
+            height: 40px;
+            .sort_content{
+                width: 100%;
+                height: 100%;
+                border-radius: 0px 40px 40px 0px;
+
+                border: 1px solid #B5B5B5;
+                border-left: none;
+
+                text-align: center;
+                font-size: 13px;
+
+                display: flex;
+                justify-content: center;
+                .material-icons-round{
+                    font-size: 19px;
+                    padding-left: 5px;
+                }
+                .sort_item{
+                    font-size: 12px;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
+
+/* コンテンツ */
+.content_box{
+    background-color: #EEF1F1;
+    overflow-y: auto;
+    height: calc(100vh - 130px);
+/* 検索件数 */
+    .search_num{
+        padding: 20px 0px 35px 0px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+        /* みんなのやることリスト */
+        .public_list{
+            // background-color: #404040;
+            width: 80%;
+            position: relative;
+            margin: 0 auto;
+            margin-bottom: 40px;
+
+            .profile_wrap{
+                width: 100%;
+                height: 70px;
+                position: absolute;
+                top: -23%;
+                left: -10%;
+                /* ユーザーアイコンと名前 */
+                .profile_icon_name{
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+        
+                    
+        
+                    // アイコン画像
+                    .friend_icon{
+                        z-index: 9;
+                        width: 70px;
+                        height: 70px;
+                        img{
+                            object-fit: cover;
+                            width: 100%;
+                            height: 100%;
+                            border: orange 5px solid;
+                            border-radius: 35px;
+                        }
+                    }
+        
+                    // ともだちのなまえ
+                    .friend_name{
+                        position: absolute;
+                        left: 60px;
+                        background-color: orange;
+                        border-radius: 0px 30px 30px 0px;
+                        width: 77%;
+                        height: 35px;
+                        padding-left: 15px;
+                            
+                            a{ 
+                                color: rgb(255, 255, 255);
+                                font-weight: 900;
+                                padding: 0px 5px;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+        
+                                font-size: 12px;
+                                text-decoration: none;
+                                .material-icons-round{
+                                    font-size: 17px;
+                                    color: rgba(255, 255, 255, 0.535);
+                                }
+                            }
+                    }
+                }
+
+            }
+            
+            /* やることリスト */
+            .todo_list{
+                width: 100%;
+                height: auto;
+                padding: 20px 0px 0px 0px;
+                background-color: rgb(255, 255, 255);
+                border: solid 1px #8f8d8d;
+                border-radius: 10px;
+                margin: 0 auto;
+                .theme{
+                    width: 100%;
+                    padding: 20px 7.5% 12px 7.5%;
+                    border-bottom: dashed gray 2px;
+                    font-weight: 600;
+                    font-size: 14px;
+                }
+                .icons_flex{
+                    display: flex;
+                    width: 85%;
+                    margin: 0 auto;
+                    justify-content: space-between;
+                    
+                    .icon_items{
+                        display: flex;
+                        align-items: center;
+                        p{
+                            display: flex;
+                            align-items: center;
+                            padding: 10px 0px;
+                            width: 70px;
+                            font-size: 13px;
+                            font-weight: 600;
+                            color: #373737;
+                            &:nth-last-of-type(1){
+                                color: #EEA600;
+                            }
+                            .row_icon{
+                                color: #373737;
+                                font-size: 30px;
+                            }
+                            .stars_icon{
+                                color: #EEA600;
+                                font-size: 30px;
+                            }
+                        }
+                        
+                    }
+                    .data{
+                        display: flex;
+                        align-items: center;
+                        font-size: 13px; 
+                        font-weight: 600; 
+                    }
+                }
+            }
+        }
+}

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Play;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Instraction;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 class InstractionController extends Controller
@@ -22,7 +23,12 @@ class InstractionController extends Controller
 
     public function post(Request $request)
     {
+        
         $instractions = $request->all();
+        
+        if (isset($_POST['other_theme'])){
+            $instractions = Instraction::where('id','=',$_POST['inst_id']);
+        }
         // セッションにデータを保存
         foreach($instractions as $key => $val){
             session([$key => $val]);

@@ -93,8 +93,54 @@ document.getElementById("js-close-btn-2").addEventListener("click",()=>{
 })
 });
 
+//ソート
+const sort_seed = document.getElementsByClassName("sort_seed");
+var select_state = document.querySelector("select[name=sort]");
+
+select_state.addEventListener('change',function(){
+  $.ajax({
+    type: 'GET',
+    url: sort,
+    data: {
+        'sort': select_state.value,
+    },
+    dataType: 'json', //json形式で受け取る
+  }).done((data)=>{
+    console.log(data);
+
+    $.each(data, function (index, value) { //dataの中身からvalueを取り出す
+
+    })
+  }).fail(()=>{
+    console.log('aaaa');
+  })
+});
+
+/* for(let j = 0; j < sort_seed.length; j++){
+  sort_seed[j].addEventListener("click", function(){
+    const sort_value = sort_seed[j].getAttribute('value');
+    console.log('aa');
+    $.ajax({
+      type: 'GET',
+      url: sort_url,
+      data: {
+          'sort': sort_value,
+      },
+      dataType: 'json', //json形式で受け取る
+    }).done((data)=>{
+      console.log(data);
+
+      $.each(data, function (index, value) { //dataの中身からvalueを取り出す
+
+      })
+    }).fail(()=>{
+      document.log('aaaa');
+    })
+  })
+} */
+
 // modal処理
-/* const close_btn = document.getElementsByClassName('modal_close')[0];
+const close_btn = document.getElementsByClassName('modal_close')[0];
 const modal = document.getElementById('release_modal');
 const todo_list = document.getElementsByClassName('todo_list');
 const modal_name = document.getElementsByClassName('modal_name')[0];
@@ -102,25 +148,19 @@ const modal_theme = document.getElementsByClassName('modal_theme')[0];
 const modal_lines = document.getElementsByClassName('modal_lines')[0];
 const modal_star_sums = document.getElementsByClassName('modal_sums')[0];
 const modal_rank = document.getElementsByClassName('modal_rank_sum')[0];
-const modal_year = document.getElementsByClassName('modal_year')[0];
-const modal_month = document.getElementsByClassName('modal_month')[0];
-const modal_day = document.getElementsByClassName('modal_day')[0];
+const modal_date = document.getElementsByClassName('modal_date')[0];
 
 
 for(let i = 0; i < todo_list.length; i++) {
     todo_list[i].addEventListener('click',function (open_modal) {
         let set_theme = document.getElementsByClassName('todo_theme')[i];
         let set_lines = document.getElementsByClassName('lines')[i];
-        let set_year = document.getElementsByClassName('year')[i];
-        let set_month = document.getElementsByClassName('month')[i];
-        let set_day = document.getElementsByClassName('day')[i];
+        let set_date = document.getElementsByClassName('data')[i];
 
         modal.style.display = 'block';
         modal_theme.innerHTML = set_theme.innerHTML;
         modal_lines.innerHTML = set_lines.innerHTML;
-        modal_year.innerHTML = set_year.innerHTML;
-        modal_month.innerHTML = set_month.innerHTML;
-        modal_day.innerHTML = set_day.innerHTML;
+        modal_date.innerHTML = set_date.innerHTML;
     });
 
 };
@@ -142,4 +182,4 @@ release_btn.addEventListener('click',function () {
 close_check_btn.addEventListener('click',function () {
     release_check_modal.style.display = 'none';
 });
- */
+

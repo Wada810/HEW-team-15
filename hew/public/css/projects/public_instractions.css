@@ -5,11 +5,6 @@ body {
   position: relative;
 }
 
-.header {
-  height: 60px;
-  background-color: #affafa;
-}
-
 .search_sort_content {
   width: 100%;
   padding: 10px 0;
@@ -228,4 +223,4 @@ body {
   font-size: 13px;
   font-weight: 600;
 }
-/*# sourceMappingURL=public_to_dolist.css.map */
+/*# sourceMappingURL=public_instractions.css.map */
