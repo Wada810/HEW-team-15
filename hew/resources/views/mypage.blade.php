@@ -53,6 +53,7 @@
                 <div class="todo_list">
                     <div class="top">
                         <p class="todo_theme">{{$val["theme"]}}</p>
+                        <div class="todo_public_setting">@if($val['is_shared'] == 1)<span class="material-icons-round on">public</span>@else<span class="material-icons-round off">public_off</span>@endif</div>
                     </div>
                     <div class="under">
                         <div class="lines_cover">

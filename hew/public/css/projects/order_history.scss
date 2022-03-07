@@ -98,7 +98,7 @@
 
   .name {
     margin: 3% 0 3% 0;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
     font-weight: bold;
     color: $text_color;
     font-size: 0.9rem;
@@ -468,9 +468,26 @@
     padding-bottom: 3%;
     border-bottom: 2px dashed $sub_bg_color;
     font-size: 0.6rem;
+
+    .todo_public_setting{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 25%;
+      .material-icons-round{
+        font-size: 20px;
+
+        &.on{
+          color: $sub_bg_color;
+        }
+        &.off{
+          color: rgb(199, 218, 212);
+        }
+      }
+    }
   }
   .todo_theme {
-    font-size: 14px;
+    font-size: 0.7rem;
     width: 75%;
   }
 
