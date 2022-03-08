@@ -76,7 +76,7 @@ for (let i = 0; i < openBtn.length; i++) {
                             </div>
                         </div>
 
-                        <form method="POST" action="{{ route('play/instraction')}}">
+                        <form method="POST" action="http://127.0.0.1:8000/play/order">
                         <input type="hidden" name="inst_id" value="${inst_id}">
                         <button type="submit" name="other_theme" value="play"><span class="material-icons-round">play_circle</span><span class="play">あそぶ</span></button>
                         </form>
