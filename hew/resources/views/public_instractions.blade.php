@@ -11,7 +11,7 @@
 
 @section('body')
 <header class="l_play_header p_play_header">
-    <a href="{{ route('theme') }}" class="p_play_header__back"><span class="material-icons-round">undo</span></a>
+    <a href="{{ route('home') }}" class="p_play_header__back"><span class="material-icons-round">undo</span></a>
     <div class="p_play_header__title">
         <span>みんなのやることリスト</span>
     </div>
@@ -52,7 +52,7 @@
             <div class="profile_wrap">
                 <div class="profile_icon_name">
                     <div class="friend_icon">
-                        <a href="{{route('friend_prof',['friend_id'=>$value['id']])}}"><img src="{{ asset('./img/kuma.png')}}" alt="友だちのアイコン"></a>
+                        <a href="{{route('friend_prof',['friend_id'=>$value['id']])}}"><img src="{{asset('img/' . $value['icon_image'])}}" alt="友だちのアイコン"></a>
 
                     </div>
                     <div class="friend_name" id="{{$value['i_id']}}">

@@ -12,6 +12,7 @@ class PublicInstractionsController extends Controller
 {
     public function index(Request $request)
     {
+        $user = Auth::user();
         $instractions = Instraction::select([
             'u.id',
             'u.name',
@@ -20,20 +21,22 @@ class PublicInstractionsController extends Controller
             'i.likes',
             'i.lines',
             'i.id as i_id',
+            'u.icon_image',
           ])
           ->from('instractions as i')
           ->join('users as u', function($join) {
               $join->on('i.user_id', '=', 'u.id');
           })
           ->where('i.is_shared','=','1')
+          ->where('i.user_id','!=',$user['id'])
           ->get();
-        $user = Auth::user();
-        $search = Instraction::where('is_shared','=',1)->count();
+        $search = Instraction::where('is_shared','=',1)->where('user_id','!=',$user['id'])->count();
         return view('public_instractions',compact('user','instractions','search'));
     }
 
     public function post(Request $request)
     {
+        $user = Auth::user();
         $instractions = Instraction::select([
             'u.id',
             'u.name',
@@ -42,18 +45,19 @@ class PublicInstractionsController extends Controller
             'i.likes',
             'i.lines',
             'i.id as i_id',
+            'u.icon_image',
           ])
           ->from('instractions as i')
           ->join('users as u', function($join) {
               $join->on('i.user_id', '=', 'u.id');
           })
           ->where('i.is_shared','=','1')
+          ->where('i.user_id','!=',$user['id'])
           ->where(function($q){
             $q->where('i.theme','like','%' . $_POST['search'] . '%');
           })
           ->get();
-        $user = Auth::user();
-        $search = Instraction::where('is_shared','=',1)->where(function($q){
+        $search = Instraction::where('is_shared','=',1)->where('user_id','!=',$user['id'])->where(function($q){
             $q->where('theme','like','%' . $_POST['search'] . '%');
           })->count();
         return view('public_instractions',compact('user','instractions','search'));

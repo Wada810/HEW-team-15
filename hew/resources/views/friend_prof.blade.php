@@ -26,7 +26,7 @@
                 <div class="prof_area">
                     <div class="prof_cover">
                         <div class="rank_cover"><div class="rank_block"><p class="rank">RANK</p><p class="rank_no">{{$friend_prof[0]['level']}}</p></div></div>
-                        <img class="prof_img" src="image/" alt="プロフ画像">
+                        <img class="prof_img" src="{{asset('img/' . $friend_prof[0]['icon_image'])}}" alt="プロフ画像">
                     </div>
                     <p class="name">{{$friend_prof[0]['name']}}</p>
                     <div class="star_cover">
@@ -61,7 +61,7 @@
                 <div class="release_cover">
                     <div class="modal_prof_img_area">
                         <div class="modal_rank_area"><div class="modal_rank_cover"><p class="modal_rank">RANK</p><p class="modal_rank_sum">{{$friend_prof[0]['level']}}</p></div></div>
-                        <img class="modal_prof_img" src="" alt="">
+                        <img class="modal_prof_img" src="{{asset('img/' . $friend_prof[0]['icon_image'])}}" alt="">
                     </div>
                     <div class="modal_top">
                         <div class="modal_close"><span class="material-icons-round modal_close_icon">cancel</span></div>
