@@ -25,10 +25,10 @@
             <div id="prof">
                 <div class="prof_area">
                     <div class="prof_cover">
-                        <div class="rank_cover"><div class="rank_block"><p class="rank">RANK</p><p class="rank_no">{{$friend_prof['level']}}</p></div></div>
-                        <img class="prof_img" src="image/ {{$friend_prof['icon_image']}}" alt="プロフ画像">
+                        <div class="rank_cover"><div class="rank_block"><p class="rank">RANK</p><p class="rank_no">{{$friend_prof[0]['level']}}</p></div></div>
+                        <img class="prof_img" src="image/" alt="プロフ画像">
                     </div>
-                    <p class="name">プロフ太郎</p>
+                    <p class="name">{{$friend_prof[0]['name']}}</p>
                     <div class="star_cover">
                         <div class="friend_get_star_cover get_star_cover">
                             <span class="material-icons-round">stars</span>
@@ -41,7 +41,7 @@
                 <div class="todo_sort_cover">
                     <div class="text-divider"><p class="todo_title">作ったやることリスト</p></div>
                     <div class="item_list">
-                        <div class="lines_num_cover"><span class="material-icons-round lines_icon line_num_icon">library_books</span><p class="line_num">13</p></div>
+                        <div class="lines_num_cover"><span class="material-icons-round lines_icon line_num_icon">library_books</span><p class="line_num">{{$instraction}}</p></div>
                         <div class="sort_cover"><p class="sort">ソート:</p><p class="sort_seed">新しい順</p><span class="material-icons-round drop_arrow">arrow_drop_down_circle</span></div>
                     </div>
                 </div>
@@ -60,13 +60,13 @@
             <div class="release_modal">
                 <div class="release_cover">
                     <div class="modal_prof_img_area">
-                        <div class="modal_rank_area"><div class="modal_rank_cover"><p class="modal_rank">RANK</p><p class="modal_rank_sum">97</p></div></div>
+                        <div class="modal_rank_area"><div class="modal_rank_cover"><p class="modal_rank">RANK</p><p class="modal_rank_sum">{{$friend_prof[0]['level']}}</p></div></div>
                         <img class="modal_prof_img" src="" alt="">
                     </div>
                     <div class="modal_top">
                         <div class="modal_close"><span class="material-icons-round modal_close_icon">cancel</span></div>
-                        <div class="modal_user_name"><p class="modal_name">SUPER_NENECHI</p></div>
-                        <div class="modal_half"><div class="modal_fav_cover"><span class="material-icons-round moda_fav_icon">stars</span><p class="modal_sums">278</p></div></div>
+                        <div class="modal_user_name"><p class="modal_name">{{$friend_prof[0]['name']}}</p></div>
+                        <div class="modal_half"><div class="modal_fav_cover"><span class="material-icons-round moda_fav_icon">stars</span><p class="modal_sums">{{$friend_star}}</p></div></div>
                         <div class="modal_theme_cover"><p class="modal_theme">構成成分は「水35ℓ、炭素20kg、アンモニア4ℓ、石</p></div>
                     </div>
                     <div class="modal_under">

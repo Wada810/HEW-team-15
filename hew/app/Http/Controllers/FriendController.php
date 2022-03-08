@@ -12,22 +12,7 @@ class FriendController extends Controller
 {
     public function index(Request $request)
     {
-        $friend_prof = Instraction::select([
-            'u.id',
-            'u.name',
-            'i.theme',
-            'i.updated_at',
-            'i.likes',
-            'i.lines',
-            'i.id as inst_id',
-            'u.icon_image',
-            'u.level',
-          ])
-          ->from('instractions as i')
-          ->join('users as u', function($join) {
-              $join->on('i.user_id', '=', 'u.id');
-          })
-          ->where('u.id','=',1)
+        $friend_prof = User::where('id','=',$_GET['friend_id'])
           ->get();
 
           $friend_inst = Instraction::select([
@@ -45,14 +30,16 @@ class FriendController extends Controller
           ->join('users as u', function($join) {
               $join->on('i.user_id', '=', 'u.id');
           })
-          ->where('u.id','=',1)
+          ->where('u.id','=',$_GET['friend_id'])
             ->where(function($q){
                 $q->orWhere('i.is_shared','=',1);
             })
           ->get();
 
-        $friend_star = User::where('user_id','=',1)
+        $friend_star = Instraction::where('user_id','=',$_GET['friend_id'])
           ->sum('likes');
-        return view('friend_prof', compact('friend_prof','friend_inst','friend_star'));
+
+        $instraction = Instraction::where('user_id','=',$_GET['friend_id'])->where('is_shared','=',1)->count();
+        return view('friend_prof', compact('friend_prof','friend_inst','friend_star','instraction'));
     }
 }

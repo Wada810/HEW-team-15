@@ -28,7 +28,7 @@ class PublicInstractionsController extends Controller
           ->where('i.is_shared','=','1')
           ->get();
         $user = Auth::user();
-        $search = Instraction::where('user_id',$user['id'])->count('likes');
+        $search = Instraction::where('is_shared','=',1)->count();
         return view('public_instractions',compact('user','instractions','search'));
     }
 
@@ -49,12 +49,13 @@ class PublicInstractionsController extends Controller
           })
           ->where('i.is_shared','=','1')
           ->where(function($q){
-            $q->where('u.name','like','%' . $_POST['search'] . '%')
-                ->orWhere('i.theme','like','%' . $_POST['search'] . '%');
+            $q->where('i.theme','like','%' . $_POST['search'] . '%');
           })
           ->get();
         $user = Auth::user();
-        $search = Instraction::where('user_id',$user['id'])->count('likes');
+        $search = Instraction::where('is_shared','=',1)->where(function($q){
+            $q->where('theme','like','%' . $_POST['search'] . '%');
+          })->count();
         return view('public_instractions',compact('user','instractions','search'));
 
     }

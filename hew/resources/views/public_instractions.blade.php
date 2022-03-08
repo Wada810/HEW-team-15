@@ -52,8 +52,7 @@
             <div class="profile_wrap">
                 <div class="profile_icon_name">
                     <div class="friend_icon">
-                        <a href="{{route('friend_prof')}}"><img src="{{ asset('./img/kuma.png')}}" alt="友だちのアイコン"></a>
-                        <a href="#"><img src="{{ asset('./img/kuma.png')}}" alt="友だちのアイコン"></a>
+                        <a href="{{route('friend_prof',['friend_id'=>$value['id']])}}"><img src="{{ asset('./img/kuma.png')}}" alt="友だちのアイコン"></a>
 
                     </div>
                     <div class="friend_name" id="{{$value['i_id']}}">
