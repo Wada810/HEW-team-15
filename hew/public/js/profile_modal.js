@@ -12,6 +12,8 @@ for (let i = 0; i < openBtn.length; i++) {
         let id = user_id.getAttribute('id');
         let inst_id = document.getElementsByClassName('friend_name')[i];
         let inst_get_id = inst_id.getAttribute('id');
+        let image_seed = document.getElementsByClassName('img_seed')[i];
+        let image = image_seed.getAttribute('src');
 
         $.ajax({
           type: 'GET',
@@ -49,7 +51,7 @@ for (let i = 0; i < openBtn.length; i++) {
                         <div class="profile_rank_int">1</div>
                     </div>
                     <div class="profile_img">
-                        <img src="{{ asset('./img/kuma.png')}}" alt="">
+                        <img src="${image}" alt="">
                     </div>
                 </a>
                 <div class="close-btn" id="close-btn"><span class="material-icons-round">close</span></div>
