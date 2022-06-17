@@ -1,0 +1,17 @@
+.hidden{
+    display: none;
+}
+
+header {
+    display: none;
+    width: 100%;
+    height: 13%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main_color);
+    color: white;
+    position: relative;
+    z-index: 100;
+    font-weight: 600;
+  }
