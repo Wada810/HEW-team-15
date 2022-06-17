@@ -1,8 +1,34 @@
+:root {
+    --main_color: #3a9fa8;
+    --sub_color: #e2efef;
+    --frame_color: #379ea760; /* ボタンの枠の色 */
+    --fav_color: #ebcb4d;
+    --rank_point_font_size: 0.5rem;
+  }
+
 .hidden{
     display: none;
 }
 
-header {
+html {
+    width: 100%;
+    height: 100%;
+  }
+  
+  body {
+    background-color: var(--sub_color);
+    width: 100%;
+    height: 100%;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "M PLUS 2", sans-serif;
+    font-weight: 600;
+  }
+  
+  header {
     display: none;
     width: 100%;
     height: 13%;
@@ -14,4 +40,15 @@ header {
     position: relative;
     z-index: 100;
     font-weight: 600;
+  }
+
+  .theme_btn{
+    width: 70%;
+    height: 80px;
+    background-color: var(--fav_color);
+    padding: 5%;
+    text-align: left;
+    border: solid 5px #e5d7a1;
+    border-radius: 10px;
+    background-image: url();
   }
