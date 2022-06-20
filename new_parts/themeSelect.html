@@ -9,26 +9,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@400;600;700;800&display=swap" rel="stylesheet">
-
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
+    />
     <link rel="stylesheet" href="./new_parts.css">
 </head>
 <body>
 <header>
     <button class="back_button" type="button"><span class="material-icons-outlined">undo</span></button>
-    <h1>お題を決めよう！</h1>
+    <h1>お題を決めよう</h1>
 </header>
 <form method="post">
-    <main class="">
-        <div class="theme_btn">にんじんを星形に切る</div>
-        <div class="theme_modal hidden">
+    <div id="mask" class="mask hidden"></div>
+        <div id="theme_btn" class="theme_btn">
             にんじんを星形に切る
-            必要なもの
-            <ul>
-                <li>にんじん</li>
-                <li>包丁</li>
-                <li>まな板</li>
-            </ul>
-            リワード
         </div>
-    </main>
+    <div id="modal" class="modal hidden">
+        にんじんを星形に切る
+        必要なもの
+        <ul>
+            <li>にんじん</li>
+            <li>包丁</li>
+            <li>まな板</li>
+        </ul>
+        リワード
+    </div>
 </form>
+
+<script>
+    const theme_btn = document.getElementById('theme_btn');
+    const modal = document.getElementById('modal');
+    const mask = document.getElementById('mask');
+
+    theme_btn.addEventListener('click', function (){
+        modal.classList.remove('hidden');
+        mask.classList.remove('hidden');
+    })
+    mask.addEventListener('click', function () {
+        modal.classList.add('hidden');
+        mask.classList.add('hidden');
+    })
+</script>
+</body>
+</html>

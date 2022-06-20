@@ -6,9 +6,7 @@
     --rank_point_font_size: 0.5rem;
   }
 
-.hidden{
-    display: none;
-}
+
 
 html {
     width: 100%;
@@ -35,20 +33,55 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--main_color);
-    color: white;
+    /* background-color: var(--main_color); */
+    color: black;
     position: relative;
     z-index: 100;
     font-weight: 600;
   }
 
   .theme_btn{
-    width: 70%;
-    height: 80px;
+    color: white;
+    width: 80%;
+    height: 120px;
     background-color: var(--fav_color);
     padding: 5%;
     text-align: left;
     border: solid 5px #e5d7a1;
     border-radius: 10px;
-    background-image: url();
+    margin: 0 auto;
+
+    background-image: url("./ninjin.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .mask.hidden{
+    display: none;
+  }
+  .modal.hidden{
+    display: none;
+  }
+
+  .modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    width: 90vw;
+    height: 90vh;
+    background-color: var(--fav_color);
+  }
+
+  .mask {
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
   }
